@@ -10,7 +10,7 @@ const Container = styled.View`
   flex: 1;
   background-color: ${sharedStyles.backgroundColor};
   align-items: center;
-  align-content: center;
+  justify-content: center;
 `
 
 const App: React.FC = () => {
