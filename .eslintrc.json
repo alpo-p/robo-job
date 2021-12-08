@@ -44,6 +44,8 @@
     "@typescript-eslint/no-use-before-define": "off",
     "func-names": 0,
     "import/prefer-default-export": "off",
-    "semi": [2, "never"]
+    "semi": [2, "never"],
+    "no-unused-vars": ["error", {"argsIngorePattern": "^_"}],
+    "camelcase": "off"
   }
 }
