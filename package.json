@@ -15,9 +15,10 @@
     "prettier-write": "prettier --write '{src/**,migrations/**,.}/*.{js,json,ts,tsx,less}'"
   },
   "dependencies": {
+    "@expo/vector-icons": "^12.0.5",
     "@types/react-native-dotenv": "^0.2.0",
     "expo": "~43.0.2",
-    "expo-google-app-auth": "~9.0.0",
+    "expo-google-app-auth": "^9.0.0",
     "expo-google-sign-in": "^10.0.3",
     "expo-status-bar": "~1.1.0",
     "firebase": "^9.6.0",
