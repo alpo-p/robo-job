@@ -9,6 +9,7 @@ import AuthScreen from './screens/AuthScreen/AuthScreen'
 import ChatScreen from './screens/ChatScreen/ChatScreen'
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
 import { IoniconsIconNames } from './sharedTypes'
+import sharedStyles from './sharedStyles'
 
 const MainStack = createNativeStackNavigator()
 const RootStack = createBottomTabNavigator()
@@ -24,14 +25,17 @@ const RootNavigator = () => {
       } else if (route.name === 'ChatScreen') {
         iconName = focused ? 'chatbox-ellipses' : 'chatbox-ellipses-outline'
       } else if (route.name === 'ProfileScreen') {
-        iconName = focused ? 'man' : 'man-outline'
+        iconName = focused ? 'body' : 'body-outline'
       }
 
       // @ts-ignore
       return <Ionicons name={iconName} size={size} color={color} />
     },
-    tabBarActiveTintColor: 'tomato',
+    tabBarActiveTintColor: sharedStyles.primaryColor,
     tabBarInactiveTintColor: 'gray',
+    tabBarShowLabel: false,
+    tabBarHideOnKeyboard: true,
+    tabBarStyle: { backgroundColor: 'black' },
   })
   return (
     <RootStack.Navigator

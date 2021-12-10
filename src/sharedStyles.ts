@@ -1,4 +1,5 @@
 export default {
   backgroundColor: '#ffff',
-  darkGrey: '#111111'
+  darkGrey: '#111111',
+  primaryColor: '#aec6cf',
 }
