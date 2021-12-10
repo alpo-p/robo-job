@@ -12,7 +12,7 @@ import { SignInWithGoogleButton } from './components/SignInWithGoogleButton'
 
 import AuthStorage from '../../utils/authStorage'
 import useAuthStorage from '../../hooks/useAuthStorage'
-import { SafeContainer } from '../../sharedComponents/SafeContainer'
+import { SafeContainer } from '../../common/components/SafeContainer'
 
 const AuthScreen: React.FC = () => {
   const auth = getAuth()

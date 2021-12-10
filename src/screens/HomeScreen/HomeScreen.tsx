@@ -8,20 +8,13 @@ import {
   getFirestore,
   doc,
 } from 'firebase/firestore'
-import useAuthStorage from '../../hooks/useAuthStorage'
-import { RoboButton } from '../../sharedComponents/RoboButton'
-import { SafeContainer } from '../../sharedComponents/SafeContainer'
+import { RoboButton } from '../../common/components/RoboButton'
+import { SafeContainer } from '../../common/components/SafeContainer'
 
 const HomeScreen: React.FC = () => {
   const auth = getAuth()
   const user = auth.currentUser
   const displayName = user?.displayName
-  const authStorage = useAuthStorage()
-
-  const handleLogout = () => {
-    auth.signOut()
-    authStorage.removeAccessToken()
-  }
 
   const db = getFirestore()
   const col = collection(db, 'users')
@@ -41,9 +34,6 @@ const HomeScreen: React.FC = () => {
   return (
     <SafeContainer>
       <Text>Current authorized user: {displayName}</Text>
-      <RoboButton onPress={handleLogout}>
-        <Text>Logout</Text>
-      </RoboButton>
       <RoboButton onPress={handleSetUserName} title="Set user name" />
       <RoboButton onPress={handleEditUserName} title="Edit user name" />
     </SafeContainer>

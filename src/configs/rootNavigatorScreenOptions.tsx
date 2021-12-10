@@ -1,7 +1,7 @@
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
-import { IoniconsIconNames } from './sharedTypes'
-import sharedStyles from './sharedStyles'
+import { IoniconsIconNames } from '../common/types'
+import sharedStyles from '../common/styles'
 
 // @ts-ignore
 export const rootNavigatorScreenOptions = ({ route }) => ({

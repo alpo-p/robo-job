@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/native'
-import sharedStyles from '../../../sharedStyles'
+import sharedStyles from '../../../common/styles'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const icon = require('../../../../assets/icons8-google-48.png')

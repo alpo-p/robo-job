@@ -1,23 +1,18 @@
 import React from 'react'
-
+import { LogBox } from 'react-native'
 import { initializeApp } from 'firebase/app'
 import Navigator from './src/Navigator'
 import AuthStorage from './src/utils/authStorage'
 
 import AuthStorageContext from './src/contexts/AuthStorageContext'
+import { firebaseConfig } from './src/configs/firebaseConfig'
 
 const authStorage = new AuthStorage()
 
-const firebaseConfig = {
-  apiKey: 'AIzaSyAvDZNaDpKLz_ej2mnUeGwLmrE2Ozik5zE',
-  authDomain: 'robo-job-334508.firebaseapp.com',
-  projectId: 'robo-job-334508',
-  storageBucket: 'robo-job-334508.appspot.com',
-  messagingSenderId: '831162647835',
-  appId: '1:831162647835:web:5f11688cb00df78e56ffbe',
-}
-
 initializeApp(firebaseConfig)
+
+// Some library throws this warning. Should probably handle at some point
+LogBox.ignoreLogs(['AsyncStorage has been extracted '])
 
 const App: React.FC = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/native'
-import sharedStyles from '../sharedStyles'
+import sharedStyles from '../styles'
 
 // TODO: make width 100% and then use containers in the actual app
 const ButtonContainer = styled.TouchableOpacity`

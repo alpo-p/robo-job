@@ -47,6 +47,7 @@
     "semi": [2, "never"],
     "no-unused-vars": ["error"],
     "camelcase": "off",
-    "@typescript-eslint/ban-ts-comment": "off"
+    "@typescript-eslint/ban-ts-comment": "off",
+    "react/require-default-props": "off"
   }
 }

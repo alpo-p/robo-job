@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from 'react-native'
-import { SafeContainer } from '../../sharedComponents/SafeContainer'
+import { SafeContainer } from '../../common/components/SafeContainer'
 
 const ChatScreen = () => (
   <SafeContainer>

@@ -1,16 +1,42 @@
 /* eslint-disable react/no-unstable-nested-components */
 import React from 'react'
-import { createNativeStackNavigator } from '@react-navigation/native-stack'
-import { NavigationContainer } from '@react-navigation/native'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+import {
+  createNativeStackNavigator,
+  NativeStackNavigationProp,
+} from '@react-navigation/native-stack'
+import {
+  CompositeNavigationProp,
+  NavigationContainer,
+} from '@react-navigation/native'
+import {
+  BottomTabNavigationProp,
+  createBottomTabNavigator,
+} from '@react-navigation/bottom-tabs'
 import HomeScreen from './screens/HomeScreen/HomeScreen'
 import AuthScreen from './screens/AuthScreen/AuthScreen'
 import ChatScreen from './screens/ChatScreen/ChatScreen'
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
-import { rootNavigatorScreenOptions } from './rootNavigatorScreenOptions'
+import { rootNavigatorScreenOptions } from './configs/rootNavigatorScreenOptions'
 
-const MainStack = createNativeStackNavigator()
-const RootStack = createBottomTabNavigator()
+type MainStackParamList = {
+  AuthScreen: undefined
+  RootNavigator: undefined
+}
+
+type RootStackParamList = {
+  HomeScreen: undefined
+  ChatScreen: undefined
+  ProfileScreen: undefined
+}
+
+// This is used as type parameter for useNavigation
+export type NavigationPropType = CompositeNavigationProp<
+  NativeStackNavigationProp<MainStackParamList>,
+  BottomTabNavigationProp<RootStackParamList>
+>
+
+const MainStack = createNativeStackNavigator<MainStackParamList>()
+const RootStack = createBottomTabNavigator<RootStackParamList>()
 
 const RootNavigator = () => (
   <RootStack.Navigator
