@@ -3,51 +3,25 @@ import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import { NavigationContainer } from '@react-navigation/native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { Ionicons } from '@expo/vector-icons'
 import HomeScreen from './screens/HomeScreen/HomeScreen'
 import AuthScreen from './screens/AuthScreen/AuthScreen'
 import ChatScreen from './screens/ChatScreen/ChatScreen'
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
-import { IoniconsIconNames } from './sharedTypes'
-import sharedStyles from './sharedStyles'
+import { rootNavigatorScreenOptions } from './rootNavigatorScreenOptions'
 
 const MainStack = createNativeStackNavigator()
 const RootStack = createBottomTabNavigator()
 
-const RootNavigator = () => {
-  // @ts-ignore
-  const screenOptions = ({ route }) => ({
-    // @ts-ignore
-    tabBarIcon: ({ focused, color, size }) => {
-      let iconName: IoniconsIconNames
-      if (route.name === 'HomeScreen') {
-        iconName = focused ? 'home' : 'home-outline'
-      } else if (route.name === 'ChatScreen') {
-        iconName = focused ? 'chatbox-ellipses' : 'chatbox-ellipses-outline'
-      } else if (route.name === 'ProfileScreen') {
-        iconName = focused ? 'body' : 'body-outline'
-      }
-
-      // @ts-ignore
-      return <Ionicons name={iconName} size={size} color={color} />
-    },
-    tabBarActiveTintColor: sharedStyles.primaryColor,
-    tabBarInactiveTintColor: 'gray',
-    tabBarShowLabel: false,
-    tabBarHideOnKeyboard: true,
-    tabBarStyle: { backgroundColor: 'black' },
-  })
-  return (
-    <RootStack.Navigator
-      initialRouteName="HomeScreen"
-      screenOptions={screenOptions}
-    >
-      <RootStack.Screen name="HomeScreen" component={HomeScreen} />
-      <RootStack.Screen name="ChatScreen" component={ChatScreen} />
-      <RootStack.Screen name="ProfileScreen" component={ProfileScreen} />
-    </RootStack.Navigator>
-  )
-}
+const RootNavigator = () => (
+  <RootStack.Navigator
+    initialRouteName="HomeScreen"
+    screenOptions={rootNavigatorScreenOptions}
+  >
+    <RootStack.Screen name="HomeScreen" component={HomeScreen} />
+    <RootStack.Screen name="ChatScreen" component={ChatScreen} />
+    <RootStack.Screen name="ProfileScreen" component={ProfileScreen} />
+  </RootStack.Navigator>
+)
 
 const Navigator = () => (
   <NavigationContainer>
