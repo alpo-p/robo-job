@@ -1,24 +1,42 @@
-import React from 'react'
-import { Text } from 'react-native'
+import React, { useEffect } from 'react'
+import { Alert, Text } from 'react-native'
 import * as Google from 'expo-google-app-auth'
 import { IOS_CLIENT_ID } from '@env'
-import { Auth, GoogleAuthProvider, signInWithCredential } from 'firebase/auth'
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithCredential,
+} from 'firebase/auth'
 import { SignInWithGoogleButton } from './components/SignInWithGoogleButton'
 
-import styled from 'styled-components/native'
+import { useNavigation } from '@react-navigation/native'
+import AuthStorage from '../../utils/authStorage'
+import useAuthStorage from '../../hooks/useAuthStorage'
+import { SafeContainer } from '../../sharedComponents/SafeContainer'
 
-interface AuthScreenProps {
-  auth: Auth
-}
+const AuthScreen: React.FC = () => {
+  const auth = getAuth()
+  const navigation = useNavigation()
+  const authStorage: AuthStorage = useAuthStorage()
 
-const Container = styled.SafeAreaView`
-  flex: 1;
-  align-items: center;
-  justify-content: center;
-`
+  const signInWithTokenAndNavigateToRoot = async (token: string) => {
+    const credential = GoogleAuthProvider.credential(null, token)
+    await signInWithCredential(auth, credential)
+    //@ts-ignore
+    navigation.navigate('RootNavigator')
+  }
 
-export const AuthScreen: React.FC<AuthScreenProps> = ({ auth }) => {
-  const signInWithGoogle = async () => {
+  useEffect(() => {
+    const tryToSignInUserFromAuthStorage = async () => {
+      const token = await authStorage.getAccessToken()
+      if (token) {
+        signInWithTokenAndNavigateToRoot(token)
+      }
+    }
+    tryToSignInUserFromAuthStorage()
+  })
+
+  const signInWithGoogleAndReturnAccessToken = async () => {
     try {
       const result = await Google.logInAsync({
         iosClientId: IOS_CLIENT_ID,
@@ -26,25 +44,29 @@ export const AuthScreen: React.FC<AuthScreenProps> = ({ auth }) => {
       })
 
       if (result.type === 'success') {
-        return { status: 'success', token: result.accessToken }
+        return result.accessToken
       }
-      return { status: 'cancelled', token: null }
+      return null
     } catch (e) {
-      return { status: 'error', token: null }
+      console.error('Error signing in with Google')
+      return null
     }
   }
 
-  const handleButtonPress = async () => {
-    const { status, token } = await signInWithGoogle()
-    const credential = GoogleAuthProvider.credential(null, token)
-    await signInWithCredential(auth, credential)
+  const handleSignIn = async () => {
+    const token = await signInWithGoogleAndReturnAccessToken()
+    if (token) {
+      await authStorage.setAccessToken(token)
+      signInWithTokenAndNavigateToRoot(token)
+    }
   }
 
   return (
-    <Container>
+    <SafeContainer>
       <Text>Sign in by clicking below</Text>
-      <SignInWithGoogleButton onPress={() => handleButtonPress()} />
-      <Text>{auth?.currentUser && auth.currentUser.email}</Text>
-    </Container>
+      <SignInWithGoogleButton onPress={() => handleSignIn()} />
+    </SafeContainer>
   )
 }
+
+export default AuthScreen

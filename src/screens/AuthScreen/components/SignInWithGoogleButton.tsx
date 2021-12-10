@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components/native'
 import sharedStyles from '../../../sharedStyles'
 
-const icon = require('../assets/icons8-google-48.png')
+const icon = require('../../../../assets/icons8-google-48.png')
 
 interface Props {
   onPress: () => void
@@ -10,12 +10,12 @@ interface Props {
 
 export const SignInWithGoogleButton: React.FC<Props> = ({ onPress }) => (
   <ButtonContainer onPress={onPress}>
-    <Image source={icon} />
+    <IconImage source={icon} />
     <ButtonText>Continue with Google</ButtonText>
   </ButtonContainer>
 )
 
-const Image = styled.Image`
+const IconImage = styled.Image`
   width: 15px;
   height: 15px;
   margin-right: 8px;
