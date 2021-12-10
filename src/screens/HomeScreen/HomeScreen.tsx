@@ -1,10 +1,6 @@
 import { getAuth } from '@firebase/auth'
 import React from 'react'
 import { Text } from 'react-native'
-import useAuthStorage from '../../hooks/useAuthStorage'
-import { RoboButton } from '../../sharedComponents/RoboButton'
-import { SafeContainer } from '../../sharedComponents/SafeContainer'
-
 import {
   collection,
   addDoc,
@@ -12,6 +8,9 @@ import {
   getFirestore,
   doc,
 } from 'firebase/firestore'
+import useAuthStorage from '../../hooks/useAuthStorage'
+import { RoboButton } from '../../sharedComponents/RoboButton'
+import { SafeContainer } from '../../sharedComponents/SafeContainer'
 
 const HomeScreen: React.FC = () => {
   const auth = getAuth()

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Alert, Text } from 'react-native'
+import { Text } from 'react-native'
 import * as Google from 'expo-google-app-auth'
 import { IOS_CLIENT_ID } from '@env'
 import {
@@ -7,9 +7,9 @@ import {
   GoogleAuthProvider,
   signInWithCredential,
 } from 'firebase/auth'
+import { useNavigation } from '@react-navigation/native'
 import { SignInWithGoogleButton } from './components/SignInWithGoogleButton'
 
-import { useNavigation } from '@react-navigation/native'
 import AuthStorage from '../../utils/authStorage'
 import useAuthStorage from '../../hooks/useAuthStorage'
 import { SafeContainer } from '../../sharedComponents/SafeContainer'
@@ -22,7 +22,7 @@ const AuthScreen: React.FC = () => {
   const signInWithTokenAndNavigateToRoot = async (token: string) => {
     const credential = GoogleAuthProvider.credential(null, token)
     await signInWithCredential(auth, credential)
-    //@ts-ignore
+    // @ts-ignore
     navigation.navigate('RootNavigator')
   }
 

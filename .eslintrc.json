@@ -45,7 +45,8 @@
     "func-names": 0,
     "import/prefer-default-export": "off",
     "semi": [2, "never"],
-    "no-unused-vars": ["error", {"argsIngorePattern": "^_"}],
-    "camelcase": "off"
+    "no-unused-vars": ["error"],
+    "camelcase": "off",
+    "@typescript-eslint/ban-ts-comment": "off"
   }
 }
