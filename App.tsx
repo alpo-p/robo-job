@@ -5,6 +5,7 @@ import Navigator from './src/Navigator'
 import AuthStorage from './src/utils/authStorage'
 
 import AuthStorageContext from './src/contexts/AuthStorageContext'
+
 const authStorage = new AuthStorage()
 
 const firebaseConfig = {

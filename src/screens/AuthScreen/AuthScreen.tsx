@@ -6,7 +6,7 @@ import {
   getAuth,
   GoogleAuthProvider,
   signInWithCredential,
-} from 'firebase/auth'
+} from '@firebase/auth'
 import { useNavigation } from '@react-navigation/native'
 import { SignInWithGoogleButton } from './components/SignInWithGoogleButton'
 
@@ -16,8 +16,8 @@ import { SafeContainer } from '../../sharedComponents/SafeContainer'
 
 const AuthScreen: React.FC = () => {
   const auth = getAuth()
-  const navigation = useNavigation()
   const authStorage: AuthStorage = useAuthStorage()
+  const navigation = useNavigation()
 
   const signInWithTokenAndNavigateToRoot = async (token: string) => {
     const credential = GoogleAuthProvider.credential(null, token)
@@ -46,11 +46,10 @@ const AuthScreen: React.FC = () => {
       if (result.type === 'success') {
         return result.accessToken
       }
-      return null
     } catch (e) {
       console.error('Error signing in with Google')
-      return null
     }
+    return null
   }
 
   const handleSignIn = async () => {
