@@ -1,12 +1,12 @@
 import { JobPostCardType } from '../common/types'
 import getMockJobPostCard from './getSingleMockJobCard'
 
-const mockCard1 = getMockJobPostCard()
-const mockCard2 = getMockJobPostCard()
-mockCard2.jobTitle = 'Javascript developer'
-mockCard2.id = '321'
-const MockJobPostCards = [mockCard1, mockCard2]
-
-export default function getMockJobCards(): JobPostCardType[] {
-  return [...MockJobPostCards]
+export default function getMockJobCards(n = 10): JobPostCardType[] {
+  const mockJobPostCards = [...Array(n).keys()].map(i => {
+    const mockCard = getMockJobPostCard()
+    mockCard.id = `${i}`
+    mockCard.jobTitle = `Software developer #${i}`
+    return mockCard
+  })
+  return mockJobPostCards
 }
