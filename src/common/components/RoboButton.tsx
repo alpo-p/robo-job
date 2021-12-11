@@ -13,7 +13,7 @@ const ButtonContainer = styled.TouchableOpacity`
 `
 
 const ButtonContent = styled.Text`
-  font-family: GillSans-Light;
+  font-family: DamascusLight;
   font-size: 14px;
   color: ${sharedStyles.darkGrey};
 `

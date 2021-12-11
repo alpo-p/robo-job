@@ -16,9 +16,10 @@ const JobPostCardsContainer: React.FC<Props> = ({ cards }) => {
       snapToAlignment="start"
       snapToInterval={height}
       decelerationRate="fast"
+      style={{ width: '100%' }}
     >
       {cards.map(card => (
-        <JobPostCard jobPost={card} height={height} />
+        <JobPostCard key={card.id} jobPost={card} height={height} />
       ))}
     </ScrollView>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components/native'
+import RoboText from '../../../common/components/RoboText'
 import { JobPostCardType } from '../../../common/types'
 
 interface Props {
@@ -9,27 +10,28 @@ interface Props {
 }
 
 const Wrapper = styled.View<{ height: number }>`
-  border-width: 1px;
   flex: 1;
   flex-direction: column;
-  width: 100%;
-  height: ${props => props.height};
+  height: ${props => `${props.height}px`};
+`
+
+const TopContainer = styled.View`
+  align-items: center;
 `
 
 const Logo = styled.Image`
-  height: 50px;
-  width: 50px;
-`
-
-const JobTitle = styled.Text`
-  text-align: center;
+  height: 75px;
+  width: 75px;
 `
 
 const JobPostCard: React.FC<Props> = ({ jobPost, height }) => {
   return (
     <Wrapper height={height}>
-      <Logo source={{ uri: jobPost.logoUrl }} />
-      <JobTitle>{jobPost.jobTitle}</JobTitle>
+      <TopContainer>
+        <Logo source={{ uri: jobPost.logoUrl }} />
+        <RoboText>{jobPost.companyName}</RoboText>
+        <RoboText weight="light">{jobPost.jobTitle}</RoboText>
+      </TopContainer>
     </Wrapper>
   )
 }

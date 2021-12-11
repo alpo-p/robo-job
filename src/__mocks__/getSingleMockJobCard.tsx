@@ -3,7 +3,7 @@ import lorem280c from './getLoremIpsum280c'
 
 const MockJobPostCard: JobPostCardType = {
   id: '123',
-  companyName: 'alpoTalent',
+  companyName: 'The Incredible Company',
   jobTitle: 'Software developer',
   logoUrl: 'https://picsum.photos/100',
   tags: [
