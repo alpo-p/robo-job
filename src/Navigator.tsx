@@ -23,6 +23,7 @@ type MainStackParamList = {
   RootNavigator: undefined
 }
 
+// When adding new screens, remember to add them here
 type RootStackParamList = {
   HomeScreen: undefined
   ChatScreen: undefined

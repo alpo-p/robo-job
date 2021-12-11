@@ -1,7 +1,7 @@
-import { TJobPostCard } from '../common/types'
+import { JobPostCardType } from '../common/types'
 import lorem280c from './getLoremIpsum280c'
 
-const MockJobPostCard: TJobPostCard = {
+const MockJobPostCard: JobPostCardType = {
   id: '123',
   companyName: 'alpoTalent',
   jobTitle: 'Software developer',
@@ -16,6 +16,6 @@ const MockJobPostCard: TJobPostCard = {
   shortDescription: lorem280c,
 }
 
-export default function getSingleMockJobCard(): TJobPostCard {
+export default function getSingleMockJobCard(): JobPostCardType {
   return { ...MockJobPostCard }
 }

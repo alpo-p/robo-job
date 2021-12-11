@@ -21,6 +21,12 @@ const AuthScreen: React.FC = () => {
 
   const signInWithTokenAndNavigateToRoot = async (token: string) => {
     const credential = GoogleAuthProvider.credential(null, token)
+
+    // TODO: This throws an error Firebase: Unsuccessful check authorization response from Google: {]
+    // when have waited for a while an come back
+    // The token is still the same, but for some reason it doens't work
+    // maybe Google.logInAsync() is needed for some reason again..?
+    // https://stackoverflow.com/questions/40450850/error-google-id-token-is-not-allowed-to-be-used-with-this-application-firebase
     await signInWithCredential(auth, credential)
     // @ts-ignore
     navigation.navigate('RootNavigator')
