@@ -1,11 +1,11 @@
 import React from 'react'
 
 import styled from 'styled-components/native'
-import RoboText from '../../../common/components/RoboText'
-import { JobPostCardType } from '../../../common/types'
+import RoboText from '../../../../common/components/RoboText'
+import { IJobPostCard } from '../../../../common/types'
 
 interface Props {
-  jobPost: JobPostCardType
+  jobPost: IJobPostCard
   height: number
 }
 

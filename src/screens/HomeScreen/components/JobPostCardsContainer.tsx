@@ -1,11 +1,11 @@
 import React from 'react'
 import { ScrollView } from 'react-native'
-import { JobPostCardType } from '../../../common/types'
+import { IJobPostCard } from '../../../common/types'
 import { useGetScreenHeight } from '../../../hooks/useGetScreenHeight'
 import JobPostCard from './JobPostCard'
 
 interface Props {
-  cards: JobPostCardType[]
+  cards: IJobPostCard[]
 }
 
 const JobPostCardsContainer: React.FC<Props> = ({ cards }) => {
@@ -17,6 +17,7 @@ const JobPostCardsContainer: React.FC<Props> = ({ cards }) => {
       snapToInterval={height}
       decelerationRate="fast"
       style={{ width: '100%' }}
+      showsVerticalScrollIndicator={false}
     >
       {cards.map(card => (
         <JobPostCard key={card.id} jobPost={card} height={height} />

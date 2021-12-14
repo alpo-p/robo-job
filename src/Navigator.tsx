@@ -12,8 +12,8 @@ import {
   BottomTabNavigationProp,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs'
-import HomeScreen from './screens/HomeScreen/HomeScreen'
-import AuthScreen from './screens/AuthScreen/AuthScreen'
+import HomeScreen from './screens/HomeScreen'
+import AuthScreen from './screens/AuthScreen'
 import ChatScreen from './screens/ChatScreen/ChatScreen'
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
 import { rootNavigatorScreenOptions } from './configs/rootNavigatorScreenOptions'
