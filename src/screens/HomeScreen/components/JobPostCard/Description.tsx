@@ -1,26 +1,26 @@
 import React from 'react'
+import { View } from 'react-native'
 
-import styled from 'styled-components/native'
 import RoboText from '../../../../common/components/RoboText'
 
 interface Props {
   description: string
 }
 
-const Container = styled.View`
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 10px;
-  width: 300px;
-`
-
 const Description: React.FC<Props> = ({ description }) => {
   return (
-    <Container>
+    <View
+      style={{
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        padding: 10,
+        width: 300,
+      }}
+    >
       <RoboText weight="light" size="small">
         {description}
       </RoboText>
-    </Container>
+    </View>
   )
 }
 

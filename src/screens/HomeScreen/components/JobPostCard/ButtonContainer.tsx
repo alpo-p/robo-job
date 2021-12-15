@@ -1,17 +1,7 @@
 import React from 'react'
+import { View } from 'react-native'
 
-import styled from 'styled-components/native'
 import { RoboButton } from '../../../../common/components/RoboButton'
-
-const Container = styled.View`
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 4px;
-  margin-top: auto;
-  flex-direction: row;
-  max-height: 150px;
-  align-content: space-between;
-`
 
 const ButtonContainer: React.FC = () => {
   const handleShowFullInfo = () => console.log('showing full info')
@@ -19,11 +9,20 @@ const ButtonContainer: React.FC = () => {
   const handleApplyNow = () => console.log('Applying!')
 
   return (
-    <Container>
+    <View
+      style={{
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        padding: 4,
+        marginTop: 'auto',
+        maxHeight: 150,
+        alignContent: 'space-between',
+      }}
+    >
       <RoboButton onPress={handleShowFullInfo} title="i" />
       <RoboButton onPress={handleClickLike} title="<3" />
       <RoboButton onPress={handleApplyNow} title="APPLY" />
-    </Container>
+    </View>
   )
 }
 

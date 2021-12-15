@@ -1,6 +1,6 @@
 import React from 'react'
+import { View, StyleSheet } from 'react-native'
 
-import styled from 'styled-components/native'
 import RoboText from '../../../../common/components/RoboText'
 import styles from '../../../../common/styles'
 
@@ -8,37 +8,36 @@ interface Props {
   tags: string[]
 }
 
-const TagContainer = styled.View`
-  border-width: 0.5px;
-  border-color: ${styles.lightGrey};
-  border-radius: 10px;
-  padding: 5px;
-  margin: 2px;
-`
-
 const Tag: React.FC<{ tag: string }> = ({ tag }) => (
-  <TagContainer>
+  <View style={stylesheet.tag}>
     <RoboText uppercase weight="light" size="tiny">
       {tag}
     </RoboText>
-  </TagContainer>
+  </View>
 )
 
-const Container = styled.View`
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin: 5px;
-`
+const Tags: React.FC<Props> = ({ tags }) => (
+  <View style={stylesheet.container}>
+    {tags.map((tag, i) => (
+      // eslint-disable-next-line react/no-array-index-key
+      <Tag key={i} tag={tag} />
+    ))}
+  </View>
+)
 
-const Tags: React.FC<Props> = ({ tags }) => {
-  return (
-    <Container>
-      {tags.map((tag, i) => (
-        // eslint-disable-next-line react/no-array-index-key
-        <Tag key={i} tag={tag} />
-      ))}
-    </Container>
-  )
-}
+const stylesheet = StyleSheet.create({
+  tag: {
+    borderWidth: 0.5,
+    borderColor: styles.lightGrey,
+    borderRadius: 10,
+    padding: 5,
+    margin: 2,
+  },
+  container: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    margin: 5,
+  },
+})
 
 export default Tags
