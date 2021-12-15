@@ -10,7 +10,8 @@ interface Props {
 const Container = styled.View`
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 4px;
+  padding: 10px;
+  width: 300px;
 `
 
 const Description: React.FC<Props> = ({ description }) => {

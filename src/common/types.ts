@@ -7,6 +7,8 @@ export interface IJobPostCard {
   companyName: string
   jobTitle: string
   logoUrl: string
+  pictureUrl: string
   tags: string[]
   shortDescription: string
+  longDescription: string
 }

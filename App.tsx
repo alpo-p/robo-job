@@ -1,5 +1,5 @@
 import React from 'react'
-import { LogBox } from 'react-native'
+import { LogBox, StatusBar } from 'react-native'
 import { initializeApp } from 'firebase/app'
 import Navigator from './src/Navigator'
 import AuthStorage from './src/utils/authStorage'
@@ -19,9 +19,12 @@ LogBox.ignoreLogs(ignoreArray)
 
 const App: React.FC = () => {
   return (
-    <AuthStorageContext.Provider value={authStorage}>
-      <Navigator />
-    </AuthStorageContext.Provider>
+    <>
+      <StatusBar backgroundColor="transparent" translucent />
+      <AuthStorageContext.Provider value={authStorage}>
+        <Navigator />
+      </AuthStorageContext.Provider>
+    </>
   )
 }
 

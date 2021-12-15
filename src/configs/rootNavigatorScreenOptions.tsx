@@ -3,6 +3,8 @@ import { Ionicons } from '@expo/vector-icons'
 import { IoniconsIconNames } from '../common/types'
 import sharedStyles from '../common/styles'
 
+// TODO: properly type this file
+
 // @ts-ignore
 export const rootNavigatorScreenOptions = ({ route }) => ({
   // @ts-ignore

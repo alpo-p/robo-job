@@ -13,12 +13,12 @@ const TagContainer = styled.View`
   border-color: ${styles.lightGrey};
   border-radius: 10px;
   padding: 5px;
-  margin: 3px;
+  margin: 2px;
 `
 
 const Tag: React.FC<{ tag: string }> = ({ tag }) => (
   <TagContainer>
-    <RoboText weight="light" size="small">
+    <RoboText uppercase weight="light" size="tiny">
       {tag}
     </RoboText>
   </TagContainer>
@@ -27,6 +27,7 @@ const Tag: React.FC<{ tag: string }> = ({ tag }) => (
 const Container = styled.View`
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 5px;
 `
 
 const Tags: React.FC<Props> = ({ tags }) => {
