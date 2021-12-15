@@ -1,7 +1,7 @@
 import React from 'react'
 import { View } from 'react-native'
 
-import RoboText from '../../../../common/components/RoboText'
+import RoboText from '../../../../../common/components/RoboText'
 
 interface Props {
   description: string
@@ -13,7 +13,6 @@ const Description: React.FC<Props> = ({ description }) => {
       style={{
         flexDirection: 'row',
         flexWrap: 'wrap',
-        padding: 10,
         width: 300,
       }}
     >

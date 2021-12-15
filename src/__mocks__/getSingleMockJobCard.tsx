@@ -10,6 +10,7 @@ const MockJobPostCard: IJobPostCard = {
   jobTitle: 'Software developer',
   logoUrl: 'https://picsum.photos/100',
   pictureUrl: 'https://picsum.photos/300',
+  location: 'Helsinki',
   tags: [
     'javascript',
     'software development',

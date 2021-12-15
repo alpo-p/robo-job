@@ -1,8 +1,8 @@
 import React from 'react'
 import { View, StyleSheet } from 'react-native'
 
-import RoboText from '../../../../common/components/RoboText'
-import styles from '../../../../common/styles'
+import RoboText from '../../../../../common/components/RoboText'
+import styles from '../../../../../common/styles'
 
 interface Props {
   tags: string[]
@@ -36,7 +36,7 @@ const stylesheet = StyleSheet.create({
   container: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    margin: 5,
+    marginBottom: 5,
   },
 })
 

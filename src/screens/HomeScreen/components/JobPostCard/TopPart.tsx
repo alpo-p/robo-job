@@ -45,6 +45,8 @@ const stylesheet = ({ height, width }: { height?: number; width?: number }) =>
       height: 100,
       width: 100,
       borderRadius: 50,
+      borderWidth: 1,
+      borderColor: 'white',
       marginTop: 30,
     },
     textContainer: {

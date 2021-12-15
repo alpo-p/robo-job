@@ -1,6 +1,6 @@
 import React from 'react'
 import { View } from 'react-native'
-import IconButton from './IconButton'
+import IconButton from '../../../../../common/components/IconButton'
 
 const ButtonContainer: React.FC = () => {
   const handleShowFullInfo = () => console.log('showing full info')
