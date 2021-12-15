@@ -1,7 +1,7 @@
 import React from 'react'
-import { ScrollView } from 'react-native'
+import { Dimensions, ScrollView } from 'react-native'
 import { IJobPostCard } from '../../../common/types'
-import { useGetScreenHeight } from '../../../hooks/useGetScreenHeight'
+import { useGetScreenHeightWithoutStatusBar } from '../../../hooks/useGetScreenHeight'
 import JobPostCard from './JobPostCard'
 
 interface Props {
@@ -9,7 +9,8 @@ interface Props {
 }
 
 const JobPostCardsContainer: React.FC<Props> = ({ cards }) => {
-  const height = useGetScreenHeight()
+  const height = useGetScreenHeightWithoutStatusBar()
+  const { width } = Dimensions.get('screen')
   return (
     <ScrollView
       disableScrollViewPanResponder
@@ -20,7 +21,12 @@ const JobPostCardsContainer: React.FC<Props> = ({ cards }) => {
       showsVerticalScrollIndicator={false}
     >
       {cards.map(card => (
-        <JobPostCard key={card.id} jobPost={card} height={height} />
+        <JobPostCard
+          key={card.id}
+          jobPost={card}
+          height={height}
+          width={width}
+        />
       ))}
     </ScrollView>
   )

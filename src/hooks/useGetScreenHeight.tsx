@@ -8,3 +8,9 @@ export const useGetScreenHeight = (): number => {
   const statusBarHeight = getStatusBarHeight()
   return dimensionsHeight - bottomTabHeight - statusBarHeight
 }
+
+export const useGetScreenHeightWithoutStatusBar = (): number => {
+  const dimensionsHeight = Dimensions.get('window').height
+  const bottomTabHeight = useBottomTabBarHeight()
+  return dimensionsHeight - bottomTabHeight
+}

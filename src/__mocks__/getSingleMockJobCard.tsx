@@ -1,11 +1,15 @@
 import { IJobPostCard } from '../common/types'
-import lorem280c from './getLoremIpsum280c'
+import getLoremIpsum from './getLoremIpsum'
+
+const lorem400c = getLoremIpsum(400)
+const lorem2000c = getLoremIpsum(2000)
 
 const MockJobPostCard: IJobPostCard = {
   id: '123',
   companyName: 'The Incredible Company',
   jobTitle: 'Software developer',
   logoUrl: 'https://picsum.photos/100',
+  pictureUrl: 'https://picsum.photos/300',
   tags: [
     'javascript',
     'software development',
@@ -13,7 +17,8 @@ const MockJobPostCard: IJobPostCard = {
     'react native',
     'node.js',
   ],
-  shortDescription: lorem280c,
+  shortDescription: lorem400c,
+  longDescription: lorem2000c,
 }
 
 export default function getSingleMockJobCard(): IJobPostCard {

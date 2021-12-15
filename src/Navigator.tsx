@@ -36,8 +36,8 @@ export type NavigationPropType = CompositeNavigationProp<
   BottomTabNavigationProp<RootStackParamList>
 >
 
-const MainStack = createNativeStackNavigator<MainStackParamList>()
 const RootStack = createBottomTabNavigator<RootStackParamList>()
+const MainStack = createNativeStackNavigator<MainStackParamList>()
 
 const RootNavigator = () => (
   <RootStack.Navigator
