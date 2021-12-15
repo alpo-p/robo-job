@@ -26,6 +26,6 @@ export const rootNavigatorScreenOptions = ({ route }) => ({
   tabBarInactiveTintColor: 'gray',
   tabBarShowLabel: false,
   tabBarHideOnKeyboard: true,
-  tabBarStyle: { backgroundColor: 'black' },
+  tabBarStyle: { backgroundColor: 'black', borderTopWidth: 0 },
   headerShown: false,
 })

@@ -10,9 +10,8 @@ const ButtonContainer: React.FC = () => {
   return (
     <View
       style={{
-        flexDirection: 'column',
-        padding: 4,
         marginLeft: 'auto',
+        bottom: 10,
       }}
     >
       <IconButton
