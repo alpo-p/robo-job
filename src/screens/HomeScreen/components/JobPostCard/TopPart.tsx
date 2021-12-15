@@ -34,7 +34,6 @@ const stylesheet = ({ height, width }: { height?: number; width?: number }) =>
     },
     topContainer: {
       marginTop: 4,
-      marginBottom: 4,
       height: 200,
     },
     imageBackground: {
