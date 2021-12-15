@@ -32,8 +32,9 @@ const Container = styled.View`
 const Tags: React.FC<Props> = ({ tags }) => {
   return (
     <Container>
-      {tags.map(tag => (
-        <Tag tag={tag} />
+      {tags.map((tag, i) => (
+        // eslint-disable-next-line react/no-array-index-key
+        <Tag key={i} tag={tag} />
       ))}
     </Container>
   )
