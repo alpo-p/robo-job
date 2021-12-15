@@ -1,7 +1,6 @@
 import React from 'react'
 import { View } from 'react-native'
-
-import { RoboButton } from '../../../../common/components/RoboButton'
+import IconButton from './IconButton'
 
 const ButtonContainer: React.FC = () => {
   const handleShowFullInfo = () => console.log('showing full info')
@@ -11,17 +10,26 @@ const ButtonContainer: React.FC = () => {
   return (
     <View
       style={{
-        flexDirection: 'row',
-        flexWrap: 'wrap',
+        flexDirection: 'column',
         padding: 4,
-        marginTop: 'auto',
-        maxHeight: 150,
-        alignContent: 'space-between',
+        marginLeft: 'auto',
       }}
     >
-      <RoboButton onPress={handleShowFullInfo} title="i" />
-      <RoboButton onPress={handleClickLike} title="<3" />
-      <RoboButton onPress={handleApplyNow} title="APPLY" />
+      <IconButton
+        iconName="information-circle-outline"
+        onPress={handleShowFullInfo}
+        color="white"
+      />
+      <IconButton
+        iconName="heart-circle-outline"
+        onPress={handleClickLike}
+        color="white"
+      />
+      <IconButton
+        iconName="chatbubbles-outline"
+        onPress={handleApplyNow}
+        color="white"
+      />
     </View>
   )
 }
