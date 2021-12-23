@@ -11,7 +11,7 @@ const ButtonContainer: React.FC = () => {
     <View
       style={{
         marginLeft: 'auto',
-        bottom: 10,
+        bottom: 100,
       }}
     >
       <IconButton

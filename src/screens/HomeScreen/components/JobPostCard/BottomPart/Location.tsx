@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Location: React.FC<Props> = ({ location }) => (
-  <View style={{ flexDirection: 'row', marginBottom: 8 }}>
+  <View style={{ flexDirection: 'row', marginTop: 8 }}>
     <Ionicons name="location" color="white" size={20} />
     <RoboText weight="light" size="small">
       {location}

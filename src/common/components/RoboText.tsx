@@ -19,9 +19,10 @@ const RoboText = styled.Text<Props>`
   }};
   font-size: ${({ size }) => {
     if (size === 'tiny') return '12px'
-    if (size === 'small') return '16px'
-    if (size === 'large') return '26px'
-    return '20px'
+    if (size === 'small') return '14px'
+    if (size === 'medium') return '16px'
+    if (size === 'large') return '20px'
+    return '14px'
   }};
   color: ${({ color }) => {
     if (color === 'primaryColorful') return sharedStyles.primaryColor

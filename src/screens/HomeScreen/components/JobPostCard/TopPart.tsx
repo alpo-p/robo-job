@@ -1,53 +1,63 @@
 import React from 'react'
 import { ImageBackground, StyleSheet, View, Image } from 'react-native'
 import { JobPostCardProps } from '.'
+import IconButton from '../../../../common/components/IconButton'
 import RoboText from '../../../../common/components/RoboText'
 import styles from '../../../../common/styles'
 
-const TopPart = ({ jobPost, width }: Omit<JobPostCardProps, 'height'>) => (
-  <View style={stylesheet({}).topContainer}>
-    <ImageBackground
-      source={{ uri: jobPost.pictureUrl }}
-      resizeMode="cover"
-      style={stylesheet({ width }).imageBackground}
-    >
-      <Image style={stylesheet({}).logo} source={{ uri: jobPost.logoUrl }} />
-      <View style={stylesheet({}).textContainer}>
-        <RoboText color="primaryDark">{jobPost.companyName}</RoboText>
-        <RoboText color="primaryDark" weight="light">
-          {jobPost.jobTitle}
-        </RoboText>
-      </View>
-    </ImageBackground>
-  </View>
-)
+const TopPart = ({ jobPost, width }: Omit<JobPostCardProps, 'height'>) => {
+  const navigateBackToSearch = () => console.log('going back to search')
+
+  return (
+    <View style={stylesheet({}).container}>
+      <ImageBackground
+        source={{ uri: jobPost.pictureUrl }}
+        resizeMode="cover"
+        style={stylesheet({ width }).imageBackground}
+      >
+        <IconButton
+          iconName="chevron-back-circle"
+          onPress={navigateBackToSearch}
+          color="white"
+          style={stylesheet({}).backIcon}
+        />
+        <Image style={stylesheet({}).logo} source={{ uri: jobPost.logoUrl }} />
+        <View style={stylesheet({}).textContainer}>
+          <RoboText color="primaryDark" size="large">
+            {jobPost.companyName}
+          </RoboText>
+          <RoboText color="primaryDark" weight="light" size="large">
+            {jobPost.jobTitle}
+          </RoboText>
+        </View>
+      </ImageBackground>
+    </View>
+  )
+}
 
 export default TopPart
 
-const stylesheet = ({ height, width }: { height?: number; width?: number }) =>
+const stylesheet = ({ width }: { height?: number; width?: number }) =>
   StyleSheet.create({
-    wrapper: {
-      flex: 1,
-      flexDirection: 'column',
-      height,
-      backgroundColor: 'black',
-    },
-    topContainer: {
-      marginTop: 4,
-      height: 200,
+    container: {
+      height: 280,
     },
     imageBackground: {
-      height: 200,
+      height: 280,
       width,
       alignItems: 'center',
     },
+    backIcon: {
+      alignSelf: 'flex-start',
+      marginTop: 40,
+      marginLeft: 8,
+    },
     logo: {
-      height: 100,
-      width: 100,
-      borderRadius: 50,
+      height: 112,
+      width: 112,
+      borderRadius: 56,
       borderWidth: 1,
       borderColor: 'white',
-      marginTop: 30,
     },
     textContainer: {
       backgroundColor: styles.lightGreyOpacity,

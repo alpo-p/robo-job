@@ -29,14 +29,15 @@ const stylesheet = StyleSheet.create({
   tag: {
     borderWidth: 0.5,
     borderColor: styles.lightGrey,
-    borderRadius: 10,
-    padding: 5,
-    margin: 2,
+    borderRadius: 4,
+    padding: 4,
+    marginRight: 6,
+    marginTop: 8,
   },
   container: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    marginBottom: 5,
+    marginTop: 8,
   },
 })
 
