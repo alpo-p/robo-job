@@ -36,7 +36,7 @@ const AuthScreen: React.FC = () => {
     const tryToSignInUserFromAuthStorage = async () => {
       const token = await authStorage.getAccessToken()
       if (token) {
-        signInWithTokenAndNavigateToRoot(token)
+        await signInWithTokenAndNavigateToRoot(token)
       }
     }
     tryToSignInUserFromAuthStorage()
@@ -62,7 +62,7 @@ const AuthScreen: React.FC = () => {
     const token = await signInWithGoogleAndReturnAccessToken()
     if (token) {
       await authStorage.setAccessToken(token)
-      signInWithTokenAndNavigateToRoot(token)
+      await signInWithTokenAndNavigateToRoot(token)
     }
   }
 

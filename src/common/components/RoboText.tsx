@@ -1,3 +1,4 @@
+import { useTheme } from '@react-navigation/native'
 import styled from 'styled-components/native'
 import sharedStyles from '../styles'
 
@@ -36,3 +37,22 @@ const RoboText = styled.Text<Props>`
 `
 
 export default RoboText
+
+const fontSizes = {
+  tiny: 12,
+  small: 14,
+  medium: 16,
+  large: 20,
+}
+
+const RoboTextNew: React.FC<Props> = ({
+  size = 'small',
+  color,
+  weight = 'normal',
+  uppercase,
+}) => {
+  const { colors } = useTheme()
+
+  const fontSize = fontSizes[size]
+  // const fontFamily =
+}

@@ -12,11 +12,13 @@ import {
   BottomTabNavigationProp,
   createBottomTabNavigator,
 } from '@react-navigation/bottom-tabs'
+import { useColorScheme } from 'react-native'
 import HomeScreen from './screens/HomeScreen'
 import AuthScreen from './screens/AuthScreen'
 import ChatScreen from './screens/ChatScreen/ChatScreen'
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
 import { rootNavigatorScreenOptions } from './configs/rootNavigatorScreenOptions'
+import { DarkTheme, LightTheme } from './common/themes'
 
 type MainStackParamList = {
   AuthScreen: undefined
@@ -50,16 +52,20 @@ const RootNavigator = () => (
   </RootStack.Navigator>
 )
 
-const Navigator = () => (
-  <NavigationContainer>
-    <MainStack.Navigator
-      initialRouteName="AuthScreen"
-      screenOptions={{ headerShown: false }}
-    >
-      <MainStack.Screen name="AuthScreen" component={AuthScreen} />
-      <MainStack.Screen name="RootNavigator" component={RootNavigator} />
-    </MainStack.Navigator>
-  </NavigationContainer>
-)
+const Navigator = () => {
+  const scheme = useColorScheme()
+
+  return (
+    <NavigationContainer theme={scheme === 'dark' ? DarkTheme : LightTheme}>
+      <MainStack.Navigator
+        initialRouteName="AuthScreen"
+        screenOptions={{ headerShown: false }}
+      >
+        <MainStack.Screen name="AuthScreen" component={AuthScreen} />
+        <MainStack.Screen name="RootNavigator" component={RootNavigator} />
+      </MainStack.Navigator>
+    </NavigationContainer>
+  )
+}
 
 export default Navigator
