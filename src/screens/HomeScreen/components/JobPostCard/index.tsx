@@ -28,7 +28,6 @@ const stylesheet = ({ height }: { height?: number }) =>
       flex: 1,
       flexDirection: 'column',
       height,
-      backgroundColor: 'black',
     },
   })
 

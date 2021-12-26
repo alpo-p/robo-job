@@ -53,7 +53,8 @@ const RootNavigator = () => (
 )
 
 const Navigator = () => {
-  const scheme = useColorScheme()
+  // const scheme = useColorScheme()
+  const scheme = 'dark'
 
   return (
     <NavigationContainer theme={scheme === 'dark' ? DarkTheme : LightTheme}>

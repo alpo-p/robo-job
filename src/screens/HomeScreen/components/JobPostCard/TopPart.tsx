@@ -23,10 +23,10 @@ const TopPart = ({ jobPost, width }: Omit<JobPostCardProps, 'height'>) => {
         />
         <Image style={stylesheet({}).logo} source={{ uri: jobPost.logoUrl }} />
         <View style={stylesheet({}).textContainer}>
-          <RoboText color="primaryDark" size="large">
+          <RoboText color={styles.darkText} size="large">
             {jobPost.companyName}
           </RoboText>
-          <RoboText color="primaryDark" weight="light" size="large">
+          <RoboText color={styles.darkText} weight="light" size="large">
             {jobPost.jobTitle}
           </RoboText>
         </View>

@@ -1,42 +1,16 @@
+import React from 'react'
 import { useTheme } from '@react-navigation/native'
-import styled from 'styled-components/native'
-import sharedStyles from '../styles'
+import { Text, TextStyle } from 'react-native'
 
 type FontSize = 'tiny' | 'small' | 'medium' | 'large'
-type Colors = 'primaryWhite' | 'primaryDark' | 'primaryColorful'
 type Weight = 'light' | 'normal' | 'bold'
 interface Props {
   size?: FontSize
-  color?: Colors
+  color?: string
   weight?: Weight
   uppercase?: boolean
+  style?: TextStyle
 }
-
-const RoboText = styled.Text<Props>`
-  font-family: ${({ weight }) => {
-    if (weight === 'light') return 'DamascusLight'
-    if (weight === 'bold') return 'DamascusBold'
-    return 'Damascus'
-  }};
-  font-size: ${({ size }) => {
-    if (size === 'tiny') return '12px'
-    if (size === 'small') return '14px'
-    if (size === 'medium') return '16px'
-    if (size === 'large') return '20px'
-    return '14px'
-  }};
-  color: ${({ color }) => {
-    if (color === 'primaryColorful') return sharedStyles.primaryColor
-    if (color === 'primaryDark') return sharedStyles.darkGrey
-    return sharedStyles.white
-  }};
-  text-transform: ${({ uppercase }) => {
-    if (uppercase) return 'uppercase'
-    return 'none'
-  }};
-`
-
-export default RoboText
 
 const fontSizes = {
   tiny: 12,
@@ -45,14 +19,39 @@ const fontSizes = {
   large: 20,
 }
 
-const RoboTextNew: React.FC<Props> = ({
+const fontFamilies = {
+  light: 'DamascusLight',
+  normal: 'Damascus',
+  bold: 'DamascusBold',
+}
+
+const RoboText: React.FC<Props> = ({
   size = 'small',
   color,
   weight = 'normal',
   uppercase,
+  children,
+  style,
 }) => {
   const { colors } = useTheme()
 
   const fontSize = fontSizes[size]
-  // const fontFamily =
+  const fontColor = color ?? colors.text
+  const fontFamily = fontFamilies[weight]
+  const upcase = uppercase ? 'uppercase' : 'none'
+  return (
+    <Text
+      style={{
+        ...style,
+        fontSize,
+        color: fontColor,
+        fontFamily,
+        textTransform: upcase,
+      }}
+    >
+      {children}
+    </Text>
+  )
 }
+
+export default RoboText
