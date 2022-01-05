@@ -30,7 +30,7 @@ export const rootNavigatorScreenOptions = (
     backgroundColor: colors.background,
     borderTopWidth: 1,
     borderColor: colors.border,
-    height: 65,
+    height: 70,
   },
   headerShown: false,
   tabBarShowLabel: false,
