@@ -1,11 +1,22 @@
-import React from 'react'
+import { useTheme } from '@react-navigation/native'
+import React, { useState } from 'react'
 import { View } from 'react-native'
 import IconButton from '../../../../../common/components/IconButton'
 
 const ButtonContainer: React.FC = () => {
+  // get this actually from the data/context/something
+  const [isHeartPressed, setIsHeartPressed] = useState(false)
+
   const handleShowFullInfo = () => console.log('showing full info')
-  const handleClickLike = () => console.log('Liking')
+  const handleClickLike = () => {
+    console.log('Liking')
+    setIsHeartPressed(b => !b)
+  }
   const handleApplyNow = () => console.log('Applying!')
+
+  const heartIconName = isHeartPressed ? 'heart' : 'heart-outline'
+
+  const { colors } = useTheme()
 
   return (
     <View
@@ -15,19 +26,19 @@ const ButtonContainer: React.FC = () => {
       }}
     >
       <IconButton
-        iconName="information-circle-outline"
+        iconName="ios-information-circle-outline"
         onPress={handleShowFullInfo}
-        color="white"
+        color={colors.primary}
       />
       <IconButton
-        iconName="heart-circle-outline"
+        iconName={heartIconName}
         onPress={handleClickLike}
-        color="white"
+        color={colors.primary}
       />
       <IconButton
-        iconName="chatbubbles-outline"
+        iconName="chatbox-ellipses"
         onPress={handleApplyNow}
-        color="white"
+        color={colors.primary}
       />
     </View>
   )

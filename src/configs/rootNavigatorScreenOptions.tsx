@@ -16,9 +16,9 @@ export const rootNavigatorScreenOptions = (
     if (route.name === 'HomeScreen') {
       iconName = focused ? 'home' : 'home-outline'
     } else if (route.name === 'ChatScreen') {
-      iconName = focused ? 'chatbox-ellipses' : 'chatbox-ellipses-outline'
+      iconName = focused ? 'chatbox' : 'chatbox-outline'
     } else if (route.name === 'ProfileScreen') {
-      iconName = focused ? 'clipboard' : 'clipboard-outline'
+      iconName = focused ? 'person' : 'person-outline'
     }
 
     // @ts-ignore

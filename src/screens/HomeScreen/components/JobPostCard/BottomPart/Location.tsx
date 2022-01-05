@@ -16,7 +16,7 @@ const Location: React.FC<Props> = ({ location }) => {
       <Ionicons
         style={{ marginTop: -3, marginRight: 2 }}
         name="location"
-        color={colors.icon}
+        color={colors.primary}
         size={20}
       />
       <RoboText weight="light" size="small">
