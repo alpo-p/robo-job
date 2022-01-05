@@ -7,6 +7,8 @@ import {
 import {
   CompositeNavigationProp,
   NavigationContainer,
+  RouteProp,
+  useTheme,
 } from '@react-navigation/native'
 import {
   BottomTabNavigationProp,
@@ -32,6 +34,11 @@ type RootStackParamList = {
   ProfileScreen: undefined
 }
 
+export type RootStackRouteProp = RouteProp<
+  RootStackParamList,
+  keyof RootStackParamList
+>
+
 // This is used as type parameter for useNavigation
 export type NavigationPropType = CompositeNavigationProp<
   NativeStackNavigationProp<MainStackParamList>,
@@ -41,20 +48,23 @@ export type NavigationPropType = CompositeNavigationProp<
 const RootStack = createBottomTabNavigator<RootStackParamList>()
 const MainStack = createNativeStackNavigator<MainStackParamList>()
 
-const RootNavigator = () => (
-  <RootStack.Navigator
-    initialRouteName="HomeScreen"
-    screenOptions={rootNavigatorScreenOptions}
-  >
-    <RootStack.Screen name="HomeScreen" component={HomeScreen} />
-    <RootStack.Screen name="ChatScreen" component={ChatScreen} />
-    <RootStack.Screen name="ProfileScreen" component={ProfileScreen} />
-  </RootStack.Navigator>
-)
+const RootNavigator = () => {
+  const { colors } = useTheme()
+  return (
+    <RootStack.Navigator
+      initialRouteName="HomeScreen"
+      screenOptions={({ route }) => rootNavigatorScreenOptions(route, colors)}
+    >
+      <RootStack.Screen name="HomeScreen" component={HomeScreen} />
+      <RootStack.Screen name="ChatScreen" component={ChatScreen} />
+      <RootStack.Screen name="ProfileScreen" component={ProfileScreen} />
+    </RootStack.Navigator>
+  )
+}
 
 const Navigator = () => {
-  // const scheme = useColorScheme()
-  const scheme = 'dark'
+  const scheme = useColorScheme()
+  // const scheme = 'dark'
 
   return (
     <NavigationContainer theme={scheme === 'dark' ? DarkTheme : LightTheme}>

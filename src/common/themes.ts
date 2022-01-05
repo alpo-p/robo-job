@@ -4,6 +4,15 @@ import {
 } from '@react-navigation/native'
 import styles from './styles'
 
+export type ThemeColors = {
+  primary: string
+  background: string
+  card: string
+  text: string
+  border: string
+  notification: string
+}
+
 export const LightTheme = {
   ...DefaultTheme,
   colors: {
@@ -20,5 +29,6 @@ export const DarkTheme = {
     primary: styles.primaryColor,
     text: styles.whiteText,
     card: '#121212',
+    border: '#121212',
   },
 }

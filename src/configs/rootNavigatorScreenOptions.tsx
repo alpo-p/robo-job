@@ -2,11 +2,13 @@ import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { IoniconsIconNames } from '../common/types'
 import sharedStyles from '../common/styles'
+import { ThemeColors } from '../common/themes'
+import { RootStackRouteProp } from '../Navigator'
 
-// TODO: properly type this file
-
-// @ts-ignore
-export const rootNavigatorScreenOptions = ({ route }) => ({
+export const rootNavigatorScreenOptions = (
+  route: RootStackRouteProp,
+  colors: ThemeColors,
+) => ({
   // @ts-ignore
   tabBarIcon: ({ focused, color, size }) => {
     let iconName: IoniconsIconNames
@@ -25,6 +27,10 @@ export const rootNavigatorScreenOptions = ({ route }) => ({
   tabBarInactiveTintColor: 'gray',
   tabBarShowLabel: false,
   tabBarHideOnKeyboard: true,
-  tabBarStyle: { backgroundColor: 'black', borderTopWidth: 0 },
+  tabBarStyle: {
+    backgroundColor: colors.background,
+    borderTopWidth: 1,
+    borderColor: colors.border,
+  },
   headerShown: false,
 })
