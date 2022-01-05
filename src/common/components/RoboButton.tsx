@@ -1,30 +1,27 @@
+import { useTheme } from '@react-navigation/native'
 import React from 'react'
-import styled from 'styled-components/native'
-import sharedStyles from '../styles'
-
-// TODO: make width 100% and then use containers in the actual app
-const ButtonContainer = styled.TouchableOpacity`
-  align-items: center;
-  padding: 10px;
-  border-width: 0.5px;
-  width: 33%;
-  border-radius: 16px;
-  border-color: ${sharedStyles.darkGrey};
-`
-
-const ButtonContent = styled.Text`
-  font-family: DamascusLight;
-  font-size: 14px;
-  color: ${sharedStyles.darkGrey};
-`
+import { TouchableOpacity } from 'react-native'
+import RoboText from './RoboText'
 
 interface Props {
   onPress: () => void
   title?: string
 }
 
-export const RoboButton: React.FC<Props> = ({ onPress, children, title }) => (
-  <ButtonContainer onPress={onPress}>
-    {title ? <ButtonContent>{title}</ButtonContent> : children}
-  </ButtonContainer>
-)
+export const RoboButton: React.FC<Props> = ({ onPress, children, title }) => {
+  const { colors } = useTheme()
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      style={{
+        backgroundColor: colors.card,
+        padding: 10,
+        borderWidth: 0.5,
+        borderRadius: 16,
+        borderColor: colors.border,
+      }}
+    >
+      {title ? <RoboText>{title}</RoboText> : children}
+    </TouchableOpacity>
+  )
+}
