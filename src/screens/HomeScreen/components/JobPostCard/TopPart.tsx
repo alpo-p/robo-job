@@ -1,3 +1,4 @@
+import { LinearGradient } from 'expo-linear-gradient'
 import React from 'react'
 import { ImageBackground, StyleSheet, View, Image } from 'react-native'
 import { JobPostCardProps } from '.'
@@ -22,14 +23,23 @@ const TopPart = ({ jobPost, width }: Omit<JobPostCardProps, 'height'>) => {
           style={stylesheet({}).backIcon}
         />
         <Image style={stylesheet({}).logo} source={{ uri: jobPost.logoUrl }} />
-        <View style={stylesheet({}).textContainer}>
-          <RoboText color={styles.darkText} size="large">
+        <LinearGradient
+          style={{
+            width: '100%',
+            alignItems: 'center',
+            position: 'absolute',
+            bottom: 0,
+            paddingBottom: 4,
+          }}
+          colors={['transparent', 'rgba(0,0,0,0.8)']}
+        >
+          <RoboText uppercase color={styles.white} size="large" weight="bold">
             {jobPost.companyName}
           </RoboText>
-          <RoboText color={styles.darkText} weight="light" size="large">
+          <RoboText color={styles.white} size="large">
             {jobPost.jobTitle}
           </RoboText>
-        </View>
+        </LinearGradient>
       </ImageBackground>
     </View>
   )
@@ -59,8 +69,5 @@ const stylesheet = ({ width }: { height?: number; width?: number }) =>
       borderWidth: 1,
       borderColor: 'white',
     },
-    textContainer: {
-      backgroundColor: styles.lightGreyOpacity,
-      alignItems: 'center',
-    },
+    textContainer: {},
   })
