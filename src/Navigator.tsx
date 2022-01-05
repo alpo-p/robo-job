@@ -47,6 +47,7 @@ export type NavigationPropType = CompositeNavigationProp<
 const RootStack = createBottomTabNavigator<RootStackParamList>()
 const MainStack = createNativeStackNavigator<MainStackParamList>()
 
+// aka. the bottom tab navigator
 const RootNavigator = () => {
   const { colors } = useTheme()
 
@@ -63,8 +64,8 @@ const RootNavigator = () => {
 }
 
 const Navigator = () => {
-  // const scheme = useColorScheme()
-  const scheme = 'dark'
+  const scheme = useColorScheme()
+  // const scheme = 'dark'
 
   return (
     <NavigationContainer theme={scheme === 'dark' ? DarkTheme : LightTheme}>
