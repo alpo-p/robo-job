@@ -1,5 +1,6 @@
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
+import { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs'
 import { IoniconsIconNames } from '../common/types'
 import sharedStyles from '../common/styles'
 import { ThemeColors } from '../common/themes'
@@ -8,7 +9,7 @@ import { RootStackRouteProp } from '../Navigator'
 export const rootNavigatorScreenOptions = (
   route: RootStackRouteProp,
   colors: ThemeColors,
-) => ({
+): BottomTabNavigationOptions => ({
   // @ts-ignore
   tabBarIcon: ({ focused, color, size }) => {
     let iconName: IoniconsIconNames
@@ -25,12 +26,13 @@ export const rootNavigatorScreenOptions = (
   },
   tabBarActiveTintColor: sharedStyles.primaryColor,
   tabBarInactiveTintColor: 'gray',
-  tabBarShowLabel: false,
-  tabBarHideOnKeyboard: true,
   tabBarStyle: {
     backgroundColor: colors.background,
     borderTopWidth: 1,
     borderColor: colors.border,
+    height: 65,
   },
   headerShown: false,
+  tabBarShowLabel: false,
+  tabBarHideOnKeyboard: true,
 })
