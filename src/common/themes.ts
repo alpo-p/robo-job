@@ -21,6 +21,7 @@ export const LightTheme = {
     primary: styles.primaryColor,
     text: styles.darkText,
     icon: '#121212',
+    background: styles.white,
   },
 }
 

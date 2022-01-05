@@ -5,8 +5,12 @@ declare module '@env' {
 }
 
 // This is declared so typings on the themes work when using useTheme()
+/**
+ * 
+ * doesnt work as of now
 declare module '@react-navigation/native' {
   export interface Theme {
-    colors: ThemeColor
+    colors: keyof ThemeColor
   }
 }
+*/
