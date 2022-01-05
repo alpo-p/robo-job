@@ -1,4 +1,5 @@
 import { Ionicons } from '@expo/vector-icons'
+import { useTheme } from '@react-navigation/native'
 import React from 'react'
 import { View } from 'react-native'
 
@@ -8,13 +9,21 @@ interface Props {
   location: string
 }
 
-const Location: React.FC<Props> = ({ location }) => (
-  <View style={{ flexDirection: 'row', marginTop: 8 }}>
-    <Ionicons name="location" color="white" size={20} />
-    <RoboText weight="light" size="small">
-      {location}
-    </RoboText>
-  </View>
-)
+const Location: React.FC<Props> = ({ location }) => {
+  const { colors } = useTheme()
+  return (
+    <View style={{ flexDirection: 'row', marginTop: 8 }}>
+      <Ionicons
+        style={{ marginTop: -3, marginRight: 2 }}
+        name="location"
+        color={colors.icon}
+        size={20}
+      />
+      <RoboText weight="light" size="small">
+        {location}
+      </RoboText>
+    </View>
+  )
+}
 
 export default Location

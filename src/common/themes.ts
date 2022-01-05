@@ -11,6 +11,7 @@ export type ThemeColors = {
   text: string
   border: string
   notification: string
+  icon: string
 }
 
 export const LightTheme = {
@@ -19,6 +20,7 @@ export const LightTheme = {
     ...DefaultTheme.colors,
     primary: styles.primaryColor,
     text: styles.darkText,
+    icon: '#121212',
   },
 }
 
@@ -30,5 +32,6 @@ export const DarkTheme = {
     text: styles.whiteText,
     card: '#121212',
     border: '#121212',
+    icon: styles.whiteText,
   },
 }

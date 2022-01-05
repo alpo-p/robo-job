@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unstable-nested-components */
 import React from 'react'
 import {
   createNativeStackNavigator,
@@ -50,6 +49,7 @@ const MainStack = createNativeStackNavigator<MainStackParamList>()
 
 const RootNavigator = () => {
   const { colors } = useTheme()
+
   return (
     <RootStack.Navigator
       initialRouteName="HomeScreen"
@@ -63,8 +63,8 @@ const RootNavigator = () => {
 }
 
 const Navigator = () => {
-  const scheme = useColorScheme()
-  // const scheme = 'dark'
+  // const scheme = useColorScheme()
+  const scheme = 'dark'
 
   return (
     <NavigationContainer theme={scheme === 'dark' ? DarkTheme : LightTheme}>
