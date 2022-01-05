@@ -1,6 +1,6 @@
 import { Ionicons } from '@expo/vector-icons'
 import React from 'react'
-import { TouchableHighlight, ViewStyle } from 'react-native'
+import { TouchableOpacity, ViewStyle } from 'react-native'
 import { IoniconsIconNames } from '../types'
 
 interface P {
@@ -11,9 +11,9 @@ interface P {
   style?: ViewStyle
 }
 const IconButton = ({ iconName, color, onPress, size = 50, style }: P) => (
-  <TouchableHighlight onPress={onPress} style={style}>
+  <TouchableOpacity onPress={onPress} style={style}>
     <Ionicons name={iconName} color={color} size={size} />
-  </TouchableHighlight>
+  </TouchableOpacity>
 )
 
 export default IconButton
