@@ -25,6 +25,6 @@ export default ({ jobPost }: P) => (
     <View style={{ marginTop: 8 }} />
     <Location location={jobPost.location} />
     <Deadline dl={jobPost.deadline} />
-    <ShortDescription description={jobPost.shortDescription} />
+    <ShortDescription description={jobPost.shortDescription} useWiderStyle />
   </View>
 )

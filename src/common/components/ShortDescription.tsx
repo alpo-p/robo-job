@@ -5,13 +5,14 @@ import ContentText from './ContentText'
 
 interface Props {
   description: string
+  useWiderStyle?: boolean
 }
 
-const Description: React.FC<Props> = ({ description }) => {
+const Description: React.FC<Props> = ({ description, useWiderStyle }) => {
   return (
     <View
       style={{
-        width: 280,
+        width: useWiderStyle ? '100%' : 280,
       }}
     >
       <ContentText>{description}</ContentText>

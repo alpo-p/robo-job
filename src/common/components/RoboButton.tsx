@@ -14,11 +14,11 @@ export const RoboButton: React.FC<Props> = ({ onPress, children, title }) => {
     <TouchableOpacity
       onPress={onPress}
       style={{
-        backgroundColor: colors.card,
+        backgroundColor: colors.background,
         padding: 10,
         borderWidth: 0.5,
         borderRadius: 16,
-        borderColor: colors.border,
+        borderColor: colors.primary,
       }}
     >
       {title ? <RoboText>{title}</RoboText> : children}

@@ -5,7 +5,6 @@ import { ScrollView, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { IJobPostCard } from '../../common/types'
 import BasicInfo from './components/BasicInfo'
-import CardBreak from './components/CardBreak'
 import HoveringButtons from './components/HoveringButtons'
 import LongJobDescription from './components/LongJobDescription'
 import PictureAndLogo from './components/PictureAndLogo'
@@ -35,8 +34,8 @@ const DetailedJobCard: React.FC<P> = ({
           }}
         >
           <BasicInfo jobPost={jobPost} />
-          <LongJobDescription desc={jobPost.longDescription} />
-          <AboutTheCompany />
+          <LongJobDescription description={jobPost.longDescription} />
+          <AboutTheCompany jobPost={jobPost} />
           <HoveringButtons id={jobPost.id} />
         </View>
       </ScrollView>
