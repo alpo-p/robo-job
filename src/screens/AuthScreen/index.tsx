@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Text } from 'react-native'
 import * as Google from 'expo-google-app-auth'
 import { IOS_CLIENT_ID } from '@env'
@@ -13,11 +13,13 @@ import { SignInWithGoogleButton } from './components/SignInWithGoogleButton'
 import AuthStorage from '../../utils/authStorage'
 import useAuthStorage from '../../hooks/useAuthStorage'
 import { SafeContainer } from '../../common/components/SafeContainer'
+import { RoboButton } from '../../common/components/RoboButton'
+import { NavigationPropType } from '../../Navigator'
 
 const AuthScreen: React.FC = () => {
   const auth = getAuth()
   const authStorage: AuthStorage = useAuthStorage()
-  const navigation = useNavigation()
+  const navigation = useNavigation<NavigationPropType>()
 
   const signInWithTokenAndNavigateToRoot = async (token: string) => {
     const credential = GoogleAuthProvider.credential(null, token)
@@ -32,6 +34,8 @@ const AuthScreen: React.FC = () => {
     navigation.navigate('RootNavigator')
   }
 
+  /*
+  * This is used to enable autochecking of "is the user logged in?"
   useEffect(() => {
     const tryToSignInUserFromAuthStorage = async () => {
       const token = await authStorage.getAccessToken()
@@ -39,8 +43,10 @@ const AuthScreen: React.FC = () => {
         await signInWithTokenAndNavigateToRoot(token)
       }
     }
+
     tryToSignInUserFromAuthStorage()
   })
+  */
 
   const signInWithGoogleAndReturnAccessToken = async () => {
     try {
@@ -66,10 +72,13 @@ const AuthScreen: React.FC = () => {
     }
   }
 
+  const signInAsDemo = () => navigation.navigate('RootNavigator')
+
   return (
     <SafeContainer>
       <Text>Sign in by clicking below</Text>
       <SignInWithGoogleButton onPress={() => handleSignIn()} />
+      <RoboButton onPress={() => signInAsDemo()} title="Sign in as demo" />
     </SafeContainer>
   )
 }
