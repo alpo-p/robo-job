@@ -38,6 +38,7 @@ const Tags: React.FC<Props> = ({ tags }) => (
       flexWrap: 'wrap',
       // we have to deduct 16 since there's already 2 x 8 margin
       marginTop: styles.commonSize - 16,
+      marginBottom: styles.commonSize - 8,
     }}
   >
     {tags.map((tag, i) => (
