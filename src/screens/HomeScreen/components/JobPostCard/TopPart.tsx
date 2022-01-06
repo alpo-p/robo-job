@@ -21,6 +21,7 @@ const TopPart = ({ jobPost, width }: Omit<JobPostCardProps, 'height'>) => {
           onPress={navigateBackToSearch}
           color={styles.primaryColor}
           style={stylesheet({}).backIcon}
+          size={50}
         />
         <Image style={stylesheet({}).logo} source={{ uri: jobPost.logoUrl }} />
         <LinearGradient
@@ -29,7 +30,7 @@ const TopPart = ({ jobPost, width }: Omit<JobPostCardProps, 'height'>) => {
             alignItems: 'center',
             position: 'absolute',
             bottom: 0,
-            paddingBottom: 12,
+            paddingBottom: 6,
             zIndex: 1,
           }}
           colors={[
@@ -44,13 +45,7 @@ const TopPart = ({ jobPost, width }: Omit<JobPostCardProps, 'height'>) => {
           <RoboText uppercase color={styles.white} size="large" weight="bold">
             {jobPost.companyName}
           </RoboText>
-          <RoboText
-            color={styles.white}
-            size="large"
-            style={{
-              textAlign: 'center',
-            }}
-          >
+          <RoboText color={styles.white} size="large">
             {jobPost.jobTitle}
           </RoboText>
         </LinearGradient>
@@ -74,6 +69,7 @@ const stylesheet = ({ width }: { height?: number; width?: number }) =>
       alignSelf: 'flex-start',
       marginTop: 40,
       marginLeft: 8,
+      marginBottom: 6,
     },
     logo: {
       height: 112,

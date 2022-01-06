@@ -10,7 +10,7 @@ interface P {
   size?: number
   style?: ViewStyle
 }
-const IconButton = ({ iconName, color, onPress, size = 50, style }: P) => (
+const IconButton = ({ iconName, color, onPress, size = 25, style }: P) => (
   <TouchableOpacity onPress={onPress} style={style}>
     <Ionicons name={iconName} color={color} size={size} />
   </TouchableOpacity>
