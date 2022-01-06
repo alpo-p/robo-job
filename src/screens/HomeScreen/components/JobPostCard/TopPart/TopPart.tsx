@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import { JobPostCardProps } from '../..'
-import CompanyLogo from '../../../../../../common/components/CompanyLogo'
-import CompanyNameAndTitle from '../../../../../../common/components/CompanyNameAndTitle'
-import GoBackButtonHeavy from '../../../../../../common/components/GoBackButtonHeavy'
-import JobPostImageBackground from '../../../../../../common/components/JobPostImageBackground'
+import { JobPostCardProps } from '..'
+import CompanyLogo from '../../../../../common/components/CompanyLogo'
+import CompanyNameAndTitle from '../../../../../common/components/CompanyNameAndTitle'
+import GoBackButtonHeavy from '../../../../../common/components/GoBackButtonHeavy'
+import JobPostImageBackground from '../../../../../common/components/JobPostImageBackground'
 import LinearGradientForPicture from './LinearGradientForPicture'
 
 const TopPart = ({ jobPost }: Omit<JobPostCardProps, 'height'>) => {
