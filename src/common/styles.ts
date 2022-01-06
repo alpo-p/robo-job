@@ -10,4 +10,6 @@ export default {
   backgroundWhite: 'rgb(242, 242, 242)',
   darkText: 'rgb(28, 28, 30)',
   whiteText: 'rgba(255, 255, 255, 0.87)',
+  commonSize: 24,
+  biggerCommonSize: 38,
 }

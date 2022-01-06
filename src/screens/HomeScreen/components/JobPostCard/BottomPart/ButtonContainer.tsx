@@ -2,6 +2,7 @@ import { useTheme } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { View } from 'react-native'
 import IconButton from '../../../../../common/components/IconButton'
+import styles from '../../../../../common/styles'
 
 const ButtonContainer: React.FC = () => {
   // get this actually from the data/context/something
@@ -22,7 +23,8 @@ const ButtonContainer: React.FC = () => {
     <View
       style={{
         marginLeft: 'auto',
-        bottom: 100,
+        left: 0,
+        bottom: '30%',
       }}
     >
       <IconButton
@@ -30,13 +32,21 @@ const ButtonContainer: React.FC = () => {
         onPress={handleShowFullInfo}
         color={colors.primary}
       />
+      <View style={{ marginTop: styles.commonSize }} />
       <IconButton
         iconName={heartIconName}
         onPress={handleClickLike}
         color={colors.primary}
       />
+      <View style={{ marginTop: styles.commonSize }} />
       <IconButton
         iconName="chatbox-ellipses"
+        onPress={handleApplyNow}
+        color={colors.primary}
+      />
+      <View style={{ marginTop: styles.commonSize }} />
+      <IconButton
+        iconName="share-social-outline"
         onPress={handleApplyNow}
         color={colors.primary}
       />

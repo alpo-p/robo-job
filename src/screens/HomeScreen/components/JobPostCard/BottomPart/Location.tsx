@@ -19,7 +19,7 @@ const Location: React.FC<Props> = ({ location }) => {
         color={colors.primary}
         size={20}
       />
-      <RoboText weight="light" size="small">
+      <RoboText uppercase weight="light" size="small">
         {location}
       </RoboText>
     </View>

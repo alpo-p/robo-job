@@ -17,9 +17,9 @@ const TopPart = ({ jobPost, width }: Omit<JobPostCardProps, 'height'>) => {
         style={stylesheet({ width }).imageBackground}
       >
         <IconButton
-          iconName="chevron-back-circle-outline"
+          iconName="chevron-back-circle"
           onPress={navigateBackToSearch}
-          color={styles.primaryColor}
+          color="white"
           style={stylesheet({}).backIcon}
           size={50}
         />
