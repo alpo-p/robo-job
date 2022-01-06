@@ -1,19 +1,31 @@
-import { useTheme } from '@react-navigation/native'
+import { useNavigation, useTheme } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { View } from 'react-native'
 import IconButton from '../../../../../common/components/IconButton'
 import styles from '../../../../../common/styles'
+import { NavigationPropType } from '../../../../../Navigator'
 
-const ButtonsContainer: React.FC = () => {
+interface Props {
+  id: string
+}
+
+const ButtonsContainer: React.FC<Props> = ({ id }) => {
   // get this actually from the data/context/something
   const [isHeartPressed, setIsHeartPressed] = useState(false)
+  const navigation = useNavigation<NavigationPropType>()
 
-  const handleShowFullInfo = () => console.log('showing full info')
+  const navigateToDetails = () => {
+    navigation.navigate('DetailedJobCard', {
+      id,
+    })
+  }
+
   const handleClickLike = () => {
     console.log('Liking')
     setIsHeartPressed(b => !b)
   }
   const handleApplyNow = () => console.log('Applying!')
+  const handleShare = () => console.log('Sharing!')
 
   const heartIconName = isHeartPressed ? 'heart' : 'heart-outline'
 
@@ -29,7 +41,7 @@ const ButtonsContainer: React.FC = () => {
     >
       <IconButton
         iconName="ios-information-circle-outline"
-        onPress={handleShowFullInfo}
+        onPress={navigateToDetails}
         color={colors.primary}
       />
       <View style={{ marginTop: styles.commonSize }} />
@@ -47,7 +59,7 @@ const ButtonsContainer: React.FC = () => {
       <View style={{ marginTop: styles.commonSize }} />
       <IconButton
         iconName="share-social-outline"
-        onPress={handleApplyNow}
+        onPress={handleShare}
         color={colors.primary}
       />
     </View>

@@ -20,10 +20,12 @@ import ChatScreen from './screens/ChatScreen/ChatScreen'
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
 import { bottomTabNavigatorOptions } from './configs/bottomTabNavigatorOptions'
 import { DarkTheme, LightTheme } from './common/themes'
+import DetailedJobCard from './screens/DetailedJobCard'
 
 type MainStackParamList = {
   AuthScreen: undefined
   RootNavigator: undefined
+  DetailedJobCard: { id: string }
 }
 
 // When adding new screens, remember to add them here
@@ -45,8 +47,6 @@ export type NavigationPropType = CompositeNavigationProp<
 >
 
 const RootStack = createBottomTabNavigator<RootStackParamList>()
-const MainStack = createNativeStackNavigator<MainStackParamList>()
-
 const BottomTabNavigator = () => {
   const { colors } = useTheme()
 
@@ -62,6 +62,7 @@ const BottomTabNavigator = () => {
   )
 }
 
+const MainStack = createNativeStackNavigator<MainStackParamList>()
 const Navigator = () => {
   const scheme = useColorScheme()
   // const scheme = 'dark'
@@ -74,6 +75,7 @@ const Navigator = () => {
       >
         <MainStack.Screen name="AuthScreen" component={AuthScreen} />
         <MainStack.Screen name="RootNavigator" component={BottomTabNavigator} />
+        <MainStack.Screen name="DetailedJobCard" component={DetailedJobCard} />
       </MainStack.Navigator>
     </NavigationContainer>
   )

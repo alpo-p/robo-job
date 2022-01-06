@@ -11,7 +11,7 @@ const BottomPart = ({ jobPost }: { jobPost: IJobPostCard }) => (
     <Location location={jobPost.location} />
     <Tags tags={jobPost.tags} />
     <Description description={jobPost.shortDescription} />
-    <ButtonsContainer />
+    <ButtonsContainer id={jobPost.id} />
   </View>
 )
 
