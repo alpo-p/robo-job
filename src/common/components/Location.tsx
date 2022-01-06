@@ -3,7 +3,7 @@ import { useTheme } from '@react-navigation/native'
 import React from 'react'
 import { View } from 'react-native'
 
-import RoboText from '../../../../../common/components/RoboText'
+import RoboText from './RoboText'
 
 interface Props {
   location: string

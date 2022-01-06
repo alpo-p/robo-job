@@ -3,20 +3,21 @@ import React, { useState } from 'react'
 import { View } from 'react-native'
 import IconButton from '../../../../../common/components/IconButton'
 import styles from '../../../../../common/styles'
+import { IJobPostCard } from '../../../../../common/types'
 import { NavigationPropType } from '../../../../../Navigator'
 
 interface Props {
-  id: string
+  jobPost: IJobPostCard
 }
 
-const ButtonsContainer: React.FC<Props> = ({ id }) => {
+const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
   // get this actually from the data/context/something
   const [isHeartPressed, setIsHeartPressed] = useState(false)
   const navigation = useNavigation<NavigationPropType>()
 
   const navigateToDetails = () => {
     navigation.navigate('DetailedJobCard', {
-      id,
+      jobPost,
     })
   }
 

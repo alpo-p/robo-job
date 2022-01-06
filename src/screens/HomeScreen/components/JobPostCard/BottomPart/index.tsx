@@ -1,17 +1,17 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import { IJobPostCard } from '../../../../../common/types'
-import Description from './Description'
+import ShortDescription from '../../../../../common/components/ShortDescription'
 import Tags from './Tags'
-import Location from './Location'
+import Location from '../../../../../common/components/Location'
 import ButtonsContainer from './ButtonsContainer'
 
 const BottomPart = ({ jobPost }: { jobPost: IJobPostCard }) => (
   <View style={stylesheet.container}>
     <Location location={jobPost.location} />
     <Tags tags={jobPost.tags} />
-    <Description description={jobPost.shortDescription} />
-    <ButtonsContainer id={jobPost.id} />
+    <ShortDescription description={jobPost.shortDescription} />
+    <ButtonsContainer jobPost={jobPost} />
   </View>
 )
 

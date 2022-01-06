@@ -21,11 +21,12 @@ import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
 import { bottomTabNavigatorOptions } from './configs/bottomTabNavigatorOptions'
 import { DarkTheme, LightTheme } from './common/themes'
 import DetailedJobCard from './screens/DetailedJobCard'
+import { IJobPostCard } from './common/types'
 
 type MainStackParamList = {
   AuthScreen: undefined
   RootNavigator: undefined
-  DetailedJobCard: { id: string }
+  DetailedJobCard: { jobPost: IJobPostCard }
 }
 
 // When adding new screens, remember to add them here

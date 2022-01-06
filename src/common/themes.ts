@@ -21,6 +21,7 @@ export const LightTheme = {
     text: styles.darkText,
     icon: '#121212',
     background: styles.white,
+    card: styles.lightGrey,
   },
 }
 

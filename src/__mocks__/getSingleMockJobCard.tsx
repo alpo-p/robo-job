@@ -20,6 +20,9 @@ const MockJobPostCard: IJobPostCard = {
   ],
   shortDescription: lorem400c,
   longDescription: lorem2000c,
+  deadline: '8 days',
+  aboutTheCompany: lorem400c,
+  linkToWebsite: 'www.goatze.com',
 }
 
 export default function getSingleMockJobCard(): IJobPostCard {

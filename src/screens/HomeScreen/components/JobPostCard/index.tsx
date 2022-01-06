@@ -3,21 +3,16 @@ import { StyleSheet, View } from 'react-native'
 
 import { IJobPostCard } from '../../../../common/types'
 import BottomPart from './BottomPart'
-import TopPart from './TopPart'
+import TopPart from './BottomPart/TopPart/TopPart'
 
 export interface JobPostCardProps {
   jobPost: IJobPostCard
   height: number
-  width: number
 }
 
-const JobPostCard: React.FC<JobPostCardProps> = ({
-  jobPost,
-  height,
-  width,
-}) => (
+const JobPostCard: React.FC<JobPostCardProps> = ({ jobPost, height }) => (
   <View style={stylesheet({ height }).wrapper}>
-    <TopPart jobPost={jobPost} width={width} />
+    <TopPart jobPost={jobPost} />
     <BottomPart jobPost={jobPost} />
   </View>
 )

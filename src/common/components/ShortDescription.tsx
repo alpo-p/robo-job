@@ -1,8 +1,8 @@
 import React from 'react'
 import { View } from 'react-native'
 
-import ContentText from '../../../../../common/components/ContentText'
-import styles from '../../../../../common/styles'
+import ContentText from './ContentText'
+import styles from '../styles'
 
 interface Props {
   description: string

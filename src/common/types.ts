@@ -12,4 +12,7 @@ export interface IJobPostCard {
   tags: string[]
   shortDescription: string
   longDescription: string
+  deadline: string
+  aboutTheCompany: string
+  linkToWebsite: string
 }
