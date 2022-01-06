@@ -6,7 +6,7 @@ import sharedStyles from '../common/styles'
 import { ThemeColors } from '../common/themes'
 import { RootStackRouteProp } from '../Navigator'
 
-export const rootNavigatorScreenOptions = (
+export const bottomTabNavigatorOptions = (
   route: RootStackRouteProp,
   colors: ThemeColors,
 ): BottomTabNavigationOptions => ({

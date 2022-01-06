@@ -11,7 +11,6 @@ export type ThemeColors = {
   text: string
   border: string
   notification: string
-  icon: string
 }
 
 export const LightTheme = {

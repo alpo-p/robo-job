@@ -18,7 +18,7 @@ import HomeScreen from './screens/HomeScreen'
 import AuthScreen from './screens/AuthScreen'
 import ChatScreen from './screens/ChatScreen/ChatScreen'
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
-import { rootNavigatorScreenOptions } from './configs/rootNavigatorScreenOptions'
+import { bottomTabNavigatorOptions } from './configs/bottomTabNavigatorOptions'
 import { DarkTheme, LightTheme } from './common/themes'
 
 type MainStackParamList = {
@@ -47,14 +47,13 @@ export type NavigationPropType = CompositeNavigationProp<
 const RootStack = createBottomTabNavigator<RootStackParamList>()
 const MainStack = createNativeStackNavigator<MainStackParamList>()
 
-// aka. the bottom tab navigator
-const RootNavigator = () => {
+const BottomTabNavigator = () => {
   const { colors } = useTheme()
 
   return (
     <RootStack.Navigator
       initialRouteName="HomeScreen"
-      screenOptions={({ route }) => rootNavigatorScreenOptions(route, colors)}
+      screenOptions={({ route }) => bottomTabNavigatorOptions(route, colors)}
     >
       <RootStack.Screen name="HomeScreen" component={HomeScreen} />
       <RootStack.Screen name="ChatScreen" component={ChatScreen} />
@@ -74,7 +73,7 @@ const Navigator = () => {
         screenOptions={{ headerShown: false }}
       >
         <MainStack.Screen name="AuthScreen" component={AuthScreen} />
-        <MainStack.Screen name="RootNavigator" component={RootNavigator} />
+        <MainStack.Screen name="RootNavigator" component={BottomTabNavigator} />
       </MainStack.Navigator>
     </NavigationContainer>
   )
