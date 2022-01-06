@@ -14,6 +14,7 @@ export default ({ jobPost }: P) => (
   <View
     style={{
       marginTop: 16,
+      marginBottom: 24,
     }}
   >
     <CompanyNameAndTitle

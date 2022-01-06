@@ -29,14 +29,13 @@ const DetailedJobCard: React.FC<P> = ({
         />
         <View
           style={{
+            marginTop: 50,
             paddingLeft: 16,
             paddingRight: 16,
           }}
         >
           <BasicInfo jobPost={jobPost} />
-          <CardBreak />
           <LongJobDescription desc={jobPost.longDescription} />
-          <CardBreak />
           <AboutTheCompany />
           <HoveringButtons id={jobPost.id} />
         </View>

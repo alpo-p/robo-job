@@ -16,7 +16,7 @@ export default ({ url, enableStylingForDetailedView }: P) => (
       borderColor: 'white',
       alignSelf: 'center',
       position: 'absolute',
-      bottom: enableStylingForDetailedView ? -12 : 70,
+      bottom: enableStylingForDetailedView ? -56 : 70,
     }}
     source={{ uri: url }}
   />
