@@ -4,14 +4,14 @@ import { IJobPostCard } from '../../../../../common/types'
 import Description from './Description'
 import Tags from './Tags'
 import Location from './Location'
-import ButtonContainer from './ButtonContainer'
+import ButtonsContainer from './ButtonsContainer'
 
 const BottomPart = ({ jobPost }: { jobPost: IJobPostCard }) => (
   <View style={stylesheet.container}>
     <Location location={jobPost.location} />
     <Tags tags={jobPost.tags} />
     <Description description={jobPost.shortDescription} />
-    <ButtonContainer />
+    <ButtonsContainer />
   </View>
 )
 

@@ -4,7 +4,7 @@ import { View } from 'react-native'
 import IconButton from '../../../../../common/components/IconButton'
 import styles from '../../../../../common/styles'
 
-const ButtonContainer: React.FC = () => {
+const ButtonsContainer: React.FC = () => {
   // get this actually from the data/context/something
   const [isHeartPressed, setIsHeartPressed] = useState(false)
 
@@ -54,4 +54,4 @@ const ButtonContainer: React.FC = () => {
   )
 }
 
-export default ButtonContainer
+export default ButtonsContainer
