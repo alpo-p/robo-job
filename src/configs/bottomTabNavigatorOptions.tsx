@@ -2,7 +2,6 @@ import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs'
 import { IoniconsIconNames } from '../common/types'
-import sharedStyles from '../common/styles'
 import { ThemeColors } from '../common/themes'
 import { RootStackRouteProp } from '../Navigator'
 
@@ -24,7 +23,7 @@ export const bottomTabNavigatorOptions = (
     // @ts-ignore
     return <Ionicons name={iconName} size={size} color={color} />
   },
-  tabBarActiveTintColor: sharedStyles.primaryColor,
+  tabBarActiveTintColor: colors.primary,
   tabBarInactiveTintColor: 'gray',
   tabBarStyle: {
     backgroundColor: colors.background,

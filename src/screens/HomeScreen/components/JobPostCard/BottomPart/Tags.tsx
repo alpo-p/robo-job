@@ -17,15 +17,15 @@ const Tag: React.FC<{ tag: string }> = ({ tag }) => {
         borderWidth: 0.5,
         borderColor: colors.primary,
         borderRadius: 4,
-        padding: 3,
+        padding: 4,
         paddingTop: 5,
         marginRight: 6,
         marginTop: 8,
         height: styles.commonSize,
       }}
     >
-      <RoboText uppercase weight="light" size="tiny">
-        {tag}
+      <RoboText color={colors.primary} uppercase weight="light" size="tiny">
+        # {tag}
       </RoboText>
     </View>
   )
