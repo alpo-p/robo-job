@@ -13,13 +13,13 @@ const TopPart = ({ jobPost, width }: Omit<JobPostCardProps, 'height'>) => {
     <View style={stylesheet({}).container}>
       <ImageBackground
         source={{ uri: jobPost.pictureUrl }}
-        resizeMode="cover"
+        resizeMode="stretch"
         style={stylesheet({ width }).imageBackground}
       >
         <IconButton
-          iconName="chevron-back-circle"
+          iconName="chevron-back-circle-outline"
           onPress={navigateBackToSearch}
-          color="white"
+          color={styles.primaryColor}
           style={stylesheet({}).backIcon}
         />
         <Image style={stylesheet({}).logo} source={{ uri: jobPost.logoUrl }} />
@@ -29,14 +29,28 @@ const TopPart = ({ jobPost, width }: Omit<JobPostCardProps, 'height'>) => {
             alignItems: 'center',
             position: 'absolute',
             bottom: 0,
-            paddingBottom: 4,
+            paddingBottom: 12,
+            zIndex: 1,
           }}
-          colors={['transparent', 'rgba(0,0,0,0.8)']}
+          colors={[
+            'transparent',
+            'rgba(0,0,0,0.35)',
+            'rgba(0,0,0,0.4)',
+            'rgba(0,0,0,0.5)',
+            'rgba(0,0,0,0.7)',
+            'rgba(0,0,0,0.9)',
+          ]}
         >
           <RoboText uppercase color={styles.white} size="large" weight="bold">
             {jobPost.companyName}
           </RoboText>
-          <RoboText color={styles.white} size="large">
+          <RoboText
+            color={styles.white}
+            size="large"
+            style={{
+              textAlign: 'center',
+            }}
+          >
             {jobPost.jobTitle}
           </RoboText>
         </LinearGradient>
@@ -55,7 +69,6 @@ const stylesheet = ({ width }: { height?: number; width?: number }) =>
     imageBackground: {
       height: 280,
       width,
-      alignItems: 'center',
     },
     backIcon: {
       alignSelf: 'flex-start',
@@ -68,6 +81,6 @@ const stylesheet = ({ width }: { height?: number; width?: number }) =>
       borderRadius: 56,
       borderWidth: 1,
       borderColor: 'white',
+      alignSelf: 'center',
     },
-    textContainer: {},
   })
