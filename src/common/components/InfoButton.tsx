@@ -11,7 +11,7 @@ export default ({ onPress, smaller }: P) => {
   const { colors } = useTheme()
   return (
     <IconButton
-      iconName="chatbox-ellipses"
+      iconName="ios-information-circle-outline"
       onPress={onPress}
       color={colors.primary}
       size={smaller ? 30 : undefined}

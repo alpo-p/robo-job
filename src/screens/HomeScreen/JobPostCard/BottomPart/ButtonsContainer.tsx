@@ -1,14 +1,14 @@
-import { useNavigation, useTheme } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 import React, { useEffect, useState } from 'react'
 import { View } from 'react-native'
 import ChatButton from '../../../../common/components/ChatButton'
 import HeartButton from '../../../../common/components/HeartButton'
-import IconButton from '../../../../common/components/IconButton'
 import ShareButton from '../../../../common/components/ShareButton'
 import { IJobPostCard } from '../../../../common/types'
 import { NavigationPropType } from '../../../../Navigator'
 import { VerticalSpaceOf24 } from '../../../../common/components/VerticalSpaceOf24'
 import useLikedJobs, { likeOrDislikeJob } from '../../../../hooks/useLikedJobs'
+import InfoButton from '../../../../common/components/InfoButton'
 
 interface Props {
   jobPost: IJobPostCard
@@ -41,8 +41,6 @@ const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
   const handleStartChat = () => console.log('Applying!')
   const handleShare = () => console.log('Sharing!')
 
-  const { colors } = useTheme()
-
   return (
     <View
       style={{
@@ -51,11 +49,7 @@ const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
         bottom: '30%',
       }}
     >
-      <IconButton
-        iconName="ios-information-circle-outline"
-        onPress={navigateToDetails}
-        color={colors.primary}
-      />
+      <InfoButton onPress={navigateToDetails} />
       <VerticalSpaceOf24 />
       <HeartButton isPressed={isHeartPressed} onPress={handleClickLike} />
       <VerticalSpaceOf24 />

@@ -1,15 +1,65 @@
+import { useTheme } from '@react-navigation/native'
 import React from 'react'
-import { View } from 'react-native'
+import { TouchableOpacity, View } from 'react-native'
 import { StateFilter } from '..'
 import RoboText from '../../../common/components/RoboText'
 
-interface P {
-  filter: string
+interface Wrapper {
+  filter: StateFilter
   // eslint-disable-next-line no-unused-vars
   setStateFilter: (filter: StateFilter) => void
 }
-export default ({ filter, setStateFilter }: P) => (
-  <View>
-    <RoboText>FILTERISH TOP BAR HERE LIKE IG</RoboText>
+
+interface Button {
+  onPress: () => void
+  title: string
+  filter: StateFilter
+}
+const TopBarButton: React.FC<Button> = ({ onPress, title, filter }) => {
+  const { colors } = useTheme()
+  const selected = filter === title.toLowerCase()
+  return (
+    <TouchableOpacity
+      onPress={onPress}
+      style={{
+        borderBottomColor: selected ? colors.primary : colors.border,
+        borderBottomWidth: 1,
+        width: '33%',
+      }}
+    >
+      <RoboText
+        weight={selected ? 'bold' : 'normal'}
+        style={{
+          alignSelf: 'center',
+          marginBottom: 8,
+        }}
+      >
+        {title}
+      </RoboText>
+    </TouchableOpacity>
+  )
+}
+
+export default ({ filter, setStateFilter }: Wrapper) => (
+  <View
+    style={{
+      flexDirection: 'row',
+    }}
+  >
+    <TopBarButton
+      filter={filter}
+      onPress={() => setStateFilter('all')}
+      title="All"
+    />
+    <TopBarButton
+      filter={filter}
+      onPress={() => setStateFilter('unread')}
+      title="Unread"
+    />
+    <TopBarButton
+      filter={filter}
+      onPress={() => setStateFilter('unfinished')}
+      title="Unfinished"
+    />
   </View>
 )
