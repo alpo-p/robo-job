@@ -7,7 +7,7 @@ import styles from '../../common/styles'
 import HelloText from './components/HelloText'
 import InputComponent from './components/InputComponent'
 
-const WHITE_BOX_SIZE = 48
+const WHITE_BOX_BASE_SIZE = 48
 
 const PLACEHOLDERS = {
   name: 'Jared Dunn',
@@ -21,6 +21,7 @@ People say I am diligent and easy to work with. I'm looking for full-time offers
 - High school degree - Nowheria in the middle of NowWhere (2005)`,
   links: 'www.linked.com/alpopanula',
 }
+
 export default () => {
   const [name, setName] = useState('')
   const [summary, setSummary] = useState('')
@@ -48,7 +49,7 @@ export default () => {
           <HelloText />
           <InputComponent
             title="my name is"
-            height={WHITE_BOX_SIZE}
+            height={WHITE_BOX_BASE_SIZE}
             placeholder={PLACEHOLDERS.name}
             value={name}
             onChangeText={setName}
@@ -56,7 +57,7 @@ export default () => {
           <VerticalSpaceOf16 />
           <InputComponent
             title="who am I"
-            height={WHITE_BOX_SIZE * 4}
+            height={WHITE_BOX_BASE_SIZE * 4}
             placeholder={PLACEHOLDERS.summary}
             value={summary}
             onChangeText={setSummary}
@@ -65,7 +66,7 @@ export default () => {
           <VerticalSpaceOf16 />
           <InputComponent
             title="work experience"
-            height={WHITE_BOX_SIZE * 3}
+            height={WHITE_BOX_BASE_SIZE * 3}
             placeholder={PLACEHOLDERS.xp}
             value={experience}
             onChangeText={setExperience}
@@ -75,7 +76,7 @@ export default () => {
           <VerticalSpaceOf16 />
           <InputComponent
             title="schools"
-            height={WHITE_BOX_SIZE * 3}
+            height={WHITE_BOX_BASE_SIZE * 3}
             placeholder={PLACEHOLDERS.education}
             value={education}
             onChangeText={setEducation}
@@ -85,7 +86,7 @@ export default () => {
           <VerticalSpaceOf16 />
           <InputComponent
             title="linkedin or other links"
-            height={WHITE_BOX_SIZE * 2}
+            height={WHITE_BOX_BASE_SIZE * 2}
             placeholder={PLACEHOLDERS.links}
             value={links}
             onChangeText={setLinks}
