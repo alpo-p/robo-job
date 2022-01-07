@@ -15,7 +15,7 @@ const TopPart = ({
   return (
     <View style={stylesheet.container}>
       <JobPostImageBackground pictureUrl={jobPost.pictureUrl}>
-        <GoBackButtonHeavy onPress={navigateBackToSearch} color="black" />
+        <GoBackButtonHeavy onPress={navigateBackToSearch} />
         <CompanyLogo url={jobPost.logoUrl} />
         <LinearGradientForPicture>
           <CompanyNameAndTitle

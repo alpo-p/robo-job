@@ -4,17 +4,15 @@ import IconButton from './IconButton'
 
 interface P {
   onPress: () => void
-  smaller: boolean
 }
 
-export default ({ onPress, smaller }: P) => {
+export default ({ onPress }: P) => {
   const { colors } = useTheme()
   return (
     <IconButton
       iconName="chatbox-ellipses"
       onPress={onPress}
       color={colors.primary}
-      size={smaller ? 30 : undefined}
     />
   )
 }

@@ -2,22 +2,23 @@ import React from 'react'
 import { TouchableOpacity, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 import SmallCompanyLogo from './SmallCompanyLogo'
-import { Row } from './ChatsContainer'
 import SmallCompanyNameAndTitle from './SmallCompanyNameAndTitle'
 import InfoButton from '../../../common/components/InfoButton'
 import { NavigationPropType } from '../../../Navigator'
-import ChatButton from '../../../common/components/ChatButton'
+import { IJobPostCard } from '../../../common/types'
 
-export const ChatRow: React.FC<Row> = ({ onPress, jobPost }) => {
+interface Row {
+  jobPost: IJobPostCard
+}
+
+export const ChatRow: React.FC<Row> = ({ jobPost }) => {
   const navigation = useNavigation<NavigationPropType>()
   const navigateToDetails = () => {
     navigation.navigate('DetailedJobCard', {
       jobPost,
     })
   }
-  const navigateToChat = () => {
-    console.log('opening chat')
-  }
+
   return (
     <View
       style={{
@@ -33,7 +34,6 @@ export const ChatRow: React.FC<Row> = ({ onPress, jobPost }) => {
           justifyContent: 'center',
           alignItems: 'center',
         }}
-        onPress={onPress}
       >
         <SmallCompanyLogo url={jobPost.logoUrl} />
         <SmallCompanyNameAndTitle
@@ -51,12 +51,6 @@ export const ChatRow: React.FC<Row> = ({ onPress, jobPost }) => {
         }}
       >
         <InfoButton onPress={navigateToDetails} smaller />
-        <View
-          style={{
-            marginRight: 8,
-          }}
-        />
-        <ChatButton onPress={navigateToChat} smaller />
       </View>
     </View>
   )

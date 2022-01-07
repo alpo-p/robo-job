@@ -1,9 +1,9 @@
+import { useTheme } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { VerticalSpaceOf16 } from '../../common/components/VerticalSpaceOf16'
 import { VerticalSpaceOf24 } from '../../common/components/VerticalSpaceOf24'
-import styles from '../../common/styles'
 import HelloText from './components/HelloText'
 import InputComponent from './components/InputComponent'
 
@@ -23,6 +23,8 @@ People say I am diligent and easy to work with. I'm looking for full-time offers
 }
 
 export default () => {
+  const { colors } = useTheme()
+
   const [name, setName] = useState('')
   const [summary, setSummary] = useState('')
   const [experience, setExperience] = useState('')
@@ -36,13 +38,13 @@ export default () => {
       >
         <ScrollView
           style={{
-            backgroundColor: styles.primaryColorDarkened30,
+            backgroundColor: colors.primary,
             margin: 8,
             paddingTop: 24,
             paddingBottom: 44,
             height: '99%',
             borderRadius: 15,
-            borderColor: styles.primaryColorDarkened30,
+            borderColor: colors.primary,
             borderWidth: 4,
           }}
         >

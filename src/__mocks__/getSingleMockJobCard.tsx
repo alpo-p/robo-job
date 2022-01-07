@@ -20,7 +20,7 @@ const MockJobPostCard: IJobPostCard = {
   ],
   shortDescription: lorem400c,
   longDescription: lorem2000c,
-  deadline: '8 days',
+  deadline: '4.20.22',
   aboutTheCompany: lorem400c,
   linkToWebsite: 'www.goatze.com',
 }

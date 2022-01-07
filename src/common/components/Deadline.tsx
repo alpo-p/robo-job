@@ -2,7 +2,7 @@ import React from 'react'
 import { View } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { useTheme } from '@react-navigation/native'
-import RoboText from '../../../common/components/RoboText'
+import RoboText from './RoboText'
 
 export const Deadline: React.FC<{ dl: string }> = ({ dl }) => {
   const { colors } = useTheme()
