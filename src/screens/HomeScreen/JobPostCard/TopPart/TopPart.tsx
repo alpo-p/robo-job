@@ -1,10 +1,10 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import { JobPostCardProps } from '..'
-import CompanyLogo from '../../../../../common/components/CompanyLogo'
-import CompanyNameAndTitle from '../../../../../common/components/CompanyNameAndTitle'
-import GoBackButtonHeavy from '../../../../../common/components/GoBackButtonHeavy'
-import JobPostImageBackground from '../../../../../common/components/JobPostImageBackground'
+import CompanyLogo from '../../../../common/components/CompanyLogo'
+import CompanyNameAndTitle from '../../../../common/components/CompanyNameAndTitle'
+import GoBackButtonHeavy from '../../../../common/components/GoBackButtonHeavy'
+import JobPostImageBackground from '../../../../common/components/JobPostImageBackground'
 import LinearGradientForPicture from './LinearGradientForPicture'
 
 const TopPart = ({ jobPost }: Omit<JobPostCardProps, 'height'>) => {
@@ -13,7 +13,7 @@ const TopPart = ({ jobPost }: Omit<JobPostCardProps, 'height'>) => {
   return (
     <View style={stylesheet.container}>
       <JobPostImageBackground pictureUrl={jobPost.pictureUrl}>
-        <GoBackButtonHeavy onPress={navigateBackToSearch} />
+        <GoBackButtonHeavy onPress={navigateBackToSearch} color="black" />
         <CompanyLogo url={jobPost.logoUrl} />
         <LinearGradientForPicture>
           <CompanyNameAndTitle

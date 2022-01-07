@@ -1,12 +1,12 @@
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
-import { IJobPostCard } from '../../../../../common/types'
-import ShortDescription from '../../../../../common/components/ShortDescription'
+import { IJobPostCard } from '../../../../common/types'
+import ShortDescription from '../../../../common/components/ShortDescription'
 import Tags from './Tags'
-import Location from '../../../../../common/components/Location'
+import Location from '../../../../common/components/Location'
 import ButtonsContainer from './ButtonsContainer'
-import { VerticalSpaceOf16 } from '../../../../../common/components/VerticalSpaceOf16'
-import { VerticalSpaceOf8 } from '../../../../../common/components/VerticalSpaceOf8'
+import { VerticalSpaceOf16 } from '../../../../common/components/VerticalSpaceOf16'
+import { VerticalSpaceOf8 } from '../../../../common/components/VerticalSpaceOf8'
 
 const BottomPart = ({ jobPost }: { jobPost: IJobPostCard }) => (
   <View style={stylesheet.container}>

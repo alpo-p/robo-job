@@ -1,13 +1,13 @@
 import { useNavigation, useTheme } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { View } from 'react-native'
-import ChatButton from '../../../../../common/components/ChatButton'
-import HeartButton from '../../../../../common/components/HeartButton'
-import IconButton from '../../../../../common/components/IconButton'
-import ShareButton from '../../../../../common/components/ShareButton'
-import { IJobPostCard } from '../../../../../common/types'
-import { NavigationPropType } from '../../../../../Navigator'
-import { VerticalSpaceOf24 } from '../../../../../common/components/VerticalSpaceOf24'
+import ChatButton from '../../../../common/components/ChatButton'
+import HeartButton from '../../../../common/components/HeartButton'
+import IconButton from '../../../../common/components/IconButton'
+import ShareButton from '../../../../common/components/ShareButton'
+import { IJobPostCard } from '../../../../common/types'
+import { NavigationPropType } from '../../../../Navigator'
+import { VerticalSpaceOf24 } from '../../../../common/components/VerticalSpaceOf24'
 
 interface Props {
   jobPost: IJobPostCard

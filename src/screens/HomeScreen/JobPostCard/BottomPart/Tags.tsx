@@ -2,8 +2,8 @@ import { useTheme } from '@react-navigation/native'
 import React from 'react'
 import { View } from 'react-native'
 
-import RoboText from '../../../../../common/components/RoboText'
-import styles from '../../../../../common/styles'
+import RoboText from '../../../../common/components/RoboText'
+import styles from '../../../../common/styles'
 
 interface Props {
   tags: string[]

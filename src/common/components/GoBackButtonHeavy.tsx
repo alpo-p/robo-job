@@ -4,14 +4,15 @@ import IconButton from './IconButton'
 
 interface P {
   onPress: () => void
+  color?: 'black'
 }
-export default ({ onPress }: P) => {
+export default ({ onPress, color }: P) => {
   const { colors } = useTheme()
   return (
     <IconButton
       iconName="md-arrow-back-circle"
       onPress={onPress}
-      color={colors.primary}
+      color={color ?? colors.primary}
       style={{
         alignSelf: 'flex-start',
         marginLeft: 8,

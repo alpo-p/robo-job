@@ -7,6 +7,7 @@ import AuthStorage from './src/utils/authStorage'
 import AuthStorageContext from './src/contexts/AuthStorageContext'
 import { firebaseConfig } from './src/configs/firebaseConfig'
 import { ignoreArray } from './src/configs/ignoreLogs'
+import LikedJobsProvider from './src/contexts/LikedJobsProvider'
 
 const authStorage = new AuthStorage()
 
@@ -21,9 +22,11 @@ const App: React.FC = () => {
   return (
     <>
       <StatusBar backgroundColor="transparent" translucent />
-      <AuthStorageContext.Provider value={authStorage}>
-        <Navigator />
-      </AuthStorageContext.Provider>
+      <LikedJobsProvider>
+        <AuthStorageContext.Provider value={authStorage}>
+          <Navigator />
+        </AuthStorageContext.Provider>
+      </LikedJobsProvider>
     </>
   )
 }
