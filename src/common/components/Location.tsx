@@ -12,7 +12,7 @@ interface Props {
 const Location: React.FC<Props> = ({ location }) => {
   const { colors } = useTheme()
   return (
-    <View style={{ flexDirection: 'row', marginTop: 8 }}>
+    <View style={{ flexDirection: 'row' }}>
       <Ionicons
         style={{ marginTop: -3, marginRight: 2 }}
         name="location"

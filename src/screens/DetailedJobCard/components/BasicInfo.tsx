@@ -5,26 +5,25 @@ import { IJobPostCard } from '../../../common/types'
 import Location from '../../../common/components/Location'
 import { Deadline } from './Deadline'
 import ShortDescription from '../../../common/components/ShortDescription'
+import { VerticalSpaceOf24 } from '../../../common/components/VerticalSpaceOf24'
+import { VerticalSpaceOf16 } from '../../../common/components/VerticalSpaceOf16'
 
 interface P {
   jobPost: IJobPostCard
 }
 
 export default ({ jobPost }: P) => (
-  <View
-    style={{
-      marginTop: 16,
-      marginBottom: 24,
-    }}
-  >
+  <View>
     <CompanyNameAndTitle
       companyName={jobPost.companyName}
       jobTitle={jobPost.jobTitle}
       editStylesForDetailedView
     />
-    <View style={{ marginTop: 8 }} />
+    <VerticalSpaceOf16 />
     <Location location={jobPost.location} />
+    <VerticalSpaceOf16 />
     <Deadline dl={jobPost.deadline} />
+    <VerticalSpaceOf24 />
     <ShortDescription description={jobPost.shortDescription} useWiderStyle />
   </View>
 )

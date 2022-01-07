@@ -8,7 +8,7 @@ interface P {
 }
 export default ({ description }: P) => (
   <View>
-    <RoboText size="medium">About the job</RoboText>
+    <RoboText size="large">About the position</RoboText>
     <View style={{ marginBottom: 8 }} />
     <ContentText>{description}</ContentText>
   </View>

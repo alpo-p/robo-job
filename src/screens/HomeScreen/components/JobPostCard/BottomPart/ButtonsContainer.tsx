@@ -5,17 +5,13 @@ import ChatButton from '../../../../../common/components/ChatButton'
 import HeartButton from '../../../../../common/components/HeartButton'
 import IconButton from '../../../../../common/components/IconButton'
 import ShareButton from '../../../../../common/components/ShareButton'
-import styles from '../../../../../common/styles'
 import { IJobPostCard } from '../../../../../common/types'
 import { NavigationPropType } from '../../../../../Navigator'
+import { VerticalSpaceOf24 } from '../../../../../common/components/VerticalSpaceOf24'
 
 interface Props {
   jobPost: IJobPostCard
 }
-
-const VerticalSpaceOf24 = () => (
-  <View style={{ marginTop: styles.commonSize }} />
-)
 
 const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
   // get this actually from the data/context/something

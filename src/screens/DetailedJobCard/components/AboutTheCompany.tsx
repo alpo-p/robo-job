@@ -8,8 +8,8 @@ interface P {
   jobPost: IJobPostCard
 }
 export default ({ jobPost }: P) => (
-  <View style={{ marginTop: 16 }}>
-    <RoboText size="medium">We are {jobPost.companyName} </RoboText>
+  <View>
+    <RoboText size="large">About {jobPost.companyName} </RoboText>
     <View style={{ marginBottom: 8 }} />
     <ContentText>{jobPost.aboutTheCompany}</ContentText>
   </View>

@@ -4,11 +4,12 @@ import { ScrollView, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { IJobPostCard } from '../../common/types'
 import BasicInfo from './components/BasicInfo'
-import HoveringButtons from './components/HoveringButtons'
-import LongJobDescription from './components/LongJobDescription'
+import BottomButtons from './components/BottomButtons'
+import AboutThePosition from './components/AbouThePosition'
 import PictureAndLogo from './components/PictureAndLogo'
 import AboutTheCompany from './components/AboutTheCompany'
 import GoBackButtonHeavy from '../../common/components/GoBackButtonHeavy'
+import { VerticalSpaceOf24 } from '../../common/components/VerticalSpaceOf24'
 
 interface P {
   route: RouteProp<{ params: { jobPost: IJobPostCard } }, 'params'>
@@ -32,17 +33,20 @@ const DetailedJobCard: React.FC<P> = ({
         />
         <View
           style={{
-            marginTop: 50,
+            marginTop: 64,
+            marginBottom: 50,
             paddingLeft: 16,
-            paddingRight: 16,
+            paddingRight: 24,
           }}
         >
           <BasicInfo jobPost={jobPost} />
-          <LongJobDescription description={jobPost.longDescription} />
+          <VerticalSpaceOf24 />
+          <AboutThePosition description={jobPost.longDescription} />
+          <VerticalSpaceOf24 />
           <AboutTheCompany jobPost={jobPost} />
         </View>
       </ScrollView>
-      <HoveringButtons />
+      <BottomButtons />
     </SafeAreaView>
   )
 }

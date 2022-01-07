@@ -10,8 +10,6 @@ export const Deadline: React.FC<{ dl: string }> = ({ dl }) => {
     <View
       style={{
         flexDirection: 'row',
-        marginTop: 16,
-        marginBottom: 16,
       }}
     >
       <Ionicons
