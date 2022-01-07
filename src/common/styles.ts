@@ -3,6 +3,7 @@ export default {
   white: '#ffffff',
   darkBackgroundColor: '#222222',
   darkGrey: '#404040',
+  mediumDarkGrey: '#d0d0d0',
   lightGrey: '#e0e0e0',
 
   primaryColorBase: '#186db6',
