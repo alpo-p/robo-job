@@ -1,14 +1,15 @@
-import AsyncStorage from "@react-native-async-storage/async-storage";
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 interface AuthStorage {
   getKey(key: string): string
   getAccessToken(): Promise<string | null>
-  setAccessToken(accessToken: string): Promise<void> 
-  removeAccessToken(accessToken: string): Promise<void> 
+  setAccessToken(accessToken: string): Promise<void>
+  removeAccessToken(accessToken: string): Promise<void>
 }
 
 class AuthStorage {
-  namespace: string;
+  namespace: string
+
   constructor(namespace = 'auth') {
     this.namespace = namespace
   }
@@ -30,4 +31,4 @@ class AuthStorage {
   }
 }
 
-export default AuthStorage;
+export default AuthStorage
