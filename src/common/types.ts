@@ -16,3 +16,4 @@ export interface IJobPostCard {
   aboutTheCompany: string
   linkToWebsite: string
 }
+export type SetStringStateType = React.Dispatch<React.SetStateAction<string[]>>

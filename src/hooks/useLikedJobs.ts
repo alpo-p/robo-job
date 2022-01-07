@@ -1,9 +1,10 @@
 import { useContext } from 'react'
+import { SetStringStateType } from '../common/types'
 import { LikedJobsContext } from '../contexts/LikedJobsProvider'
 
 export const likeOrDislikeJob = (
   id: string,
-  setLikedJobs: React.Dispatch<React.SetStateAction<string[]>>,
+  setLikedJobs: SetStringStateType,
 ) => {
   setLikedJobs((jobs: string[]) => {
     if (jobs.includes(id)) {
