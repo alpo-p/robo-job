@@ -1,0 +1,98 @@
+import { useTheme } from '@react-navigation/native'
+import React, { useState } from 'react'
+import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { VerticalSpaceOf16 } from '../../common/components/VerticalSpaceOf16'
+import { VerticalSpaceOf24 } from '../../common/components/VerticalSpaceOf24'
+import HelloText from './components/HelloText'
+import InputComponent from './components/InputComponent'
+
+const WHITE_BOX_SIZE = 48
+
+const PLACEHOLDERS = {
+  name: 'Jared Dunn',
+  summary:
+    "I am a business graduate with a degree in Marketing looking for work in the field.\nI have worked as a marketing generalist in a small business handling all sides, such as updating websites and copywriting.\nPeople say I am diligent and easy to work with. I'm looking for full-time offers.",
+  xp: 'Marketing coordinator - Pied Piper (2017 - 2021)\nCashier - K-Market Ilola 2010-2017)',
+  education:
+    'Msc. Marketing - Trolls of Trinity Christian College in Illinois (2010)\nHigh school degree - Nowheria in the middle of NowWhere (2005)',
+  links: 'www.linked.com/alpopanula',
+}
+export default () => {
+  const { colors } = useTheme()
+
+  const [name, setName] = useState('')
+  const [summary, setSummary] = useState('')
+  const [experience, setExperience] = useState('')
+  const [education, setEducation] = useState('')
+  const [links, setLinks] = useState('')
+
+  return (
+    <SafeAreaView>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'position' : 'height'}
+      >
+        <ScrollView
+          style={{
+            backgroundColor: colors.primary,
+            margin: 8,
+            paddingTop: 24,
+            paddingBottom: 44,
+            height: '99%',
+            borderRadius: 15,
+          }}
+        >
+          <HelloText />
+          <InputComponent
+            title="my name is"
+            height={WHITE_BOX_SIZE}
+            placeholder={PLACEHOLDERS.name}
+            value={name}
+            onChangeText={setName}
+          />
+          <VerticalSpaceOf16 />
+          <InputComponent
+            title="who am I"
+            height={WHITE_BOX_SIZE * 4}
+            placeholder={PLACEHOLDERS.summary}
+            value={summary}
+            onChangeText={setSummary}
+            multiline
+          />
+          <VerticalSpaceOf16 />
+          <InputComponent
+            title="work experience"
+            height={WHITE_BOX_SIZE * 3}
+            placeholder={PLACEHOLDERS.xp}
+            value={experience}
+            onChangeText={setExperience}
+            multiline
+            optional
+          />
+          <VerticalSpaceOf16 />
+          <InputComponent
+            title="schools"
+            height={WHITE_BOX_SIZE * 3}
+            placeholder={PLACEHOLDERS.education}
+            value={education}
+            onChangeText={setEducation}
+            multiline
+            optional
+          />
+          <VerticalSpaceOf16 />
+          <InputComponent
+            title="linkedin or other links"
+            height={WHITE_BOX_SIZE * 2}
+            placeholder={PLACEHOLDERS.links}
+            value={links}
+            onChangeText={setLinks}
+            multiline
+            optional
+          />
+          <VerticalSpaceOf24 />
+          <VerticalSpaceOf24 />
+        </ScrollView>
+      </KeyboardAvoidingView>
+    </SafeAreaView>
+  )
+}

@@ -2,7 +2,7 @@ import React from 'react'
 import { useTheme } from '@react-navigation/native'
 import { Text, TextStyle } from 'react-native'
 
-type FontSize = 'tiny' | 'small' | 'medium' | 'large'
+type FontSize = 'tiny' | 'small' | 'medium' | 'large' | 'largest'
 type Weight = 'light' | 'normal' | 'bold'
 interface Props {
   size?: FontSize
@@ -17,6 +17,7 @@ const fontSizes = {
   small: 14,
   medium: 16,
   large: 20,
+  largest: 60,
 }
 
 const fontFamilies = {
