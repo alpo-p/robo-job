@@ -41,6 +41,8 @@ export default () => {
             paddingBottom: 44,
             height: '99%',
             borderRadius: 15,
+            borderColor: styles.primaryColorDarkened30,
+            borderWidth: 4,
           }}
         >
           <HelloText />
