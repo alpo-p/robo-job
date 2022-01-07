@@ -2,11 +2,14 @@ import React, { useState } from 'react'
 
 interface ILikedJobsContext {
   likedJobs: string[]
-  setLikedJobs?: React.Dispatch<React.SetStateAction<string[]>>
+  setLikedJobs: React.Dispatch<React.SetStateAction<string[]>>
 }
 
 const defaultState = {
   likedJobs: [] as string[],
+  setLikedJobs: undefined as unknown as React.Dispatch<
+    React.SetStateAction<string[]>
+  >,
 }
 
 export const LikedJobsContext =

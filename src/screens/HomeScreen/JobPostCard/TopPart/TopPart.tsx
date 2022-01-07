@@ -7,7 +7,9 @@ import GoBackButtonHeavy from '../../../../common/components/GoBackButtonHeavy'
 import JobPostImageBackground from '../../../../common/components/JobPostImageBackground'
 import LinearGradientForPicture from './LinearGradientForPicture'
 
-const TopPart = ({ jobPost }: Omit<JobPostCardProps, 'height'>) => {
+const TopPart = ({
+  jobPost,
+}: Omit<JobPostCardProps, 'height' | 'likedJobs'>) => {
   const navigateBackToSearch = () => console.log('going back to search')
 
   return (
