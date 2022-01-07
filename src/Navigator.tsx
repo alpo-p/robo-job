@@ -20,7 +20,7 @@ import ChatScreen from './screens/ChatScreen/ChatScreen'
 import ProfileScreen from './screens/ProfileScreen/ProfileScreen'
 import { bottomTabNavigatorOptions } from './configs/bottomTabNavigatorOptions'
 import { DarkTheme, LightTheme } from './common/themes'
-import DetailedJobCard from './screens/DetailedJobCard'
+import DetailedJobCard from './screens/DetailedJobPost'
 import { IJobPostCard } from './common/types'
 
 type MainStackParamList = {
