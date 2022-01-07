@@ -1,23 +1,24 @@
+import { useTheme } from '@react-navigation/native'
 import React from 'react'
 import IconButton from './IconButton'
 
 interface P {
   onPress: () => void
-  editStylesForDetailedView?: boolean
 }
-export default ({ onPress, editStylesForDetailedView }: P) => (
-  <IconButton
-    iconName="chevron-back-circle"
-    onPress={onPress}
-    color="white"
-    style={{
-      alignSelf: 'flex-start',
-      marginTop: editStylesForDetailedView ? 0 : 40,
-      marginLeft: 8,
-      marginBottom: 6,
-      position: 'absolute',
-      top: 0,
-    }}
-    size={50}
-  />
-)
+export default ({ onPress }: P) => {
+  const { colors } = useTheme()
+  return (
+    <IconButton
+      iconName="md-arrow-back-circle"
+      onPress={onPress}
+      color={colors.primary}
+      style={{
+        alignSelf: 'flex-start',
+        marginLeft: 8,
+        position: 'absolute',
+        zIndex: 1,
+        top: 48,
+      }}
+    />
+  )
+}

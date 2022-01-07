@@ -19,7 +19,6 @@ export const LightTheme = {
     ...DefaultTheme.colors,
     primary: styles.primaryColorDarkened30,
     text: styles.darkText,
-    icon: '#121212',
     background: styles.white,
     card: styles.lightGrey,
   },
@@ -33,6 +32,5 @@ export const DarkTheme = {
     text: styles.whiteText,
     card: '#121212',
     border: '#121212',
-    icon: styles.whiteText,
   },
 }
