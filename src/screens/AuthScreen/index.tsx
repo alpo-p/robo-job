@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Text } from 'react-native'
 import * as Google from 'expo-google-app-auth'
 import { IOS_CLIENT_ID } from '@env'
@@ -34,9 +34,9 @@ const AuthScreen: React.FC = () => {
     navigation.navigate('RootNavigator')
   }
 
-  /*
-  * This is used to enable autochecking of "is the user logged in?"
   useEffect(() => {
+    /*
+   * This is used to enable autochecking of "is the user logged in?"
     const tryToSignInUserFromAuthStorage = async () => {
       const token = await authStorage.getAccessToken()
       if (token) {
@@ -45,8 +45,11 @@ const AuthScreen: React.FC = () => {
     }
 
     tryToSignInUserFromAuthStorage()
+   */
+
+    // In order to skip authentication process for dev
+    navigation.navigate('RootNavigator')
   })
-  */
 
   const signInWithGoogleAndReturnAccessToken = async () => {
     try {

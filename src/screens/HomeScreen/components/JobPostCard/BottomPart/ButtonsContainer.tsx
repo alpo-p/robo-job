@@ -1,7 +1,10 @@
 import { useNavigation, useTheme } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { View } from 'react-native'
+import ChatButton from '../../../../../common/components/ChatButton'
+import HeartButton from '../../../../../common/components/HeartButton'
 import IconButton from '../../../../../common/components/IconButton'
+import ShareButton from '../../../../../common/components/ShareButton'
 import styles from '../../../../../common/styles'
 import { IJobPostCard } from '../../../../../common/types'
 import { NavigationPropType } from '../../../../../Navigator'
@@ -9,6 +12,10 @@ import { NavigationPropType } from '../../../../../Navigator'
 interface Props {
   jobPost: IJobPostCard
 }
+
+const VerticalSpaceOf24 = () => (
+  <View style={{ marginTop: styles.commonSize }} />
+)
 
 const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
   // get this actually from the data/context/something
@@ -25,10 +32,8 @@ const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
     console.log('Liking')
     setIsHeartPressed(b => !b)
   }
-  const handleApplyNow = () => console.log('Applying!')
+  const handleStartChat = () => console.log('Applying!')
   const handleShare = () => console.log('Sharing!')
-
-  const heartIconName = isHeartPressed ? 'heart' : 'heart-outline'
 
   const { colors } = useTheme()
 
@@ -45,24 +50,12 @@ const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
         onPress={navigateToDetails}
         color={colors.primary}
       />
-      <View style={{ marginTop: styles.commonSize }} />
-      <IconButton
-        iconName={heartIconName}
-        onPress={handleClickLike}
-        color={colors.primary}
-      />
-      <View style={{ marginTop: styles.commonSize }} />
-      <IconButton
-        iconName="chatbox-ellipses"
-        onPress={handleApplyNow}
-        color={colors.primary}
-      />
-      <View style={{ marginTop: styles.commonSize }} />
-      <IconButton
-        iconName="share-social-outline"
-        onPress={handleShare}
-        color={colors.primary}
-      />
+      <VerticalSpaceOf24 />
+      <HeartButton isPressed={isHeartPressed} onPress={handleClickLike} />
+      <VerticalSpaceOf24 />
+      <ChatButton onPress={handleStartChat} />
+      <VerticalSpaceOf24 />
+      <ShareButton onPress={handleShare} />
     </View>
   )
 }
