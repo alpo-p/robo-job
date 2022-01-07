@@ -1,23 +1,33 @@
 import { useTheme } from '@react-navigation/native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { View } from 'react-native'
 import ChatButton from '../../../common/components/ChatButton'
 import HeartButton from '../../../common/components/HeartButton'
 import ShareButton from '../../../common/components/ShareButton'
 import styles from '../../../common/styles'
+import useLikedJobs, { likeOrDislikeJob } from '../../../hooks/useLikedJobs'
 
 const HorizontalSpaceOf24 = () => (
   <View style={{ marginLeft: styles.commonSize }} />
 )
 
-export default () => {
-  // get this actually from the data/context/something
+interface P {
+  id: string
+}
+
+export default ({ id }: P) => {
+  const { likedJobs, setLikedJobs } = useLikedJobs()
   const [isHeartPressed, setIsHeartPressed] = useState(false)
   const { colors } = useTheme()
 
+  useEffect(() => {
+    const isLiked = likedJobs.includes(id)
+    setIsHeartPressed(isLiked)
+  }, [likedJobs, id])
+
   const handleClickLike = () => {
-    console.log('Liking')
     setIsHeartPressed(b => !b)
+    likeOrDislikeJob(id, setLikedJobs)
   }
   const handleStartChat = () => console.log('Applying!')
   const handleShare = () => console.log('Sharing!')

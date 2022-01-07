@@ -8,7 +8,7 @@ import ShareButton from '../../../../common/components/ShareButton'
 import { IJobPostCard } from '../../../../common/types'
 import { NavigationPropType } from '../../../../Navigator'
 import { VerticalSpaceOf24 } from '../../../../common/components/VerticalSpaceOf24'
-import useLikedJobs from '../../../../hooks/useLikedJobs'
+import useLikedJobs, { likeOrDislikeJob } from '../../../../hooks/useLikedJobs'
 
 interface Props {
   jobPost: IJobPostCard
@@ -36,12 +36,7 @@ const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
 
   const handleClickLike = () => {
     setIsHeartPressed(b => !b)
-    setLikedJobs(jobs => {
-      if (jobs.includes(id)) {
-        return jobs.filter(likedJobId => likedJobId !== id)
-      }
-      return jobs.concat(id)
-    })
+    likeOrDislikeJob(id, setLikedJobs)
   }
   const handleStartChat = () => console.log('Applying!')
   const handleShare = () => console.log('Sharing!')
