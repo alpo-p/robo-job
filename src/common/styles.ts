@@ -2,8 +2,8 @@ export default {
   backgroundColor: '#000000',
   white: '#ffffff',
   darkBackgroundColor: '#222222',
-  darkGrey: '#c6c6c6',
-  lightGrey: '#d3d3d3',
+  darkGrey: '#404040',
+  lightGrey: '#e0e0e0',
 
   primaryColorBase: '#186db6',
   primaryColorDarkened10: '#00549D',

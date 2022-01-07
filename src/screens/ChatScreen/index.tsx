@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import ChatsContainer from './components/ChatsContainer'
-import ChatSearchBar from './components/ChatSearchBar'
+import SearchBar from './components/SearchBar'
 import FilterTopBar from './components/FilterTopBar'
 
 export type StateFilter = 'all' | 'unread' | 'unfinished'
@@ -12,7 +12,7 @@ export default () => {
 
   return (
     <SafeAreaView>
-      <ChatSearchBar
+      <SearchBar
         searchFilter={searchFilter}
         setSearchFilter={setSearchFilter}
       />
