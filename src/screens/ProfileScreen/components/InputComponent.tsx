@@ -35,7 +35,7 @@ export default ({
       </RoboText>
       <TextInput
         placeholder={placeholder}
-        placeholderTextColor={styles.lightGrey}
+        placeholderTextColor={styles.darkGrey}
         textAlign="center"
         textAlignVertical="top"
         style={{
@@ -44,7 +44,7 @@ export default ({
           padding: 12,
           backgroundColor: 'white',
           borderRadius: 2,
-          color: styles.darkGrey,
+          color: styles.darkText,
           fontSize: 16,
           textAlign: multiline ? 'left' : 'center',
         }}

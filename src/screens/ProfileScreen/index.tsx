@@ -1,9 +1,9 @@
-import { useTheme } from '@react-navigation/native'
 import React, { useState } from 'react'
 import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { VerticalSpaceOf16 } from '../../common/components/VerticalSpaceOf16'
 import { VerticalSpaceOf24 } from '../../common/components/VerticalSpaceOf24'
+import styles from '../../common/styles'
 import HelloText from './components/HelloText'
 import InputComponent from './components/InputComponent'
 
@@ -11,16 +11,17 @@ const WHITE_BOX_SIZE = 48
 
 const PLACEHOLDERS = {
   name: 'Jared Dunn',
-  summary:
-    "I am a business graduate with a degree in Marketing looking for work in the field.\nI have worked as a marketing generalist in a small business handling all sides, such as updating websites and copywriting.\nPeople say I am diligent and easy to work with. I'm looking for full-time offers.",
-  xp: 'Marketing coordinator - Pied Piper (2017 - 2021)\nCashier - K-Market Ilola 2010-2017)',
-  education:
-    'Msc. Marketing - Trolls of Trinity Christian College in Illinois (2010)\nHigh school degree - Nowheria in the middle of NowWhere (2005)',
+  summary: `I am a business graduate with a degree in Marketing looking for work in the field.
+I have worked as a marketing generalist in a small business handling all sides, such as updating websites and copywriting.
+
+People say I am diligent and easy to work with. I'm looking for full-time offers.`,
+  xp: `- Marketing coordinator: Pied Piper (2017-2021)
+- Cashier: K-Market Ilola (2010-2017)`,
+  education: `- Msc. Marketing - Trolls of Trinity Christian College in Illinois (2010)
+- High school degree - Nowheria in the middle of NowWhere (2005)`,
   links: 'www.linked.com/alpopanula',
 }
 export default () => {
-  const { colors } = useTheme()
-
   const [name, setName] = useState('')
   const [summary, setSummary] = useState('')
   const [experience, setExperience] = useState('')
@@ -34,7 +35,7 @@ export default () => {
       >
         <ScrollView
           style={{
-            backgroundColor: colors.primary,
+            backgroundColor: styles.primaryColorDarkened30,
             margin: 8,
             paddingTop: 24,
             paddingBottom: 44,
