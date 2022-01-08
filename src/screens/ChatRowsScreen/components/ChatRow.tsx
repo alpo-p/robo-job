@@ -21,7 +21,7 @@ export const ChatRow: React.FC<Row> = ({ jobPost }) => {
   }
 
   const navigateToChatScreen = () => {
-    navigation.navigate('DetailedJobCard', {
+    navigation.navigate('ChatScreen', {
       jobPost,
     })
   }

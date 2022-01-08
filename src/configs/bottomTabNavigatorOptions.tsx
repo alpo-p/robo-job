@@ -14,7 +14,7 @@ export const bottomTabNavigatorOptions = (
     let iconName: IoniconsIconNames
     if (route.name === 'HomeScreen') {
       iconName = focused ? 'home' : 'home-outline'
-    } else if (route.name === 'ChatScreen') {
+    } else if (route.name === 'ChatRowsScreen') {
       iconName = focused ? 'chatbox' : 'chatbox-outline'
     } else if (route.name === 'ProfileScreen') {
       iconName = focused ? 'person' : 'person-outline'
