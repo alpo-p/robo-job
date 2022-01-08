@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import ChatsContainer from './components/ChatsContainer'
+import ChatsContainer from './components/ChatRowsContainer'
 import SearchBar from './components/SearchBar'
 import FilterTopBar from './components/FilterTopBar'
 

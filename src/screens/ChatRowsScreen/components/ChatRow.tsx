@@ -13,7 +13,14 @@ interface Row {
 
 export const ChatRow: React.FC<Row> = ({ jobPost }) => {
   const navigation = useNavigation<NavigationPropType>()
+
   const navigateToDetails = () => {
+    navigation.navigate('DetailedJobCard', {
+      jobPost,
+    })
+  }
+
+  const navigateToChatScreen = () => {
     navigation.navigate('DetailedJobCard', {
       jobPost,
     })
@@ -34,6 +41,7 @@ export const ChatRow: React.FC<Row> = ({ jobPost }) => {
           justifyContent: 'center',
           alignItems: 'center',
         }}
+        onPress={navigateToChatScreen}
       >
         <SmallCompanyLogo url={jobPost.logoUrl} />
         <SmallCompanyNameAndTitle

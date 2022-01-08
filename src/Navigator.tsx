@@ -16,7 +16,7 @@ import {
 import { useColorScheme } from 'react-native'
 import HomeScreen from './screens/HomeScreen'
 import AuthScreen from './screens/AuthScreen'
-import ChatScreen from './screens/ChatScreen'
+import ChatScreen from './screens/ChatRowsScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import { bottomTabNavigatorOptions } from './configs/bottomTabNavigatorOptions'
 import { DarkTheme, LightTheme } from './common/themes'
