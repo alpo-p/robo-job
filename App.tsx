@@ -9,6 +9,7 @@ import AuthStorageContext from './src/contexts/AuthStorageContext'
 import { firebaseConfig } from './src/configs/firebaseConfig'
 import { ignoreArray } from './src/configs/ignoreLogs'
 import LikedJobsProvider from './src/contexts/LikedJobsProvider'
+import ChatsProvider from './src/contexts/ChatsProvider'
 
 const authStorage = new AuthStorage()
 
@@ -24,11 +25,13 @@ const App: React.FC = () => {
     <>
       <StatusBar backgroundColor="transparent" translucent />
       <SafeAreaProvider>
-        <LikedJobsProvider>
-          <AuthStorageContext.Provider value={authStorage}>
-            <Navigator />
-          </AuthStorageContext.Provider>
-        </LikedJobsProvider>
+        <ChatsProvider>
+          <LikedJobsProvider>
+            <AuthStorageContext.Provider value={authStorage}>
+              <Navigator />
+            </AuthStorageContext.Provider>
+          </LikedJobsProvider>
+        </ChatsProvider>
       </SafeAreaProvider>
     </>
   )
