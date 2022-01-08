@@ -4,21 +4,24 @@ import IconButton from './IconButton'
 
 interface P {
   onPress: () => void
-  color?: 'black'
+  editStylesForChatScreen?: boolean
 }
-export default ({ onPress, color }: P) => {
+
+export default ({ onPress, editStylesForChatScreen }: P) => {
   const { colors } = useTheme()
   return (
     <IconButton
-      iconName="md-arrow-back-circle"
+      iconName={
+        editStylesForChatScreen ? 'chevron-back' : 'md-arrow-back-circle'
+      }
       onPress={onPress}
-      color={color ?? colors.primary}
+      color={editStylesForChatScreen ? colors.text : colors.primary}
       style={{
-        alignSelf: 'flex-start',
+        alignSelf: editStylesForChatScreen ? undefined : 'flex-start',
         marginLeft: 8,
-        position: 'absolute',
+        position: editStylesForChatScreen ? 'relative' : 'absolute',
         zIndex: 1,
-        top: 48,
+        top: editStylesForChatScreen ? undefined : 48,
       }}
     />
   )
