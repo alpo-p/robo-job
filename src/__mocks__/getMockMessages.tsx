@@ -20,4 +20,4 @@ const messages: Message[] = [
   },
 ]
 
-export const getMockMessages = () => ({ ...messages })
+export const getMockMessages = () => [...messages]

@@ -1,8 +1,6 @@
 import React, { useState } from 'react'
 import { Chats } from '../common/types'
-
-// The message can be from "the robot" (pre-assigned questions), recruiter (manual messages) or the user
-// note: how to group the question and user answer together? A type with "question: string, answer: string" would solve this I guess
+import { getMockChats } from '../__mocks__/getMockChats'
 
 interface IChatsContext {
   chats: Chats
@@ -17,7 +15,8 @@ const defaultState = {
 export const ChatsContext = React.createContext<IChatsContext>(defaultState)
 
 const ChatsProvider: React.FC = ({ children }) => {
-  const [chats, setChats] = useState<Chats>([])
+  const mockChats = getMockChats()
+  const [chats, setChats] = useState<Chats>(mockChats)
 
   return (
     <ChatsContext.Provider
