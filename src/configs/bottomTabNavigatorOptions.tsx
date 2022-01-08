@@ -1,7 +1,7 @@
 import React from 'react'
 import { Ionicons } from '@expo/vector-icons'
 import { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs'
-import { IoniconsIconNames } from '../common/types'
+import { IoniconsIconNames } from '../common/types/utilTypes'
 import { ThemeColors } from '../common/themes'
 import { RootStackRouteProp } from '../Navigator'
 

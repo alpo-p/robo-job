@@ -1,7 +1,3 @@
-import { Ionicons } from '@expo/vector-icons'
-
-export type IoniconsIconNames = keyof typeof Ionicons.glyphMap
-
 export interface IJobPostCard {
   id: string
   companyName: string
@@ -16,4 +12,17 @@ export interface IJobPostCard {
   aboutTheCompany: string
   linkToWebsite: string
 }
-export type SetStringStateType = React.Dispatch<React.SetStateAction<string[]>>
+
+export type MessageTypes = 'robo' | 'recruiter' | 'user'
+
+export interface Message {
+  typeOfMessage: MessageTypes
+  text: string
+}
+
+export interface IndividualChat {
+  jobPostId: string
+  messages: Message[]
+}
+
+export type Chats = IndividualChat[] | null
