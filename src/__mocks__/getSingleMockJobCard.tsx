@@ -8,8 +8,8 @@ const MockJobPostCard: IJobPostCard = {
   id: '123',
   companyName: 'The Incredible Company',
   jobTitle: 'Software developer',
-  logoUrl: 'https://picsum.photos/100',
-  pictureUrl: 'https://picsum.photos/300',
+  logoUrl: 'https://picsum.photos/112',
+  pictureUrl: 'https://picsum.photos/280',
   location: 'Helsinki',
   tags: [
     'javascript',
