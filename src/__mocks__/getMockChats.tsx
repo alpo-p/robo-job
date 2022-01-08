@@ -11,7 +11,5 @@ export const getMockChats = (n = 10): Chats => {
 
     return mockChat
   })
-  console.log('c:', chats)
-
   return chats
 }
