@@ -8,7 +8,7 @@ import BottomButtons from './components/BottomButtons'
 import AboutThePosition from './components/AbouThePosition'
 import PictureAndLogo from './components/PictureAndLogo'
 import AboutTheCompany from './components/AboutTheCompany'
-import GoBackButtonHeavy from '../../common/components/GoBackButtonHeavy'
+import GoBackButton from '../../common/components/GoBackButton'
 import { VerticalSpaceOf24 } from '../../common/components/VerticalSpaceOf24'
 
 interface P {
@@ -26,7 +26,7 @@ const DetailedJobCard: React.FC<P> = ({
 
   return (
     <SafeAreaView>
-      <GoBackButtonHeavy onPress={navigateBackToSearch} />
+      <GoBackButton onPress={navigateBackToSearch} />
       <ScrollView>
         <PictureAndLogo
           pictureUrl={jobPost.pictureUrl}

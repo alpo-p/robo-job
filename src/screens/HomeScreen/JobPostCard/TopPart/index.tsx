@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import { JobPostCardProps } from '..'
 import CompanyLogo from '../../../../common/components/CompanyLogo'
 import CompanyNameAndTitle from '../../../../common/components/CompanyNameAndTitle'
-import GoBackButtonHeavy from '../../../../common/components/GoBackButtonHeavy'
+import GoBackButton from '../../../../common/components/GoBackButton'
 import JobPostImageBackground from '../../../../common/components/JobPostImageBackground'
 import LinearGradientForPicture from './LinearGradientForPicture'
 
@@ -15,7 +15,7 @@ const TopPart = ({
   return (
     <View style={stylesheet.container}>
       <JobPostImageBackground pictureUrl={jobPost.pictureUrl}>
-        <GoBackButtonHeavy onPress={navigateBackToSearch} />
+        <GoBackButton onPress={navigateBackToSearch} />
         <CompanyLogo url={jobPost.logoUrl} />
         <LinearGradientForPicture>
           <CompanyNameAndTitle

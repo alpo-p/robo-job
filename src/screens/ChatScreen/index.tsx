@@ -1,10 +1,21 @@
+import { RouteProp } from '@react-navigation/native'
 import React from 'react'
-import { View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import RoboText from '../../common/components/RoboText'
+import { IJobPostCard } from '../../common/types'
+import ChatTopBar from './components/ChatTopBar'
+import MessagesContainer from './components/MessagesContainer'
 
-export default () => (
+interface P {
+  route: RouteProp<{ params: { jobPost: IJobPostCard } }, 'params'>
+}
+
+export default ({
+  route: {
+    params: { jobPost },
+  },
+}: P) => (
   <SafeAreaView>
-    <RoboText>Render chat screen here</RoboText>
+    <ChatTopBar jobPost={jobPost} />
+    <MessagesContainer />
   </SafeAreaView>
 )
