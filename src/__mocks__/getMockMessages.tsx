@@ -4,11 +4,11 @@ import { Message } from '../common/types'
 const messages: Message[] = [
   {
     typeOfMessage: 'robo',
-    text: 'Here is the first message from the robo',
+    text: 'Here is the first message from the robo. It is a very long one yeah yo yeah',
   },
   {
     typeOfMessage: 'user',
-    text: '',
+    text: 'Here is the first message from the user',
   },
   {
     typeOfMessage: 'robo',
@@ -16,7 +16,15 @@ const messages: Message[] = [
   },
   {
     typeOfMessage: 'user',
-    text: '',
+    text: 'Here is the second message from the user',
+  },
+  {
+    typeOfMessage: 'recruiter',
+    text: 'Would you be available for a phone meeting tomorrow 2pm?',
+  },
+  {
+    typeOfMessage: 'user',
+    text: 'Yes definitely!',
   },
 ]
 

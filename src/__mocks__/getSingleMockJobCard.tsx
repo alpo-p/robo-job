@@ -23,6 +23,7 @@ const MockJobPostCard: IJobPostCard = {
   deadline: '4.20.22',
   aboutTheCompany: lorem400c,
   linkToWebsite: 'www.goatze.com',
+  recruiterName: 'Erlich Bachman',
 }
 
 export default function getSingleMockJobCard(): IJobPostCard {

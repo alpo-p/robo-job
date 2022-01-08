@@ -11,6 +11,7 @@ export interface IJobPostCard {
   deadline: string
   aboutTheCompany: string
   linkToWebsite: string
+  recruiterName: string
 }
 
 // The message can be from "the robot" (pre-assigned questions), recruiter (manual messages) or the user

@@ -9,7 +9,7 @@ interface P {
 }
 
 const sizes = {
-  tiny: 20,
+  tiny: 32,
   small: 48,
   default: 56,
 }
