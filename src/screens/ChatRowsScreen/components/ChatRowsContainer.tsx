@@ -19,7 +19,11 @@ export default ({ searchFilter, stateFilter }: P) => {
   const likedJobPosts = jobPosts.filter(job => likedJobs.includes(job.id))
 
   return (
-    <View>
+    <View
+      style={{
+        marginTop: 8,
+      }}
+    >
       {likedJobPosts.map(job => (
         <ChatRow key={job.id} jobPost={job} />
       ))}

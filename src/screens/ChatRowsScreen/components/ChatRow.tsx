@@ -6,6 +6,7 @@ import SmallCompanyNameAndTitle from './SmallCompanyNameAndTitle'
 import InfoButton from '../../../common/components/InfoButton'
 import { NavigationPropType } from '../../../Navigator'
 import { IJobPostCard } from '../../../common/types'
+import { HorizontalSpaceOf8 } from '../../../common/components/HorizontalSpaceOf8'
 
 interface Row {
   jobPost: IJobPostCard
@@ -44,6 +45,7 @@ export const ChatRow: React.FC<Row> = ({ jobPost }) => {
         onPress={navigateToChatScreen}
       >
         <SmallCompanyLogo url={jobPost.logoUrl} />
+        <HorizontalSpaceOf8 />
         <SmallCompanyNameAndTitle
           name={jobPost.companyName}
           title={jobPost.jobTitle}

@@ -1,15 +1,25 @@
 import React from 'react'
 import { Image } from 'react-native'
 
+type LogoSizes = 'tiny' | 'small' | 'default'
+
 interface P {
   url: string
+  size?: LogoSizes
 }
-export default ({ url }: P) => (
+
+const sizes = {
+  tiny: 20,
+  small: 50,
+  default: 56,
+}
+
+export default ({ url, size = 'default' }: P) => (
   <Image
     style={{
-      height: 48,
-      width: 48,
-      borderRadius: 24,
+      height: sizes[size],
+      width: sizes[size],
+      borderRadius: sizes[size] / 2,
     }}
     source={{ uri: url }}
   />
