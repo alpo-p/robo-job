@@ -25,4 +25,4 @@ export interface IndividualChat {
   messages: Message[]
 }
 
-export type Chats = IndividualChat[] | null
+export type Chats = IndividualChat[]

@@ -10,7 +10,7 @@ interface IChatsContext {
 }
 
 const defaultState = {
-  chats: null,
+  chats: [] as Chats,
   setChats: undefined as unknown as React.Dispatch<React.SetStateAction<Chats>>,
 }
 

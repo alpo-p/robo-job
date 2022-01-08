@@ -16,6 +16,6 @@ export default ({
 }: P) => (
   <SafeAreaView>
     <ChatTopBar jobPost={jobPost} />
-    <MessagesContainer />
+    <MessagesContainer jobPost={jobPost} />
   </SafeAreaView>
 )
