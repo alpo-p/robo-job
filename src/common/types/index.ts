@@ -13,6 +13,8 @@ export interface IJobPostCard {
   linkToWebsite: string
 }
 
+// The message can be from "the robot" (pre-assigned questions), recruiter (manual messages) or the user
+// note: how to group the question and user answer together? A type with "question: string, answer: string" would solve this I guess
 export type MessageTypes = 'robo' | 'recruiter' | 'user'
 
 export interface Message {
