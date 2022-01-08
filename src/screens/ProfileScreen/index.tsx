@@ -34,7 +34,7 @@ export default () => {
   return (
     <SafeAreaView>
       <KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'position' : 'height'}
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
         <ScrollView
           style={{
@@ -67,6 +67,15 @@ export default () => {
           />
           <VerticalSpaceOf16 />
           <InputComponent
+            title="linkedin or other links"
+            height={WHITE_BOX_BASE_SIZE * 2}
+            placeholder={PLACEHOLDERS.links}
+            value={links}
+            onChangeText={setLinks}
+            multiline
+          />
+          <VerticalSpaceOf16 />
+          <InputComponent
             title="work experience"
             height={WHITE_BOX_BASE_SIZE * 3}
             placeholder={PLACEHOLDERS.xp}
@@ -82,16 +91,6 @@ export default () => {
             placeholder={PLACEHOLDERS.education}
             value={education}
             onChangeText={setEducation}
-            multiline
-            optional
-          />
-          <VerticalSpaceOf16 />
-          <InputComponent
-            title="linkedin or other links"
-            height={WHITE_BOX_BASE_SIZE * 2}
-            placeholder={PLACEHOLDERS.links}
-            value={links}
-            onChangeText={setLinks}
             multiline
             optional
           />

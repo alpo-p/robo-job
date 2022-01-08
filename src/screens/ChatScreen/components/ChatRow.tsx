@@ -43,11 +43,8 @@ export const ChatRow: React.FC<Row> = ({ jobPost }) => {
       </TouchableOpacity>
       <View
         style={{
-          flexDirection: 'row',
           marginLeft: 'auto',
           justifyContent: 'center',
-          alignContent: 'flex-end',
-          alignItems: 'center',
         }}
       >
         <InfoButton onPress={navigateToDetails} smaller />
