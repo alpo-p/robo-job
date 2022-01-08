@@ -16,23 +16,25 @@ import {
 import { useColorScheme } from 'react-native'
 import HomeScreen from './screens/HomeScreen'
 import AuthScreen from './screens/AuthScreen'
-import ChatScreen from './screens/ChatRowsScreen'
+import ChatRowsScreen from './screens/ChatRowsScreen'
 import ProfileScreen from './screens/ProfileScreen'
 import { bottomTabNavigatorOptions } from './configs/bottomTabNavigatorOptions'
 import { DarkTheme, LightTheme } from './common/themes'
 import DetailedJobCard from './screens/DetailedJobPost'
 import { IJobPostCard } from './common/types'
+import ChatScreen from './screens/ChatScreen'
 
 type MainStackParamList = {
   AuthScreen: undefined
   RootNavigator: undefined
   DetailedJobCard: { jobPost: IJobPostCard }
+  ChatScreen: { jobPost: IJobPostCard }
 }
 
 // When adding new screens, remember to add them here
 type RootStackParamList = {
   HomeScreen: undefined
-  ChatScreen: undefined
+  ChatRowsScreen: undefined
   ProfileScreen: undefined
 }
 
@@ -50,14 +52,13 @@ export type NavigationPropType = CompositeNavigationProp<
 const RootStack = createBottomTabNavigator<RootStackParamList>()
 const BottomTabNavigator = () => {
   const { colors } = useTheme()
-
   return (
     <RootStack.Navigator
       initialRouteName="HomeScreen"
       screenOptions={({ route }) => bottomTabNavigatorOptions(route, colors)}
     >
       <RootStack.Screen name="HomeScreen" component={HomeScreen} />
-      <RootStack.Screen name="ChatScreen" component={ChatScreen} />
+      <RootStack.Screen name="ChatRowsScreen" component={ChatRowsScreen} />
       <RootStack.Screen name="ProfileScreen" component={ProfileScreen} />
     </RootStack.Navigator>
   )
@@ -66,8 +67,6 @@ const BottomTabNavigator = () => {
 const MainStack = createNativeStackNavigator<MainStackParamList>()
 const Navigator = () => {
   const scheme = useColorScheme()
-  // const scheme = 'dark'
-
   return (
     <NavigationContainer theme={scheme === 'dark' ? DarkTheme : LightTheme}>
       <MainStack.Navigator
@@ -77,6 +76,7 @@ const Navigator = () => {
         <MainStack.Screen name="AuthScreen" component={AuthScreen} />
         <MainStack.Screen name="RootNavigator" component={BottomTabNavigator} />
         <MainStack.Screen name="DetailedJobCard" component={DetailedJobCard} />
+        <MainStack.Screen name="ChatScreen" component={ChatScreen} />
       </MainStack.Navigator>
     </NavigationContainer>
   )
