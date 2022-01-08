@@ -20,9 +20,9 @@ const DetailedJobCard: React.FC<P> = ({
     params: { jobPost },
   },
 }) => {
+  // TODO: maybe don't pass on the whole jobPost but instead fetch from context/etc.?
   const navigation = useNavigation()
   const navigateBackToSearch = () => navigation.goBack()
-  // TODO: maybe don't pass on the whole jobPost but instead fetch from context/etc.?
 
   return (
     <SafeAreaView>
@@ -47,7 +47,7 @@ const DetailedJobCard: React.FC<P> = ({
           <AboutTheCompany jobPost={jobPost} />
         </View>
       </ScrollView>
-      <BottomButtons id={jobPost.id} />
+      <BottomButtons jobPost={jobPost} />
     </SafeAreaView>
   )
 }

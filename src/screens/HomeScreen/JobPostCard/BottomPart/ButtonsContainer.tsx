@@ -38,7 +38,19 @@ const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
     setIsHeartPressed(b => !b)
     likeOrDislikeJob(id, setLikedJobs)
   }
-  const handleStartChat = () => console.log('Applying!')
+
+  const handleStartChat = () => {
+    // Starting a chat means here the user likes the job
+    // TODO: Maybe in the future this should be triggered only when user starts answering
+    if (!isHeartPressed) {
+      handleClickLike()
+    }
+
+    navigation.navigate('ChatScreen', {
+      jobPost,
+    })
+  }
+
   const handleShare = () => console.log('Sharing!')
 
   return (

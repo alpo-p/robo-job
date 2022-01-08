@@ -4,7 +4,7 @@ import IconButton from './IconButton'
 
 interface P {
   onPress: () => void
-  smaller: boolean
+  smaller?: boolean
 }
 
 export default ({ onPress, smaller }: P) => {
