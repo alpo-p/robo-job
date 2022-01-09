@@ -1,21 +1,24 @@
-import { useTheme } from '@react-navigation/native'
 import React from 'react'
-import { View } from 'react-native'
-import RoboText from '../../../common/components/RoboText'
+import { View, StyleSheet } from 'react-native'
+import { MessageBubble } from './MessageBubble'
 
 interface P {
   text: string
 }
 
 export default ({ text }: P) => {
-  const { colors } = useTheme()
   return (
-    <View
-      style={{
-        backgroundColor: colors.card,
-      }}
-    >
-      <RoboText>{text}</RoboText>
+    <View style={stylesheet.wrapper}>
+      <MessageBubble text={text} noBackgroundColor />
     </View>
   )
 }
+
+const stylesheet = StyleSheet.create({
+  wrapper: {
+    margin: 8,
+    maxWidth: '80%',
+    alignSelf: 'flex-end',
+    marginBottom: 16,
+  },
+})
