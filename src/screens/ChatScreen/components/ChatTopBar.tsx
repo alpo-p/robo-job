@@ -13,6 +13,7 @@ interface P {
   jobPost: IJobPostCard
 }
 
+// TODO: make SmallCompanyNameAndTitle clickable and navigate to details
 export default ({ jobPost }: P) => {
   const { colors } = useTheme()
   const navigation = useNavigation<NavigationPropType>()

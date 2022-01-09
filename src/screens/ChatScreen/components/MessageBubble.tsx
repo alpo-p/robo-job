@@ -3,7 +3,7 @@ import React from 'react'
 import { View } from 'react-native'
 import RoboText from '../../../common/components/RoboText'
 
-export const TextBubble: React.FC<{ text: string }> = ({ text }) => {
+export const MessageBubble: React.FC<{ text: string }> = ({ text }) => {
   const { colors } = useTheme()
   return (
     <View
