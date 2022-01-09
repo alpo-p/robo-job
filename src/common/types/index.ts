@@ -19,8 +19,10 @@ export interface IJobPostCard {
 export type MessageTypes = 'robo' | 'recruiter' | 'user'
 
 export interface Message {
+  id: string
   typeOfMessage: MessageTypes
   text: string
+  seen?: boolean
 }
 
 export interface IndividualChat {

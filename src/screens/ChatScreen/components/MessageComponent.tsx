@@ -10,6 +10,7 @@ interface Props {
 }
 
 export const MessageComponent: React.FC<Props> = ({ message, jobPost }) => {
+  if (!message.text) return null
   if (message.typeOfMessage === 'user')
     return <UserMessage text={message.text} />
   if (message.typeOfMessage === 'recruiter')
