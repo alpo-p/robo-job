@@ -35,6 +35,6 @@ const stylesheet = StyleSheet.create({
   },
   name: {
     marginTop: 4,
-    marginLeft: 40,
+    marginLeft: 48,
   },
 })
