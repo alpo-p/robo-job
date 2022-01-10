@@ -37,8 +37,6 @@ export default ({ jobPost }: P) => {
   const [isApplying, setIsApplying] = useState<boolean>(false)
   const [hasApplied, setHasApplied] = useState<boolean>(false)
 
-  console.log(iOfRoboMsgToShow)
-
   const handleSendAnswer = () => {
     const userMessage: Message = {
       typeOfMessage: 'user',
