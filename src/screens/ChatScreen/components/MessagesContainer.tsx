@@ -1,5 +1,4 @@
-/* eslint-disable no-await-in-loop */
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
 import { IJobPostCard, Message } from '../../../common/types'
 import AnswerInputBar from './AnswerInputBar'
@@ -25,8 +24,14 @@ const initialRoboMessages: Message[] = [
 ]
 
 export default ({ jobPost }: P) => {
+  const scrollViewRef = useRef<ScrollView | null>(null)
+
   const [shownMessages, setShownMessages] = useState<Message[]>([] as Message[])
   const [answer, setAnswer] = useState<string>('')
+  const [iOfRoboMsgToShow, setIOfRoboMsgToShow] = useState<number>(0)
+  const [isApplying, setIsApplying] = useState<boolean>(false)
+
+  console.log(iOfRoboMsgToShow)
 
   const handleSendAnswer = () => {
     const userMessage: Message = {
@@ -35,13 +40,26 @@ export default ({ jobPost }: P) => {
     }
     setShownMessages(m => m.concat(userMessage))
     setAnswer('')
+
+    const nextIndex = iOfRoboMsgToShow + 1
+
+    if (nextIndex < initialRoboMessages.length) {
+      setShownMessages(m => m.concat(initialRoboMessages[nextIndex]))
+      setIOfRoboMsgToShow(nextIndex)
+    }
+
+    if (nextIndex === initialRoboMessages.length - 1) {
+      setIsApplying(true)
+    }
   }
 
   useEffect(() => {
-    const messageToShow = initialRoboMessages[0]
+    const messageToShow = initialRoboMessages[iOfRoboMsgToShow]
     setShownMessages(m => m.concat(messageToShow))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  if (!scrollViewRef) return null
   // TODO: refactor keyboardavoidingview
   return (
     <KeyboardAvoidingView
@@ -50,7 +68,12 @@ export default ({ jobPost }: P) => {
       }}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <ScrollView>
+      <ScrollView
+        ref={scrollViewRef}
+        onContentSizeChange={() =>
+          scrollViewRef.current?.scrollToEnd({ animated: true })
+        }
+      >
         {shownMessages.map((m, i) => (
           // eslint-disable-next-line react/no-array-index-key
           <MessageComponent key={i} message={m} jobPost={jobPost} />
@@ -60,6 +83,7 @@ export default ({ jobPost }: P) => {
         value={answer}
         onChangeText={setAnswer}
         handleSendAnswer={handleSendAnswer}
+        isApplying={isApplying}
       />
     </KeyboardAvoidingView>
   )
