@@ -8,7 +8,7 @@ interface P {
   jobPost: IJobPostCard
 }
 
-const initialRoboMessages: Message[] = [
+const roboMessages: Message[] = [
   {
     typeOfMessage: 'robo',
     text: 'Here is the first message from the robo. It is a very long one yeah yo yeah',
@@ -23,6 +23,11 @@ const initialRoboMessages: Message[] = [
   },
 ]
 
+const thanksForApplying: Message = {
+  typeOfMessage: 'robo',
+  text: 'Thanks for applying! If you want to provide additional information, please do so by sending messages',
+}
+
 export default ({ jobPost }: P) => {
   const scrollViewRef = useRef<ScrollView | null>(null)
 
@@ -30,6 +35,7 @@ export default ({ jobPost }: P) => {
   const [answer, setAnswer] = useState<string>('')
   const [iOfRoboMsgToShow, setIOfRoboMsgToShow] = useState<number>(0)
   const [isApplying, setIsApplying] = useState<boolean>(false)
+  const [hasApplied, setHasApplied] = useState<boolean>(false)
 
   console.log(iOfRoboMsgToShow)
 
@@ -41,25 +47,32 @@ export default ({ jobPost }: P) => {
     setShownMessages(m => m.concat(userMessage))
     setAnswer('')
 
-    const nextIndex = iOfRoboMsgToShow + 1
-
-    if (nextIndex < initialRoboMessages.length) {
-      setShownMessages(m => m.concat(initialRoboMessages[nextIndex]))
-      setIOfRoboMsgToShow(nextIndex)
+    if (isApplying) {
+      setHasApplied(true)
+      setIsApplying(false)
+      setShownMessages(m => m.concat(thanksForApplying))
     }
 
-    if (nextIndex === initialRoboMessages.length - 1) {
-      setIsApplying(true)
+    if (!hasApplied) {
+      const nextIndex = iOfRoboMsgToShow + 1
+
+      if (nextIndex < roboMessages.length) {
+        setShownMessages(m => m.concat(roboMessages[nextIndex]))
+        setIOfRoboMsgToShow(nextIndex)
+      }
+
+      if (nextIndex === roboMessages.length - 1) {
+        setIsApplying(true)
+      }
     }
   }
 
   useEffect(() => {
-    const messageToShow = initialRoboMessages[iOfRoboMsgToShow]
+    const messageToShow = roboMessages[iOfRoboMsgToShow]
     setShownMessages(m => m.concat(messageToShow))
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  if (!scrollViewRef) return null
   // TODO: refactor keyboardavoidingview
   return (
     <KeyboardAvoidingView
