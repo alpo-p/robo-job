@@ -6,6 +6,8 @@ export default {
   mediumDarkGrey: '#d0d0d0',
   lightGrey: '#e0e0e0',
 
+  successGreen: '#087c61',
+
   primaryColorBase: '#186db6',
   primaryColorDarkened10: '#00549D',
   primaryColorLightened10: '#3287D0',

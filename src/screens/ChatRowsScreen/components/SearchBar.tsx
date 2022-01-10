@@ -9,6 +9,7 @@ interface P {
   setSearchFilter: (term: string) => void
 }
 
+// TODO: refactor
 export default ({ searchFilter, setSearchFilter }: P) => {
   const { colors } = useTheme()
   return (
