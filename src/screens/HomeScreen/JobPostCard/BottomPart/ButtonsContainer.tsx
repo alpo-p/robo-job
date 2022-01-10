@@ -24,7 +24,7 @@ const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
   const { id } = jobPost
 
   useEffect(() => {
-    const isLiked = likedJobs.includes(jobPost.id)
+    const isLiked = likedJobs.map(job => job.id).includes(jobPost.id)
     setIsHeartPressed(isLiked)
   }, [likedJobs, jobPost.id])
 

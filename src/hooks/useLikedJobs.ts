@@ -1,18 +1,21 @@
 import { useContext } from 'react'
-import { SetStringStateType } from '../common/types/utilTypes'
-import { LikedJobsContext } from '../contexts/LikedJobsProvider'
+import { LikedJob } from '../common/types'
+import {
+  LikedJobsContext,
+  SetLikedJobsType,
+} from '../contexts/LikedJobsProvider'
 
 // TODO: refactor this whole thing
 // TODO: extract this out of here and get rid of the weird dependency of setLikedJobs
 export const likeOrDislikeJob = (
   id: string,
-  setLikedJobs: SetStringStateType,
+  setLikedJobs: SetLikedJobsType,
 ) => {
-  setLikedJobs((jobs: string[]) => {
-    if (jobs.includes(id)) {
-      return jobs.filter(likedJobId => likedJobId !== id)
+  setLikedJobs((jobs: LikedJob[]) => {
+    if (jobs.map(job => job.id).includes(id)) {
+      return jobs.filter(likedJobId => likedJobId.id !== id)
     }
-    return jobs.concat(id)
+    return jobs.concat({ id })
   })
 }
 

@@ -26,7 +26,7 @@ export default ({ jobPost }: P) => {
   const { id } = jobPost
 
   useEffect(() => {
-    const isLiked = likedJobs.includes(id)
+    const isLiked = likedJobs.map(job => job.id).includes(id)
     setIsHeartPressed(isLiked)
   }, [likedJobs, id])
 

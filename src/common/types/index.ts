@@ -29,3 +29,8 @@ export interface IndividualChat {
 }
 
 export type Chats = IndividualChat[]
+
+export interface LikedJob {
+  id: string
+  isUnread?: boolean
+}

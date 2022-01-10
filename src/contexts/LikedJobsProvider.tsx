@@ -1,22 +1,23 @@
 import React, { useState } from 'react'
+import { LikedJob } from '../common/types'
+
+export type SetLikedJobsType = React.Dispatch<React.SetStateAction<LikedJob[]>>
 
 interface ILikedJobsContext {
-  likedJobs: string[]
-  setLikedJobs: React.Dispatch<React.SetStateAction<string[]>>
+  likedJobs: LikedJob[]
+  setLikedJobs: SetLikedJobsType
 }
 
 const defaultState = {
-  likedJobs: [] as string[],
-  setLikedJobs: undefined as unknown as React.Dispatch<
-    React.SetStateAction<string[]>
-  >,
+  likedJobs: [] as LikedJob[],
+  setLikedJobs: undefined as unknown as SetLikedJobsType,
 }
 
 export const LikedJobsContext =
   React.createContext<ILikedJobsContext>(defaultState)
 
 const LikedJobsProvider: React.FC = ({ children }) => {
-  const [likedJobs, setLikedJobs] = useState<string[]>([])
+  const [likedJobs, setLikedJobs] = useState<LikedJob[]>([])
 
   return (
     <LikedJobsContext.Provider

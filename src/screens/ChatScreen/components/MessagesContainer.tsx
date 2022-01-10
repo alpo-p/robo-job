@@ -28,7 +28,7 @@ const roboMessages: Message[] = [
 
 const thanksForApplying: Message = {
   typeOfMessage: 'robo',
-  text: 'Thanks for applying! If you want to provide additional information, please do so by sending messages',
+  text: 'Thanks for applying! Our recruiting manager will go through your answers ASAP. In the meanwhile, check that your profile is up to date',
 }
 
 const messageFromRecruiter: Message = {

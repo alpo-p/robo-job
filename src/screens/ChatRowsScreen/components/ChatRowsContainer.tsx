@@ -16,7 +16,9 @@ export default ({ searchFilter, stateFilter }: P) => {
   const { likedJobs } = useLikedJobs() // Confusingly this is ids
   const jobPosts = getMockJobCards()
 
-  const likedJobPosts = jobPosts.filter(job => likedJobs.includes(job.id))
+  const likedJobPosts = jobPosts.filter(job =>
+    likedJobs.map(j => j.id).includes(job.id),
+  )
 
   return (
     <View
