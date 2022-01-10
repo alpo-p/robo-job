@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
 import { IJobPostCard, Message } from '../../../common/types'
+import useGetMessages from '../../../hooks/useGetMessages'
+import useSetMessages from '../../../hooks/useSetMessages'
+import waitSeconds from '../../../utils/waitSeconds'
 import AnswerInputBar from './AnswerInputBar'
 import { MessageComponent } from './MessageComponent'
 
@@ -28,8 +31,15 @@ const thanksForApplying: Message = {
   text: 'Thanks for applying! If you want to provide additional information, please do so by sending messages',
 }
 
+const messageFromRecruiter: Message = {
+  typeOfMessage: 'recruiter',
+  text: 'Thanks for your interest! We really like you. Are you available for a phone interview tomorrow?',
+}
+
 export default ({ jobPost }: P) => {
   const scrollViewRef = useRef<ScrollView | null>(null)
+  const messagesFromContext = useGetMessages(jobPost.id)
+  const setMessagesToContext = useSetMessages(jobPost.id)
 
   const [shownMessages, setShownMessages] = useState<Message[]>([] as Message[])
   const [answer, setAnswer] = useState<string>('')
@@ -37,7 +47,9 @@ export default ({ jobPost }: P) => {
   const [isApplying, setIsApplying] = useState<boolean>(false)
   const [hasApplied, setHasApplied] = useState<boolean>(false)
 
-  const handleSendAnswer = () => {
+  console.log(messagesFromContext)
+
+  const handleSendAnswer = async () => {
     const userMessage: Message = {
       typeOfMessage: 'user',
       text: answer,
@@ -45,9 +57,17 @@ export default ({ jobPost }: P) => {
     setShownMessages(m => m.concat(userMessage))
     setAnswer('')
 
+    // Looks cooler when there's a small delay between receiving the msg from robot
+    await waitSeconds(1)
+
     if (isApplying) {
       setHasApplied(true)
       setIsApplying(false)
+      const messagesInTheEnd = shownMessages
+        .concat(userMessage)
+        .concat(thanksForApplying)
+        .concat(messageFromRecruiter)
+      setMessagesToContext(messagesInTheEnd)
       setShownMessages(m => m.concat(thanksForApplying))
     }
 
@@ -66,12 +86,18 @@ export default ({ jobPost }: P) => {
   }
 
   useEffect(() => {
-    const messageToShow = roboMessages[iOfRoboMsgToShow]
-    setShownMessages(m => m.concat(messageToShow))
+    if (messagesFromContext.length === 0) {
+      const messageToShow = roboMessages[iOfRoboMsgToShow]
+      setShownMessages(m => m.concat(messageToShow))
+    } else {
+      setShownMessages(messagesFromContext)
+      setHasApplied(true)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // TODO: refactor keyboardavoidingview
+  // TODO: replace scrollview with flatlist?
   return (
     <KeyboardAvoidingView
       style={{

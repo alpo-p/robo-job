@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Chats } from '../common/types'
-import { getMockChats } from '../__mocks__/getMockChats'
 
 interface IChatsContext {
   chats: Chats
@@ -15,8 +14,7 @@ const defaultState = {
 export const ChatsContext = React.createContext<IChatsContext>(defaultState)
 
 const ChatsProvider: React.FC = ({ children }) => {
-  const mockChats = getMockChats()
-  const [chats, setChats] = useState<Chats>(mockChats)
+  const [chats, setChats] = useState<Chats>([])
 
   return (
     <ChatsContext.Provider
