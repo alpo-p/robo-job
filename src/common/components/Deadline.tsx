@@ -19,7 +19,7 @@ export const Deadline: React.FC<{ dl: string }> = ({ dl }) => {
         size={20}
       />
       <RoboText weight="light" size="small">
-        Deadline: {dl}
+        Deadline in {dl} days
       </RoboText>
     </View>
   )
