@@ -56,6 +56,7 @@ export default ({ jobPost }: P) => {
         state.showProfileBadge = true
         return state
       })
+      await waitSeconds(10)
       setAsUnread()
     }
 

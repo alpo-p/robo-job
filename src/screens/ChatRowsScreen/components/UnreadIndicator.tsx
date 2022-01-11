@@ -8,7 +8,7 @@ export default () => {
   return (
     <View
       style={{
-        backgroundColor: colors.primary,
+        backgroundColor: colors.notification,
         height: size,
         width: size,
         borderRadius: size / 2,

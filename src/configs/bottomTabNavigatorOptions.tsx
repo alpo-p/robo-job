@@ -35,7 +35,7 @@ export const bottomTabNavigatorOptions = (
   tabBarShowLabel: false,
   tabBarHideOnKeyboard: true,
   tabBarBadgeStyle: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.notification,
     minWidth: 12,
     maxHeight: 12,
     borderRadius: 7,

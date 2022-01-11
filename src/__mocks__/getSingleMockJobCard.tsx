@@ -79,9 +79,9 @@ export const mockPositions = [mockPosition1, mockPosition2, mockPosition3]
 const mockCompany1 = {
   companyName: 'E Corp',
   logoUrl:
-    'https://static.wikia.nocookie.net/villains/images/8/87/ECorp.png/revision/latest/scale-to-width-down/677?cb=20190330195106',
+    'https://ih1.redbubble.net/image.659413411.3655/st,small,507x507-pad,600x600,f8f8f8.u1.jpg',
   pictureUrl:
-    'https://www.wework.com/ideas/wp-content/uploads/sites/4/2017/06/Web_150DPI-20190927_10th_Floor_Conference_Room_2_v1-1120x630.jpg',
+    'https://thumbs.dreamstime.com/b/close-up-business-people-congratulating-one-another-team-building-exercise-54970426.jpg',
   location: 'Helsinki',
   aboutTheCompany: `E Corp is a fast and responsible loan provider with over 500 000 customers in Finland, Sweden and Lithuania. The company was recently granted a specialized banking license by The European Central Bank (ECB) and is currently establishing a new business to enable international growth and a continuous launch of new products.
 
