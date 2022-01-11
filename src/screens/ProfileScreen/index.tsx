@@ -38,7 +38,7 @@ export default () => {
       state.showProfileBadge = false
       return state
     })
-  }, [name, setGlobalBooleans])
+  }, [setGlobalBooleans])
 
   return (
     <SafeAreaView>

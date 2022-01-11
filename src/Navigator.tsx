@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import {
   createNativeStackNavigator,
   NativeStackNavigationProp,
@@ -55,6 +55,8 @@ const RootStack = createBottomTabNavigator<RootStackParamList>()
 
 const BottomTabNavigator = () => {
   const { colors } = useTheme()
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [_s, setS] = useState(false) // eslint-disable-line no-unused-vars
 
   const { likedJobs } = useLikedJobs()
   const showChatBadge = likedJobs.map(j => j.isUnread).includes(true)
@@ -67,6 +69,9 @@ const BottomTabNavigator = () => {
     <RootStack.Navigator
       initialRouteName="HomeScreen"
       screenOptions={({ route }) => bottomTabNavigatorOptions(route, colors)}
+      screenListeners={{
+        focus: () => setS(s => !s),
+      }}
     >
       <RootStack.Screen name="HomeScreen" component={HomeScreen} />
       <RootStack.Screen

@@ -44,6 +44,11 @@ export default ({ jobPost }: P) => {
 
     if (isApplying) {
       setHasApplied(true)
+      setGlobalBooleans(s => {
+        const state = s
+        state.showProfileBadge = true
+        return state
+      })
       setIsApplying(false)
       const messagesInTheEnd = shownMessages
         .concat(userMessage)
@@ -51,11 +56,6 @@ export default ({ jobPost }: P) => {
         .concat(messageFromRecruiter)
       setMessagesToContext(messagesInTheEnd)
       setShownMessages(m => m.concat(thanksForApplying))
-      setGlobalBooleans(s => {
-        const state = s
-        state.showProfileBadge = true
-        return state
-      })
       await waitSeconds(10)
       setAsUnread()
     }
