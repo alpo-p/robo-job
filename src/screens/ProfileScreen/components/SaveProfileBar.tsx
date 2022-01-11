@@ -19,7 +19,7 @@ export default ({ show, onPress }: P) => {
         display: !show ? 'none' : undefined,
         alignItems: 'flex-end',
         justifyContent: 'center',
-        borderBottomColor: colors.border,
+        borderBottomColor: colors.card,
         borderBottomWidth: 1,
         marginRight: 1 * 8,
       }}
