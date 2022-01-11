@@ -6,36 +6,12 @@ import useGetMessages from '../../../hooks/useGetMessages'
 import { useSetAsReadOrUnread } from '../../../hooks/useLikedJobs'
 import useSetMessages from '../../../hooks/useSetMessages'
 import waitSeconds from '../../../utils/waitSeconds'
+import getMocksForMessages from '../../../__mocks__/getMocksForMessages'
 import AnswerInputBar from './AnswerInputBar'
 import { MessageComponent } from './MessageComponent'
 
 interface P {
   jobPost: IJobPostCard
-}
-
-const roboMessages: Message[] = [
-  {
-    typeOfMessage: 'robo',
-    text: 'Here is the first message from the robo. It is a very long one yeah yo yeah',
-  },
-  {
-    typeOfMessage: 'robo',
-    text: "Here's a second message. Yeeeea h buddy ueah yeayh eau siudasidu asid iuasd iasjd oasj",
-  },
-  {
-    typeOfMessage: 'robo',
-    text: 'Here is the third message from the robo. It is a very long one yeah yo yeah',
-  },
-]
-
-const thanksForApplying: Message = {
-  typeOfMessage: 'robo',
-  text: 'Thanks for applying! Our recruiting manager will go through your answers ASAP. In the meanwhile, check that your profile is up to date',
-}
-
-const messageFromRecruiter: Message = {
-  typeOfMessage: 'recruiter',
-  text: 'Thanks for your interest! We really like you. Are you available for a phone interview tomorrow?',
 }
 
 // TODO: refactor or something. This is a mess
@@ -45,6 +21,9 @@ export default ({ jobPost }: P) => {
   const messagesFromContext = useGetMessages(jobPost.id)
   const setMessagesToContext = useSetMessages(jobPost.id)
   const { setAsRead, setAsUnread } = useSetAsReadOrUnread(jobPost.id)
+
+  const { roboMessages, thanksForApplying, messageFromRecruiter } =
+    getMocksForMessages()
 
   const [shownMessages, setShownMessages] = useState<Message[]>([] as Message[])
   const [answer, setAnswer] = useState<string>('')
