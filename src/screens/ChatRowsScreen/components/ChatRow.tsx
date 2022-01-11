@@ -7,12 +7,14 @@ import InfoButton from '../../../common/components/InfoButton'
 import { NavigationPropType } from '../../../Navigator'
 import { IJobPostCard } from '../../../common/types'
 import { HorizontalSpaceOf8 } from '../../../common/components/HorizontalSpaceOf8'
+import UnreadIndicator from './UnreadIndicator'
 
 interface Row {
   jobPost: IJobPostCard
+  hasUnread?: boolean
 }
 
-export const ChatRow: React.FC<Row> = ({ jobPost }) => {
+export const ChatRow: React.FC<Row> = ({ jobPost, hasUnread }) => {
   const navigation = useNavigation<NavigationPropType>()
 
   const navigateToDetails = () => {
@@ -53,10 +55,12 @@ export const ChatRow: React.FC<Row> = ({ jobPost }) => {
       </TouchableOpacity>
       <View
         style={{
+          flexDirection: 'row',
           marginLeft: 'auto',
           justifyContent: 'center',
         }}
       >
+        {hasUnread && <UnreadIndicator />}
         <InfoButton onPress={navigateToDetails} smaller />
       </View>
     </View>

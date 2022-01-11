@@ -19,6 +19,27 @@ export const likeOrDislikeJob = (
   })
 }
 
+export const useSetAsReadOrUnread = (id: string) => {
+  const { setLikedJobs } = useContext(LikedJobsContext)
+  const setAsUnread = () =>
+    setLikedJobs((jobs: LikedJob[]) => {
+      const newLikedJobObject = {
+        id,
+        isUnread: true,
+      }
+      return jobs.map(job => (job.id === id ? newLikedJobObject : job))
+    })
+  const setAsRead = () =>
+    setLikedJobs((jobs: LikedJob[]) => {
+      const newLikedJobObject = {
+        id,
+        isUnread: false,
+      }
+      return jobs.map(job => (job.id === id ? newLikedJobObject : job))
+    })
+  return { setAsRead, setAsUnread }
+}
+
 export default () => {
   return useContext(LikedJobsContext)
 }
