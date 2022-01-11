@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native'
 import React, { useEffect, useState } from 'react'
-import { View } from 'react-native'
+import { Alert, View } from 'react-native'
 import ChatButton from '../../../../common/components/ChatButton'
 import HeartButton from '../../../../common/components/HeartButton'
 import ShareButton from '../../../../common/components/ShareButton'
@@ -51,7 +51,10 @@ const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
     })
   }
 
-  const handleShare = () => console.log('Sharing!')
+  const handleShare = () =>
+    Alert.alert(
+      'Pressing this button will trigger sharing this job to your friends',
+    )
 
   return (
     <View
