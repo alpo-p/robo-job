@@ -40,7 +40,6 @@ const AuthScreen: React.FC = () => {
         }}
       >
         <BigLogo />
-        <VerticalSpaceOf8 />
         <RoboText
           size="largest"
           weight="bold"
@@ -52,7 +51,9 @@ const AuthScreen: React.FC = () => {
       <VerticalSpaceOf8 />
       <View
         style={{
-          width: '80%',
+          position: 'absolute',
+          bottom: 8 * 4,
+          width: '88%',
         }}
       >
         <SignInButton

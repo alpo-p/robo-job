@@ -17,7 +17,7 @@ export const SignInButton: React.FC<Props> = ({ onPress, children, title }) => {
         backgroundColor: colors.primary,
         padding: 16,
         borderWidth: 0.5,
-        borderRadius: 16,
+        borderRadius: 8 * 4,
         alignItems: 'center',
       }}
     >
