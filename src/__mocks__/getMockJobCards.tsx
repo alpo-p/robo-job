@@ -16,6 +16,8 @@ export function getMockJobCards2(n = 10): IJobPostCard[] {
   return mockJobPostCards
 }
 
+// TODO: clean up mock files
+
 // @ts-ignore
 function swapElement(array, indexA, indexB) {
   const tmp = array[indexA]

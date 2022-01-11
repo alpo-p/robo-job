@@ -15,7 +15,7 @@ In short, we are looking for a seasoned marketing professional with mature views
     typeOfMessage: 'robo',
     text: `Last question. From 1-10, rate how good you are at building marketing strategies. Also explain shortly why you chose the answer.
 
-Note: after answering this question, you will apply to the position and your profile will be shared with the recruiter ✅`,
+Note: by answering this question you'll apply to the position and your profile will be shared with the recruiter ✅`,
   },
 ]
 
