@@ -1,5 +1,5 @@
 import React from 'react'
-import { Image, useColorScheme, View } from 'react-native'
+import { Alert, Image, useColorScheme, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
 import { SafeContainer } from '../../common/components/SafeContainer'
@@ -30,7 +30,12 @@ const BigLogo: React.FC = () => {
 const AuthScreen: React.FC = () => {
   const scheme = useColorScheme()
   const navigation = useNavigation<NavigationPropType>()
-  const signInAsDemo = () => navigation.navigate('RootNavigator')
+  const signInAsDemo = () => {
+    navigation.navigate('RootNavigator')
+    Alert.alert(
+      'Kuvittele, että olet juuri kirjoittanut hakukenttään digital marketing helsinki',
+    )
+  }
 
   return (
     <SafeContainer>
