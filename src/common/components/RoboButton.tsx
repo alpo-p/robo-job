@@ -8,20 +8,26 @@ interface Props {
   title?: string
 }
 
-export const RoboButton: React.FC<Props> = ({ onPress, children, title }) => {
+export const SignInButton: React.FC<Props> = ({ onPress, children, title }) => {
   const { colors } = useTheme()
   return (
     <TouchableOpacity
       onPress={onPress}
       style={{
-        backgroundColor: colors.background,
-        padding: 10,
+        backgroundColor: colors.primary,
+        padding: 16,
         borderWidth: 0.5,
         borderRadius: 16,
-        borderColor: colors.primary,
+        alignItems: 'center',
       }}
     >
-      {title ? <RoboText>{title}</RoboText> : children}
+      {title ? (
+        <RoboText size="medium" color="white">
+          {title}
+        </RoboText>
+      ) : (
+        children
+      )}
     </TouchableOpacity>
   )
 }

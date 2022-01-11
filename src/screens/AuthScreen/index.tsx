@@ -1,21 +1,65 @@
 import React from 'react'
+import { Image, useColorScheme, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
 import { SafeContainer } from '../../common/components/SafeContainer'
-import { RoboButton } from '../../common/components/RoboButton'
+import { SignInButton } from '../../common/components/RoboButton'
 import { NavigationPropType } from '../../Navigator'
 import RoboText from '../../common/components/RoboText'
+import { ROBO_COP_URL } from '../ChatScreen/components/RoboAvatar'
+import { VerticalSpaceOf8 } from '../../common/components/VerticalSpaceOf8'
+
+const logoSize = 100
+
+const BigLogo: React.FC = () => {
+  const scheme = useColorScheme()
+  return (
+    <Image
+      style={{
+        height: logoSize,
+        width: logoSize,
+        tintColor: scheme === 'dark' ? 'white' : undefined,
+      }}
+      source={{
+        uri: ROBO_COP_URL,
+      }}
+    />
+  )
+}
 
 const AuthScreen: React.FC = () => {
+  const scheme = useColorScheme()
   const navigation = useNavigation<NavigationPropType>()
   const signInAsDemo = () => navigation.navigate('RootNavigator')
 
   return (
     <SafeContainer>
-      <RoboText size="largest" weight="bold">
-        robo job
-      </RoboText>
-      <RoboButton onPress={() => signInAsDemo()} title="Sign in as demo" />
+      <View
+        style={{
+          alignItems: 'center',
+        }}
+      >
+        <BigLogo />
+        <VerticalSpaceOf8 />
+        <RoboText
+          size="largest"
+          weight="bold"
+          color={scheme === 'dark' ? 'white' : 'black'}
+        >
+          robo job
+        </RoboText>
+      </View>
+      <VerticalSpaceOf8 />
+      <View
+        style={{
+          width: '80%',
+        }}
+      >
+        <SignInButton
+          onPress={() => signInAsDemo()}
+          title="Sign in with demo account"
+        />
+      </View>
     </SafeContainer>
   )
 }
