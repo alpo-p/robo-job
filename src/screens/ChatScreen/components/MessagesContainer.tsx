@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
 import { IJobPostCard, Message } from '../../../common/types'
+import { GlobalBooleansContext } from '../../../contexts/GlobalBooleansProvider'
 import useGetMessages from '../../../hooks/useGetMessages'
 import { useSetAsReadOrUnread } from '../../../hooks/useLikedJobs'
 import useSetMessages from '../../../hooks/useSetMessages'
@@ -37,8 +38,10 @@ const messageFromRecruiter: Message = {
   text: 'Thanks for your interest! We really like you. Are you available for a phone interview tomorrow?',
 }
 
+// TODO: refactor or something. This is a mess
 export default ({ jobPost }: P) => {
   const scrollViewRef = useRef<ScrollView | null>(null)
+  const { setGlobalBooleans } = useContext(GlobalBooleansContext)
   const messagesFromContext = useGetMessages(jobPost.id)
   const setMessagesToContext = useSetMessages(jobPost.id)
   const { setAsRead, setAsUnread } = useSetAsReadOrUnread(jobPost.id)
@@ -48,8 +51,6 @@ export default ({ jobPost }: P) => {
   const [iOfRoboMsgToShow, setIOfRoboMsgToShow] = useState<number>(0)
   const [isApplying, setIsApplying] = useState<boolean>(false)
   const [hasApplied, setHasApplied] = useState<boolean>(false)
-
-  console.log(messagesFromContext)
 
   const handleSendAnswer = async () => {
     const userMessage: Message = {
@@ -71,6 +72,11 @@ export default ({ jobPost }: P) => {
         .concat(messageFromRecruiter)
       setMessagesToContext(messagesInTheEnd)
       setShownMessages(m => m.concat(thanksForApplying))
+      setGlobalBooleans(s => {
+        const state = s
+        state.showProfileBadge = true
+        return state
+      })
       setAsUnread()
     }
 
@@ -94,6 +100,7 @@ export default ({ jobPost }: P) => {
       setShownMessages(m => m.concat(messageToShow))
     } else {
       setShownMessages(messagesFromContext)
+      setHasApplied(true)
       setAsRead()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

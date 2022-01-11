@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import {
   createNativeStackNavigator,
   NativeStackNavigationProp,
@@ -23,6 +23,8 @@ import { DarkTheme, LightTheme } from './common/themes'
 import DetailedJobCard from './screens/DetailedJobPost'
 import { IJobPostCard } from './common/types'
 import ChatScreen from './screens/ChatScreen'
+import { GlobalBooleansContext } from './contexts/GlobalBooleansProvider'
+import useLikedJobs from './hooks/useLikedJobs'
 
 type MainStackParamList = {
   AuthScreen: undefined
@@ -53,18 +55,38 @@ const RootStack = createBottomTabNavigator<RootStackParamList>()
 
 const BottomTabNavigator = () => {
   const { colors } = useTheme()
+
+  const { likedJobs } = useLikedJobs()
+  const showChatBadge = likedJobs.map(j => j.isUnread).includes(true)
+
+  const {
+    globalBooleans: { showProfileBadge },
+  } = useContext(GlobalBooleansContext)
+
   return (
     <RootStack.Navigator
       initialRouteName="HomeScreen"
       screenOptions={({ route }) => bottomTabNavigatorOptions(route, colors)}
     >
       <RootStack.Screen name="HomeScreen" component={HomeScreen} />
-      <RootStack.Screen name="ChatRowsScreen" component={ChatRowsScreen} />
-      <RootStack.Screen name="ProfileScreen" component={ProfileScreen} />
+      <RootStack.Screen
+        name="ChatRowsScreen"
+        component={ChatRowsScreen}
+        options={{
+          tabBarBadge: showChatBadge ? '' : undefined,
+        }}
+      />
+      <RootStack.Screen
+        name="ProfileScreen"
+        component={ProfileScreen}
+        options={{
+          tabBarBadge: showProfileBadge ? '' : undefined,
+        }}
+      />
     </RootStack.Navigator>
   )
 }
-
+//  tabBarBadge: chatIndicator ? '0' : undefined,
 const MainStack = createNativeStackNavigator<MainStackParamList>()
 
 const Navigator = () => {

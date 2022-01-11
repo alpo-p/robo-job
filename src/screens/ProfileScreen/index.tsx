@@ -1,9 +1,10 @@
 import { useTheme } from '@react-navigation/native'
-import React, { useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { VerticalSpaceOf16 } from '../../common/components/VerticalSpaceOf16'
 import { VerticalSpaceOf24 } from '../../common/components/VerticalSpaceOf24'
+import { GlobalBooleansContext } from '../../contexts/GlobalBooleansProvider'
 import HelloText from './components/HelloText'
 import InputComponent from './components/InputComponent'
 
@@ -24,12 +25,21 @@ People say I am diligent and easy to work with. I'm looking for full-time offers
 
 export default () => {
   const { colors } = useTheme()
+  const { setGlobalBooleans } = useContext(GlobalBooleansContext)
 
   const [name, setName] = useState('')
   const [summary, setSummary] = useState('')
   const [experience, setExperience] = useState('')
   const [education, setEducation] = useState('')
   const [links, setLinks] = useState('')
+
+  useEffect(() => {
+    setGlobalBooleans(s => {
+      const state = s
+      state.showProfileBadge = false
+      return state
+    })
+  }, [name, setGlobalBooleans])
 
   return (
     <SafeAreaView>
