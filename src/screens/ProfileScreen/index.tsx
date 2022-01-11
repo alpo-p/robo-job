@@ -14,7 +14,6 @@ const PLACEHOLDERS = {
   name: 'Jared Dunn',
   summary: `I am a business graduate with a degree in Marketing looking for work in the field.
 I have worked as a marketing generalist in a small business handling all sides, such as updating websites and copywriting.
-
 People say I am diligent and easy to work with. I'm looking for full-time offers.`,
   xp: `- Marketing coordinator: Pied Piper (2017-2021)
 - Cashier: K-Market Ilola (2010-2017)`,

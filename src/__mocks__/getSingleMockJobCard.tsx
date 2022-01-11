@@ -50,7 +50,7 @@ const mockPosition2 = {
   jobTitle: 'Digital Marketing Manager',
   tags: ['digital marketing', 'management', 'facebook', 'adwords'],
   shortDescription:
-    'As a Digital Marketing Manager you will be responsible for digital marketing content creation, company newsletter, web pages(maintenance), social media, photographing and graphic design for web and print media. You will be accompanies by a happy group of hard-working and nice people with good values and great benefits',
+    'As a Digital Marketing Manager you will be responsible for digital marketing content creation, company newsletter, web pages, social media, photographing and graphic design for web and print media. You will be accompanies by a happy group of hard-working and nice people with good values and great benefits',
   longDescription: `We are searching for a passionate and ambitious MARKETING MANAGER to take on the exciting challenge of managing the company’s marketing activities in their home market - Finland!
   
 As the successful candidate, we trust that you will bring relevant marketing experience with proven success, along with a strong can-do attitude and a banquet of fresh ideas! In this marketing role, you will have the opportunity to influence the direction of some of the most respected brands! 
