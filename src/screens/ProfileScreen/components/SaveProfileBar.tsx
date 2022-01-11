@@ -10,7 +10,7 @@ interface P {
 }
 
 export default ({ show, onPress }: P) => {
-  const height = 7 * 8
+  const height = 6 * 8
   const { colors } = useTheme()
   return (
     <View
