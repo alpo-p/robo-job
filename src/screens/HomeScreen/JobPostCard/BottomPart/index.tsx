@@ -28,6 +28,7 @@ export default BottomPart
 
 const stylesheet = StyleSheet.create({
   container: {
+    flex: 1,
     paddingTop: 8,
     paddingLeft: 16,
     paddingRight: 16,

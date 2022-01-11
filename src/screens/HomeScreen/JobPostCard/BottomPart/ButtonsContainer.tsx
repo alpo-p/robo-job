@@ -59,9 +59,9 @@ const ButtonsContainer: React.FC<Props> = ({ jobPost }) => {
   return (
     <View
       style={{
-        marginLeft: 'auto',
-        left: 0,
-        bottom: '30%',
+        position: 'absolute',
+        right: 16,
+        bottom: 8 * 10,
       }}
     >
       <InfoButton onPress={navigateToDetails} />

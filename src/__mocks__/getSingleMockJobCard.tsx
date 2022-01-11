@@ -36,7 +36,7 @@ const mockPosition1 = {
   jobTitle: 'Marketing Manager',
   tags: ['marketing', 'social media', 'marketing automation'],
   shortDescription: `If you are marketing-minded, enthusiastic, creative, digitally savvy, up to date on emerging trends and tactics, and obsessed with quality - then this is the position for you, and we want to hear from you!
-    
+   
 We have top-of-market pay, Friday beers and great support personal growth!`,
   longDescription: `We are searching for a passionate and ambitious MARKETING MANAGER to take on the exciting challenge of managing the company’s marketing activities in their home market - Finland!
   
