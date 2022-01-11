@@ -17,7 +17,7 @@ const fontSizes = {
   small: 14,
   medium: 16,
   large: 20,
-  largest: 60,
+  largest: 40,
 }
 
 const fontFamilies = {
