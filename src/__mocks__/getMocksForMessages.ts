@@ -3,7 +3,7 @@ import { Message } from '../common/types'
 const roboMessages: Message[] = [
   {
     typeOfMessage: 'robo',
-    text: `Thanks for your interest to the position and our company! To apply, please answer our 3 short questions.
+    text: `Thanks for your interest to the position and our company! To apply, please answer our 3 short questions 🙏
 
 In short, we are looking for a seasoned marketing professional with mature views about the field. Could you explain shortly (280 words or less) how you view the modern marketing field and what's currently imporant?`,
   },
@@ -15,18 +15,18 @@ In short, we are looking for a seasoned marketing professional with mature views
     typeOfMessage: 'robo',
     text: `Last question. From 1-10, rate how good you are at building marketing strategies. Also explain shortly why you chose the answer.
 
-Note: after answering this question, you will apply to the position and your profile will be shared with the recruiter`,
+Note: after answering this question, you will apply to the position and your profile will be shared with the recruiter ✅`,
   },
 ]
 
 const thanksForApplying: Message = {
   typeOfMessage: 'robo',
-  text: 'Thanks for applying! Our recruiting manager will go through your answers ASAP. In the meanwhile, make sure that your profile is up to date',
+  text: 'Thanks for applying! Our recruiting manager will go through your answers ASAP. In the meanwhile, make sure that your profile is up to date 🔥',
 }
 
 const messageFromRecruiter: Message = {
   typeOfMessage: 'recruiter',
-  text: 'Thanks for your interest! We really like you. Are you available for a phone interview tomorrow?',
+  text: 'Thanks for your interest! We really like your profile ☺️. Are you available for a phone interview tomorrow?',
 }
 
 interface P {
