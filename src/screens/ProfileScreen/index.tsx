@@ -1,12 +1,18 @@
 import { useTheme } from '@react-navigation/native'
 import React, { useContext, useEffect, useState } from 'react'
-import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
+import {
+  Keyboard,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
+} from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { VerticalSpaceOf16 } from '../../common/components/VerticalSpaceOf16'
 import { VerticalSpaceOf24 } from '../../common/components/VerticalSpaceOf24'
 import { GlobalBooleansContext } from '../../contexts/GlobalBooleansProvider'
 import HelloText from './components/HelloText'
 import InputComponent from './components/InputComponent'
+import SaveProfileBar from './components/SaveProfileBar'
 
 const WHITE_BOX_BASE_SIZE = 48
 
@@ -31,6 +37,17 @@ export default () => {
   const [experience, setExperience] = useState('')
   const [education, setEducation] = useState('')
   const [links, setLinks] = useState('')
+  const [showSaveProfileBar, setShowSaveProfileBar] = useState(false)
+
+  const onTextInputFocus = () => {
+    setShowSaveProfileBar(true)
+  }
+
+  const saveProfile = () => {
+    console.log('saving profile')
+    setShowSaveProfileBar(false)
+    Keyboard.dismiss()
+  }
 
   useEffect(() => {
     setGlobalBooleans(s => {
@@ -45,6 +62,7 @@ export default () => {
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
+        <SaveProfileBar show={showSaveProfileBar} onPress={saveProfile} />
         <ScrollView
           style={{
             backgroundColor: colors.primary,
@@ -64,6 +82,7 @@ export default () => {
             placeholder={PLACEHOLDERS.name}
             value={name}
             onChangeText={setName}
+            onFocus={onTextInputFocus}
           />
           <VerticalSpaceOf16 />
           <InputComponent
@@ -72,6 +91,7 @@ export default () => {
             placeholder={PLACEHOLDERS.summary}
             value={summary}
             onChangeText={setSummary}
+            onFocus={onTextInputFocus}
             multiline
           />
           <VerticalSpaceOf16 />
@@ -81,6 +101,7 @@ export default () => {
             placeholder={PLACEHOLDERS.links}
             value={links}
             onChangeText={setLinks}
+            onFocus={onTextInputFocus}
             multiline
           />
           <VerticalSpaceOf16 />
@@ -90,6 +111,7 @@ export default () => {
             placeholder={PLACEHOLDERS.xp}
             value={experience}
             onChangeText={setExperience}
+            onFocus={onTextInputFocus}
             multiline
             optional
           />
@@ -100,6 +122,7 @@ export default () => {
             placeholder={PLACEHOLDERS.education}
             value={education}
             onChangeText={setEducation}
+            onFocus={onTextInputFocus}
             multiline
             optional
           />
