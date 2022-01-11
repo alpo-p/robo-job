@@ -58,13 +58,10 @@ const AuthScreen: React.FC = () => {
         style={{
           position: 'absolute',
           bottom: 8 * 4,
-          width: '88%',
+          width: '90%',
         }}
       >
-        <SignInButton
-          onPress={() => signInAsDemo()}
-          title="Sign in with demo account"
-        />
+        <SignInButton onPress={() => signInAsDemo()} title="Sign in as demo" />
       </View>
     </SafeContainer>
   )

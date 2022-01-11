@@ -16,13 +16,12 @@ export const SignInButton: React.FC<Props> = ({ onPress, children, title }) => {
       style={{
         backgroundColor: colors.primary,
         padding: 16,
-        borderWidth: 0.5,
-        borderRadius: 8 * 4,
+        borderRadius: 8 * 1,
         alignItems: 'center',
       }}
     >
       {title ? (
-        <RoboText size="medium" color="white">
+        <RoboText size="medium" weight="bold" color="white">
           {title}
         </RoboText>
       ) : (
