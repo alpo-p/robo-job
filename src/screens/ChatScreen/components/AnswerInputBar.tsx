@@ -1,6 +1,6 @@
 import { useTheme } from '@react-navigation/native'
 import React from 'react'
-import { TextInput, TouchableOpacity, View } from 'react-native'
+import { TextInput, TouchableOpacity, useColorScheme, View } from 'react-native'
 import RoboText from '../../../common/components/RoboText'
 import styles from '../../../common/styles'
 
@@ -15,6 +15,10 @@ interface P {
 // TODO: refactor
 export default ({ value, onChangeText, handleSendAnswer, isApplying }: P) => {
   const { colors } = useTheme()
+  const scheme = useColorScheme()
+  // TODO: refactor placeholderColor to themes
+  const placeholderColor =
+    scheme === 'dark' ? styles.lighterWhiteText : styles.lighterDarkText
   return (
     <View
       style={{
@@ -38,7 +42,7 @@ export default ({ value, onChangeText, handleSendAnswer, isApplying }: P) => {
         value={value}
         onChangeText={onChangeText}
         placeholder="Write your answer here..."
-        placeholderTextColor={colors.primary}
+        placeholderTextColor={placeholderColor}
         multiline
       />
       <TouchableOpacity

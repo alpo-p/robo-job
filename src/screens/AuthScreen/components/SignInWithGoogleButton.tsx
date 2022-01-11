@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components/native'
-import sharedStyles from '../../../common/styles'
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
 const icon = require('../../../../assets/icons8-google-48.png')
@@ -31,7 +30,7 @@ const ButtonContainer = styled.TouchableOpacity`
   align-items: center;
   border-width: 1px;
   border-radius: 16px;
-  border-color: ${sharedStyles.darkGrey};
+  border-color: black;
 `
 const ButtonText = styled.Text`
   font-size: 14px;
@@ -40,5 +39,5 @@ const ButtonText = styled.Text`
   text-align: center;
   text-transform: uppercase;
   font-family: GillSans;
-  color: ${sharedStyles.darkGrey};
+  color: black;
 `

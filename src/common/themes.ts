@@ -17,7 +17,7 @@ export const LightTheme = {
   ...DefaultTheme,
   colors: {
     ...DefaultTheme.colors,
-    primary: styles.primaryColorDarkened30,
+    primary: styles.primaryColorDarkened20,
     text: styles.darkText,
     background: styles.white,
     card: styles.lightGrey,
