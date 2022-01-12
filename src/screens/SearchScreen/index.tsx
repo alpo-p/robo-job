@@ -3,13 +3,25 @@ import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { HomeNavigationPropType } from '../../navigators/HomeScreenNavigator'
 import InputBarWithIcon from '../../common/InputBarWithIcon'
-import { SearchButton } from './SearchButton'
+import { SearchButton } from './components/SearchButton'
+import SearchTags from './components/SearchTags'
 
 export default () => {
   const navigation = useNavigation<HomeNavigationPropType>()
   const [search, setSearch] = useState('')
+  const [searchTags, setSearchTags] = useState<string[]>([])
   const [location, setLocation] = useState('')
+  const [locationTags, setLocationTags] = useState([])
+
   const handleSearch = () => navigation.navigate('HomeScreen')
+
+  const onEndEditingSearch = () => {
+    if (search) {
+      setSearchTags(s => s.concat(search))
+      setSearch('')
+    }
+  }
+
   return (
     <SafeAreaView
       style={{
@@ -17,7 +29,13 @@ export default () => {
         flex: 1,
       }}
     >
-      <InputBarWithIcon value={search} setValue={setSearch} iconName="search" />
+      <InputBarWithIcon
+        value={search}
+        setValue={setSearch}
+        iconName="search"
+        onEndEditing={onEndEditingSearch}
+      />
+      <SearchTags tags={searchTags} />
       <InputBarWithIcon
         value={location}
         setValue={setLocation}

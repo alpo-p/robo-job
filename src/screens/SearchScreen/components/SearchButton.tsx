@@ -1,7 +1,7 @@
 import { useTheme } from '@react-navigation/native'
 import React from 'react'
 import { TouchableOpacity } from 'react-native'
-import RoboText from '../../common/components/RoboText'
+import RoboText from '../../../common/components/RoboText'
 
 export const SearchButton: React.FC<ButtonProps> = ({ onPress }) => {
   const { colors } = useTheme()

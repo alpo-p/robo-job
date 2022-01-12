@@ -11,6 +11,7 @@ interface P {
   setValue: (v: string) => void
   iconName: IoniconsIconNames
   placeholderText?: string
+  onEndEditing?: () => void
 }
 
 // TODO: refactor
@@ -19,6 +20,7 @@ export default ({
   setValue,
   iconName,
   placeholderText = 'Search',
+  onEndEditing,
 }: P) => {
   const { colors } = useTheme()
   const scheme = useColorScheme()
@@ -54,6 +56,7 @@ export default ({
         onChangeText={setValue}
         placeholder={placeholderText}
         placeholderTextColor={placeholderColor}
+        onEndEditing={onEndEditing}
       />
     </View>
   )
