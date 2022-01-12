@@ -2,16 +2,24 @@ import { Ionicons } from '@expo/vector-icons'
 import { useTheme } from '@react-navigation/native'
 import React from 'react'
 import { TextInput, useColorScheme, View } from 'react-native'
-import styles from '../../../common/styles'
+import styles from './styles'
+import { IoniconsIconNames } from './types/utilTypes'
 
 interface P {
-  searchFilter: string
+  value: string
   // eslint-disable-next-line no-unused-vars
-  setSearchFilter: (term: string) => void
+  setValue: (v: string) => void
+  iconName: IoniconsIconNames
+  placeholderText?: string
 }
 
 // TODO: refactor
-export default ({ searchFilter, setSearchFilter }: P) => {
+export default ({
+  value,
+  setValue,
+  iconName,
+  placeholderText = 'Search',
+}: P) => {
   const { colors } = useTheme()
   const scheme = useColorScheme()
   // TODO: refactor bgColor and placeholder color to themes
@@ -33,7 +41,7 @@ export default ({ searchFilter, setSearchFilter }: P) => {
         style={{
           padding: 8,
         }}
-        name="search"
+        name={iconName}
         color={colors.primary}
         size={15}
       />
@@ -42,9 +50,9 @@ export default ({ searchFilter, setSearchFilter }: P) => {
           color: colors.text,
           width: '70%',
         }}
-        value={searchFilter}
-        onChangeText={setSearchFilter}
-        placeholder="Search"
+        value={value}
+        onChangeText={setValue}
+        placeholder={placeholderText}
         placeholderTextColor={placeholderColor}
       />
     </View>

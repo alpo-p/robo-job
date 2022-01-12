@@ -21,7 +21,7 @@ export const SignInButton: React.FC<Props> = ({ onPress, children, title }) => {
       }}
     >
       {title ? (
-        <RoboText size="medium" weight="bold" color="white">
+        <RoboText size="medium" weight="bold" color="white" uppercase>
           {title}
         </RoboText>
       ) : (

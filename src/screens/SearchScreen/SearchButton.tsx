@@ -10,14 +10,15 @@ export const SearchButton: React.FC<ButtonProps> = ({ onPress }) => {
       onPress={onPress}
       style={{
         alignSelf: 'center',
+        justifyContent: 'center',
         width: '91%',
         backgroundColor: colors.primary,
-        padding: 16,
         borderRadius: 8 * 1,
         alignItems: 'center',
+        height: 8 * 5,
       }}
     >
-      <RoboText size="medium" weight="bold" color="white" uppercase>
+      <RoboText size="small" weight="bold" color="white" uppercase>
         Search
       </RoboText>
     </TouchableOpacity>
