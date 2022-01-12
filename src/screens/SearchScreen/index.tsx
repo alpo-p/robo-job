@@ -1,65 +1,26 @@
-import { Ionicons } from '@expo/vector-icons'
-import { useNavigation, useTheme } from '@react-navigation/native'
+import { useNavigation } from '@react-navigation/native'
 import React, { useState } from 'react'
-import { useColorScheme, View, TextInput } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import styles from '../../common/styles'
 import { HomeNavigationPropType } from '../../navigators/HomeScreenNavigator'
+import SearchBar from '../ChatRowsScreen/components/SearchBar'
+import { SearchButton } from './SearchButton'
 
-const SearchBar: React.FC = () => {
-  const { colors } = useTheme()
-  const scheme = useColorScheme()
+export default () => {
   const navigation = useNavigation<HomeNavigationPropType>()
-  // TODO: refactor bgColor and placeholder color to themes
-  const bgColor =
-    scheme === 'dark' ? styles.lightBgDarkMode : styles.lightBgLightMode
-  const placeholderColor =
-    scheme === 'dark' ? styles.lighterWhiteText : styles.lighterDarkText
-
   const [searchFilter, setSearchFilter] = useState('')
-
   const handleSearch = () => navigation.navigate('HomeScreen')
-
-  const height = 5 * 8
-
   return (
-    <View
+    <SafeAreaView
       style={{
-        flexDirection: 'row',
-        backgroundColor: bgColor,
-        margin: 16,
-        borderRadius: 8,
-        height,
-        paddingLeft: 8 * 2,
-        padding: 4,
+        justifyContent: 'center',
+        flex: 1,
       }}
     >
-      <TextInput
-        style={{
-          color: colors.text,
-          width: '88%',
-        }}
-        value={searchFilter}
-        onChangeText={text => setSearchFilter(text)}
-        placeholder="Search"
-        placeholderTextColor={placeholderColor}
+      <SearchBar
+        searchFilter={searchFilter}
+        setSearchFilter={setSearchFilter}
       />
-      <Ionicons
-        style={{
-          alignSelf: 'center',
-          justifyContent: 'center',
-        }}
-        name="search"
-        color={colors.primary}
-        size={height / 1.5}
-        onPress={handleSearch}
-      />
-    </View>
+      <SearchButton onPress={handleSearch} />
+    </SafeAreaView>
   )
 }
-
-export default () => (
-  <SafeAreaView>
-    <SearchBar />
-  </SafeAreaView>
-)
