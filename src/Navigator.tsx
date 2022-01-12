@@ -70,6 +70,7 @@ const BottomTabNavigator = () => {
       initialRouteName="HomeScreen"
       screenOptions={({ route }) => bottomTabNavigatorOptions(route, colors)}
       screenListeners={{
+        // This is done so the icons rerender with fresh data for badges
         focus: () => setS(s => !s),
       }}
     >
@@ -91,7 +92,7 @@ const BottomTabNavigator = () => {
     </RootStack.Navigator>
   )
 }
-//  tabBarBadge: chatIndicator ? '0' : undefined,
+
 const MainStack = createNativeStackNavigator<MainStackParamList>()
 
 const Navigator = () => {
