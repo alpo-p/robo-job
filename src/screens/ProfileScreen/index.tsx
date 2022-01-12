@@ -1,5 +1,5 @@
 import { useTheme } from '@react-navigation/native'
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {
   Keyboard,
   KeyboardAvoidingView,
@@ -47,15 +47,12 @@ export default () => {
     console.log('saving profile')
     setShowSaveProfileBar(false)
     Keyboard.dismiss()
-  }
-
-  useEffect(() => {
     setGlobalBooleans(s => {
-      const state = s
+      const state = { ...s }
       state.showProfileBadge = false
       return state
     })
-  }, [setGlobalBooleans])
+  }
 
   return (
     <SafeAreaView>

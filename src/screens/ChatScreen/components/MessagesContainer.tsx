@@ -45,7 +45,7 @@ export default ({ jobPost }: P) => {
     if (isApplying) {
       setHasApplied(true)
       setGlobalBooleans(s => {
-        const state = s
+        const state = { ...s }
         state.showProfileBadge = true
         return state
       })
