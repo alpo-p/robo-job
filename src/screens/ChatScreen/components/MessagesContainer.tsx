@@ -56,7 +56,7 @@ export default ({ jobPost }: P) => {
         .concat(messageFromRecruiter)
       setMessagesToContext(messagesInTheEnd)
       setShownMessages(m => m.concat(thanksForApplying))
-      await waitSeconds(10)
+      await waitSeconds(15)
       setAsUnread()
     }
 
