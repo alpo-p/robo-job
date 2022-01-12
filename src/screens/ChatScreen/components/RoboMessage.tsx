@@ -6,5 +6,9 @@ interface P {
   text: string
 }
 export default ({ text }: P) => (
-  <ReceivedMessageBase avatar={<RoboAvatar />} text={text} name="Robo" />
+  <ReceivedMessageBase
+    avatar={<RoboAvatar size={32} />}
+    text={text}
+    name="Robo"
+  />
 )

@@ -1,31 +1,15 @@
 import React from 'react'
-import { Alert, Image, useColorScheme, View } from 'react-native'
+import { Alert, useColorScheme, View } from 'react-native'
 import { useNavigation } from '@react-navigation/native'
 
 import { SafeContainer } from '../../common/components/SafeContainer'
 import { SignInButton } from '../../common/components/RoboButton'
 import { NavigationPropType } from '../../Navigator'
 import RoboText from '../../common/components/RoboText'
-import { ROBO_COP_URL } from '../ChatScreen/components/RoboAvatar'
+import RoboAvatar from '../ChatScreen/components/RoboAvatar'
 import { VerticalSpaceOf8 } from '../../common/components/VerticalSpaceOf8'
 
-const logoSize = 100
-
-const BigLogo: React.FC = () => {
-  const scheme = useColorScheme()
-  return (
-    <Image
-      style={{
-        height: logoSize,
-        width: logoSize,
-        tintColor: scheme === 'dark' ? 'white' : undefined,
-      }}
-      source={{
-        uri: ROBO_COP_URL,
-      }}
-    />
-  )
-}
+const LOGO_SIZE = 100
 
 const AuthScreen: React.FC = () => {
   const scheme = useColorScheme()
@@ -44,7 +28,7 @@ const AuthScreen: React.FC = () => {
           alignItems: 'center',
         }}
       >
-        <BigLogo />
+        <RoboAvatar size={LOGO_SIZE} />
         <RoboText
           size="largest"
           weight="bold"

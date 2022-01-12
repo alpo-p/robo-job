@@ -1,24 +1,26 @@
 import React from 'react'
-import { View } from 'react-native'
-import SmallCompanyLogo from '../../ChatRowsScreen/components/SmallCompanyLogo'
+import { useColorScheme, Image } from 'react-native'
 
 export const ROBO_COP_URL =
   'https://cdn3.iconfinder.com/data/icons/movies-solid/60/54_-_Robocop_video_film_cinema_movie-1024.png'
 
-export default () => {
-  const SIZE = 32
+interface P {
+  size: number
+}
+
+export default ({ size }: P) => {
+  const scheme = useColorScheme()
+  const isDark = scheme === 'dark'
   return (
-    <View
+    <Image
       style={{
-        backgroundColor: 'white',
-        width: SIZE,
-        height: SIZE,
-        borderRadius: SIZE / 2,
-        alignItems: 'center',
-        justifyContent: 'center',
+        height: size,
+        width: size,
+        tintColor: isDark ? 'white' : undefined,
       }}
-    >
-      <SmallCompanyLogo size="tiny" url={ROBO_COP_URL} />
-    </View>
+      source={{
+        uri: ROBO_COP_URL,
+      }}
+    />
   )
 }
