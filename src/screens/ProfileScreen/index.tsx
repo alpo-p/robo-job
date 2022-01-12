@@ -1,10 +1,12 @@
 import { useTheme } from '@react-navigation/native'
-import React, { useContext, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import {
+  Alert,
   Keyboard,
   KeyboardAvoidingView,
   Platform,
   ScrollView,
+  View,
 } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { VerticalSpaceOf16 } from '../../common/components/VerticalSpaceOf16'
@@ -12,7 +14,7 @@ import { VerticalSpaceOf24 } from '../../common/components/VerticalSpaceOf24'
 import { GlobalBooleansContext } from '../../contexts/GlobalBooleansProvider'
 import HelloText from './components/HelloText'
 import InputComponent from './components/InputComponent'
-import SaveProfileBar from './components/SaveProfileBar'
+import SaveProfileButton from './components/SaveProfileButton'
 
 const WHITE_BOX_BASE_SIZE = 48
 
@@ -30,6 +32,7 @@ People say I am diligent and easy to work with. I'm looking for full-time offers
 
 export default () => {
   const { colors } = useTheme()
+  const viewRef = useRef<ScrollView | null>(null)
   const { setGlobalBooleans } = useContext(GlobalBooleansContext)
 
   const [name, setName] = useState('')
@@ -37,21 +40,20 @@ export default () => {
   const [experience, setExperience] = useState('')
   const [education, setEducation] = useState('')
   const [links, setLinks] = useState('')
-  const [showSaveProfileBar, setShowSaveProfileBar] = useState(false)
 
   const onTextInputFocus = () => {
-    setShowSaveProfileBar(true)
+    console.log('textinputfocus on profile')
   }
 
   const saveProfile = () => {
     console.log('saving profile')
-    setShowSaveProfileBar(false)
     Keyboard.dismiss()
     setGlobalBooleans(s => {
       const state = { ...s }
       state.showProfileBadge = false
       return state
     })
+    Alert.alert('Saved profile!')
   }
 
   return (
@@ -59,7 +61,6 @@ export default () => {
       <KeyboardAvoidingView
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
       >
-        <SaveProfileBar show={showSaveProfileBar} onPress={saveProfile} />
         <ScrollView
           style={{
             backgroundColor: colors.primary,
@@ -71,6 +72,7 @@ export default () => {
             borderColor: colors.primary,
             borderWidth: 4,
           }}
+          ref={viewRef}
         >
           <HelloText />
           <InputComponent
@@ -124,7 +126,12 @@ export default () => {
             optional
           />
           <VerticalSpaceOf24 />
-          <VerticalSpaceOf24 />
+          <SaveProfileButton onPress={saveProfile} />
+          <View
+            style={{
+              marginTop: 24 * 5,
+            }}
+          />
         </ScrollView>
       </KeyboardAvoidingView>
     </SafeAreaView>
