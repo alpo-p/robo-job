@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native'
 import React from 'react'
 import { StyleSheet, View } from 'react-native'
 import { JobPostCardProps } from '..'
@@ -5,12 +6,14 @@ import CompanyLogo from '../../../../common/components/CompanyLogo'
 import CompanyNameAndTitle from '../../../../common/components/CompanyNameAndTitle'
 import GoBackButton from '../../../../common/components/GoBackButton'
 import JobPostImageBackground from '../../../../common/components/JobPostImageBackground'
+import { HomeNavigationPropType } from '../../../../navigators/HomeScreenNavigator'
 import LinearGradientForPicture from './LinearGradientForPicture'
 
 const TopPart = ({
   jobPost,
 }: Omit<JobPostCardProps, 'height' | 'likedJobs'>) => {
-  const navigateBackToSearch = () => console.log('going back to search')
+  const navigation = useNavigation<HomeNavigationPropType>()
+  const navigateBackToSearch = () => navigation.navigate('SearchScreen')
 
   return (
     <View style={stylesheet.container}>
