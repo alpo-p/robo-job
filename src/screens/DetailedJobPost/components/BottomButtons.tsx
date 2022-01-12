@@ -7,7 +7,7 @@ import ShareButton from '../../../common/components/ShareButton'
 import styles from '../../../common/styles'
 import { IJobPostCard } from '../../../common/types'
 import useLikedJobs, { likeOrDislikeJob } from '../../../hooks/useLikedJobs'
-import { NavigationPropType } from '../../../Navigator'
+import { NavigationPropType } from '../../../navigators/Navigator'
 
 const HorizontalSpaceOf24 = () => (
   <View style={{ marginLeft: styles.commonSize }} />

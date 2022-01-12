@@ -1,7 +1,7 @@
 import React from 'react'
 import { StatusBar } from 'react-native'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
-import Navigator from './src/Navigator'
+import Navigator from './src/navigators/Navigator'
 
 import LikedJobsProvider from './src/contexts/LikedJobsProvider'
 import ChatsProvider from './src/contexts/ChatsProvider'

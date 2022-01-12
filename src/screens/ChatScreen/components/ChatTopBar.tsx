@@ -5,7 +5,7 @@ import GoBackButton from '../../../common/components/GoBackButton'
 import { HorizontalSpaceOf8 } from '../../../common/components/HorizontalSpaceOf8'
 import InfoButton from '../../../common/components/InfoButton'
 import { IJobPostCard } from '../../../common/types'
-import { NavigationPropType } from '../../../Navigator'
+import { NavigationPropType } from '../../../navigators/Navigator'
 import SmallCompanyLogo from '../../ChatRowsScreen/components/SmallCompanyLogo'
 import SmallCompanyNameAndTitle from '../../ChatRowsScreen/components/SmallCompanyNameAndTitle'
 

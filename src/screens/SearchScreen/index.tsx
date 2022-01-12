@@ -4,12 +4,12 @@ import React, { useState } from 'react'
 import { useColorScheme, View, TextInput } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import styles from '../../common/styles'
-import { NavigationPropType } from '../../Navigator'
+import { HomeNavigationPropType } from '../../navigators/HomeScreenNavigator'
 
 const SearchBar: React.FC = () => {
   const { colors } = useTheme()
   const scheme = useColorScheme()
-  const navigation = useNavigation<NavigationPropType>()
+  const navigation = useNavigation<HomeNavigationPropType>()
   // TODO: refactor bgColor and placeholder color to themes
   const bgColor =
     scheme === 'dark' ? styles.lightBgDarkMode : styles.lightBgLightMode

@@ -3,7 +3,7 @@ import { Ionicons } from '@expo/vector-icons'
 import { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs'
 import { IoniconsIconNames } from '../common/types/utilTypes'
 import { ThemeColors } from '../common/themes'
-import { RootStackRouteProp } from '../Navigator'
+import { RootStackRouteProp } from './BottomTabNavigator'
 
 export const bottomTabNavigatorOptions = (
   route: RootStackRouteProp,
@@ -12,7 +12,7 @@ export const bottomTabNavigatorOptions = (
   // @ts-ignore
   tabBarIcon: ({ focused, color, size }) => {
     let iconName: IoniconsIconNames
-    if (route.name === 'HomeScreen') {
+    if (route.name === 'HomeScreenNavigator') {
       iconName = focused ? 'home' : 'home-outline'
     } else if (route.name === 'ChatRowsScreen') {
       iconName = focused ? 'chatbox' : 'chatbox-outline'
