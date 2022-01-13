@@ -5,7 +5,7 @@ const mockPosition1 = {
   tags: ['social media', 'marketing automation'],
   shortDescription: `If you are marketing-minded, enthusiastic, creative, digitally savvy, up to date on emerging trends and tactics, and obsessed with quality - then this is the position for you, and we want to hear from you!
    
-We have top-of-market pay, Friday beers and great support personal growth!`,
+We have top-of-market pay, Friday beers and great support for personal growth!`,
   longDescription: `We are searching for a passionate and ambitious MARKETING MANAGER to take on the exciting challenge of managing the company’s marketing activities in their home market - Finland!
   
 As the successful candidate, we trust that you will bring relevant marketing experience with proven success, along with a strong can-do attitude and a banquet of fresh ideas! In this marketing role, you will have the opportunity to influence the direction of some of the most respected brands! 
@@ -29,7 +29,7 @@ You will get to collaborate with colleagues around the world, create campaigns, 
 
 const mockPosition3 = {
   jobTitle: 'Marketing Analyst',
-  tags: ['analyst', 'marketing automation'],
+  tags: ['analyst', 'experienced', 'marketing', 'agile'],
   shortDescription:
     'As the Marketing Analyst within Marketing and Sales Renewal, you will lead activities such as developing a market intelligence tool, renewal of the public website, launching a global marketing automation solution and developing and driving adoption. You will be a key stakeholder to the upper management. You will have an opportunity to work with inspired people, a truly global working environment and support for your personal professional development',
   longDescription: `In this role, you get to:

@@ -1,8 +1,8 @@
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { useColorScheme, View } from 'react-native'
+import { Alert, useColorScheme, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { SignInButton } from '../../../common/components/RoboButton'
+import { SignInButton } from './SignInButton'
 import RoboText from '../../../common/components/RoboText'
 import { VerticalSpaceOf8 } from '../../../common/components/VerticalSpaceOf8'
 import { NavigationPropType } from '../../../navigators/Navigator'
@@ -17,7 +17,13 @@ interface P {
 export default ({ width, hideSignInButton }: P) => {
   const scheme = useColorScheme()
   const navigation = useNavigation<NavigationPropType>()
-  const signInAsDemo = () => navigation.navigate('RootNavigator')
+  const signInAsDemo = () => {
+    Alert.alert(
+      'Kuvittele, että kirjauduit sisään puhelinnumerollasi',
+      'Kuvittele myös, että etsit markkinointitöitä Helsingistä',
+    )
+    navigation.navigate('RootNavigator')
+  }
 
   return (
     <SafeAreaView
@@ -40,7 +46,7 @@ export default ({ width, hideSignInButton }: P) => {
       <VerticalSpaceOf8 />
       {hideSignInButton && (
         <RoboText weight="light" size="large">
-          The easiest way to find your dream job
+          The easiest way to find a job
         </RoboText>
       )}
       <View
@@ -50,12 +56,7 @@ export default ({ width, hideSignInButton }: P) => {
           width: '90%',
         }}
       >
-        {!hideSignInButton && (
-          <SignInButton
-            onPress={() => signInAsDemo()}
-            title="Sign in as demo"
-          />
-        )}
+        {!hideSignInButton && <SignInButton onPress={() => signInAsDemo()} />}
       </View>
     </SafeAreaView>
   )
