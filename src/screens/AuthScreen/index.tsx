@@ -1,48 +1,71 @@
-import React from 'react'
-import { useColorScheme, View } from 'react-native'
-import { useNavigation } from '@react-navigation/native'
+/* eslint-disable react/jsx-props-no-spreading */
+import React, { useState } from 'react'
+import {
+  Dimensions,
+  NativeScrollEvent,
+  NativeSyntheticEvent,
+  ScrollView,
+} from 'react-native'
 
-import { SafeContainer } from '../../common/components/SafeContainer'
-import { SignInButton } from '../../common/components/RoboButton'
-import { NavigationPropType } from '../../navigators/Navigator'
-import RoboText from '../../common/components/RoboText'
-import RoboAvatar from '../ChatScreen/components/RoboAvatar'
-import { VerticalSpaceOf8 } from '../../common/components/VerticalSpaceOf8'
+import SignInPage from './components/SignInPage'
+import { OnboardingPage, OnboaringPageProps } from './components/OnboardingPage'
+import { PaginationDots } from './components/PaginationDots'
 
-const LOGO_SIZE = 100
+type OnboardingPageT = Omit<OnboaringPageProps, 'width'>
+
+const first: OnboardingPageT = {
+  title: 'Search for jobs',
+  text: `...and then swipe through them`,
+  iconName: 'search',
+}
+
+const second: OnboardingPageT = {
+  title: 'Save the jobs you like',
+  text: 'Your profile will not be shared when liking',
+  iconName: 'heart',
+}
+
+const third: OnboardingPageT = {
+  title: 'Quick apply',
+  text: 'Apply to jobs by answering a couple of questions by the company',
+  iconName: 'chatbox',
+}
+
+type ScrollEvent = NativeSyntheticEvent<NativeScrollEvent>
+
+const NUMBER_OF_PAGES = 5
 
 const AuthScreen: React.FC = () => {
-  const scheme = useColorScheme()
-  const navigation = useNavigation<NavigationPropType>()
-  const signInAsDemo = () => navigation.navigate('RootNavigator')
+  const { width } = Dimensions.get('screen')
+  const [page, setPage] = useState(0)
+
+  const setSliderPage = (event: ScrollEvent) => {
+    const { x } = event.nativeEvent.contentOffset
+    const indexOfNextScreen = Math.floor(x / width)
+    if (indexOfNextScreen !== page) {
+      setPage(indexOfNextScreen)
+    }
+  }
 
   return (
-    <SafeContainer>
-      <View
-        style={{
-          alignItems: 'center',
+    <>
+      <ScrollView
+        horizontal
+        scrollEventThrottle={16}
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        onScroll={(event: ScrollEvent) => {
+          setSliderPage(event)
         }}
       >
-        <RoboAvatar size={LOGO_SIZE} />
-        <RoboText
-          size="largest"
-          weight="bold"
-          color={scheme === 'dark' ? 'white' : 'black'}
-        >
-          robo job
-        </RoboText>
-      </View>
-      <VerticalSpaceOf8 />
-      <View
-        style={{
-          position: 'absolute',
-          bottom: 8 * 4,
-          width: '90%',
-        }}
-      >
-        <SignInButton onPress={() => signInAsDemo()} title="Sign in as demo" />
-      </View>
-    </SafeContainer>
+        <SignInPage width={width} hideSignInButton />
+        <OnboardingPage width={width} {...first} />
+        <OnboardingPage width={width} {...second} />
+        <OnboardingPage width={width} {...third} />
+        <SignInPage width={width} />
+      </ScrollView>
+      <PaginationDots page={page} numbOfPages={NUMBER_OF_PAGES} />
+    </>
   )
 }
 
