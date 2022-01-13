@@ -42,7 +42,7 @@ export const OnboardingPage: React.FC<OnboaringPageProps> = ({
       <RoboText
         size="medium"
         weight="light"
-        style={{ textAlign: 'center', marginTop: 8 }}
+        style={{ textAlign: 'center', marginTop: 0 }}
       >
         {text}
       </RoboText>

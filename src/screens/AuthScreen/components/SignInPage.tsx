@@ -45,7 +45,13 @@ export default ({ width, hideSignInButton }: P) => {
       </View>
       <VerticalSpaceOf8 />
       {hideSignInButton && (
-        <RoboText weight="light" size="large">
+        <RoboText
+          weight="light"
+          size="large"
+          style={{
+            marginTop: -8,
+          }}
+        >
           The easiest way to find a job
         </RoboText>
       )}
