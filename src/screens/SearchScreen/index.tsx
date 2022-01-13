@@ -5,59 +5,67 @@ import { HomeNavigationPropType } from '../../navigators/HomeScreenNavigator'
 import InputBarWithIcon from '../../common/InputBarWithIcon'
 import { SearchButton } from './components/SearchButton'
 import SearchTags from './components/SearchTags'
-import { getRandomId } from '../../utils/utils'
-import { TagType } from '../../common/types'
 import waitSeconds from '../../utils/waitSeconds'
+import RecentSearches, { SearchQuery } from './components/RecentSearches'
+
+const recent: SearchQuery[] = [
+  {
+    searchTags: ['marketing', 'social media'],
+    locations: ['Helsinki'],
+  },
+  {
+    searchTags: ['marketing automation'],
+    locations: ['Remote', 'Helsinki'],
+  },
+]
 
 export default () => {
   const navigation = useNavigation<HomeNavigationPropType>()
   const [search, setSearch] = useState('')
-  const [searchTags, setSearchTags] = useState<TagType[]>([])
+  const [searchTags, setSearchTags] = useState<string[]>([])
   const [location, setLocation] = useState('')
-  const [locationTags, setLocationTags] = useState<TagType[]>([])
+  const [locationTags, setLocationTags] = useState<string[]>([])
 
   const handleSearch = () => navigation.navigate('HomeScreen')
 
-  const onEndEditingSearch = () => {
+  const onEndEditingSearch = async () => {
     if (search) {
-      const tag: TagType = {
-        id: getRandomId(),
-        text: search,
-      }
-      setSearchTags(s => s.concat(tag))
+      setSearchTags(s => s.concat(search))
       setSearch('')
     }
   }
 
-  const onEndEditingLocation = () => {
+  const onEndEditingLocation = async () => {
     if (location) {
-      const tag: TagType = {
-        id: getRandomId(),
-        text: location,
-      }
-      setLocationTags(l => l.concat(tag))
+      setLocationTags(l => l.concat(location))
       setLocation('')
     }
   }
 
-  const handleRemoveSearchTag = async (id: string) => {
+  const handleRemoveSearchTag = async (tag: string) => {
     // Looks cooler this way
     await waitSeconds(0.2)
-    setSearchTags(s => s.filter(tag => tag.id !== id))
+    setSearchTags(s => s.filter(t => t !== tag))
   }
 
-  const handleRemoveLocationTag = async (id: string) => {
+  const handleRemoveLocationTag = async (tag: string) => {
     await waitSeconds(0.2)
-    setLocationTags(l => l.filter(tag => tag.id !== id))
+    setLocationTags(l => l.filter(t => t !== tag))
+  }
+
+  const handleOnPressRecentSearch = (searchQuery: SearchQuery) => {
+    console.log(searchQuery)
+    handleSearch()
   }
 
   return (
-    <SafeAreaView style={{ marginTop: '50%' }}>
+    <SafeAreaView style={{ marginTop: '65%' }}>
       <InputBarWithIcon
         value={search}
         setValue={setSearch}
         iconName="search"
         onEndEditing={onEndEditingSearch}
+        style={!searchTags.length ? { marginBottom: 8 } : undefined}
       />
       <SearchTags tags={searchTags} onPressTag={handleRemoveSearchTag} />
       <InputBarWithIcon
@@ -66,9 +74,14 @@ export default () => {
         iconName="location"
         placeholderText="Location"
         onEndEditing={onEndEditingLocation}
+        style={!locationTags.length ? { marginBottom: 8 } : undefined}
       />
       <SearchTags tags={locationTags} onPressTag={handleRemoveLocationTag} />
       <SearchButton onPress={handleSearch} />
+      <RecentSearches
+        recent={recent}
+        handleOnPress={handleOnPressRecentSearch}
+      />
     </SafeAreaView>
   )
 }

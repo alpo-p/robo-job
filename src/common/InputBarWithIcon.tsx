@@ -1,7 +1,7 @@
 import { Ionicons } from '@expo/vector-icons'
 import { useTheme } from '@react-navigation/native'
 import React from 'react'
-import { TextInput, useColorScheme, View } from 'react-native'
+import { TextInput, useColorScheme, View, ViewStyle } from 'react-native'
 import styles from './styles'
 import { IoniconsIconNames } from './types/utilTypes'
 
@@ -12,6 +12,7 @@ interface P {
   iconName: IoniconsIconNames
   placeholderText?: string
   onEndEditing?: () => void
+  style?: ViewStyle
 }
 
 // TODO: refactor
@@ -21,6 +22,7 @@ export default ({
   iconName,
   placeholderText = 'Search',
   onEndEditing,
+  style,
 }: P) => {
   const { colors } = useTheme()
   const scheme = useColorScheme()
@@ -31,13 +33,16 @@ export default ({
     scheme === 'dark' ? styles.lighterWhiteText : styles.lighterDarkText
   return (
     <View
-      style={{
-        flexDirection: 'row',
-        backgroundColor: bgColor,
-        margin: 16,
-        borderRadius: 8,
-        height: 8 * 4,
-      }}
+      style={[
+        {
+          flexDirection: 'row',
+          backgroundColor: bgColor,
+          margin: 16,
+          borderRadius: 8,
+          height: 8 * 4,
+        },
+        { ...style },
+      ]}
     >
       <Ionicons
         style={{
@@ -57,6 +62,7 @@ export default ({
         placeholder={placeholderText}
         placeholderTextColor={placeholderColor}
         onEndEditing={onEndEditing}
+        returnKeyType="done"
       />
     </View>
   )

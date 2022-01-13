@@ -1,39 +1,37 @@
 import React from 'react'
-import { TouchableOpacity, View } from 'react-native'
+import { ScrollView, TouchableOpacity } from 'react-native'
 import { Tag } from '../../../common/components/Tags'
-import { TagType } from '../../../common/types'
 
 interface P {
-  tags: TagType[]
+  tags: string[]
   // eslint-disable-next-line no-unused-vars
-  onPressTag: (id: string) => void
+  onPressTag: (t: string) => void
 }
 
 interface TagProp {
-  tag: TagType
+  tag: string
   // eslint-disable-next-line no-unused-vars
-  onPressTag: (id: string) => void
+  onPressTag: (t: string) => void
 }
 
 const PressableTag: React.FC<TagProp> = ({ tag, onPressTag }) => (
-  <TouchableOpacity onPress={() => onPressTag(tag.id)}>
+  <TouchableOpacity onPress={() => onPressTag(tag)}>
     <Tag tag={tag} editStylesForSearchScreen />
   </TouchableOpacity>
 )
 
 export default ({ tags, onPressTag }: P) => (
-  <View
-    style={{
+  <ScrollView
+    showsHorizontalScrollIndicator={false}
+    horizontal
+    contentContainerStyle={{
       flexDirection: 'row',
-      height: 1 * 8,
       marginLeft: 2 * 8,
-      marginTop: 8,
-      marginBottom: 8,
       alignItems: 'center',
     }}
   >
     {tags.map(tag => (
-      <PressableTag key={tag.id} tag={tag} onPressTag={onPressTag} />
+      <PressableTag key={tag} tag={tag} onPressTag={onPressTag} />
     ))}
-  </View>
+  </ScrollView>
 )

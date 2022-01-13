@@ -5,14 +5,13 @@ import { View } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import RoboText from './RoboText'
 import styles from '../styles'
-import { TagType } from '../types'
 
 interface Props {
-  tags: TagType[]
+  tags: string[]
 }
 
 interface TagPropProps {
-  tag: TagType
+  tag: string
   editStylesForSearchScreen?: boolean
 }
 
@@ -41,7 +40,7 @@ export const Tag: React.FC<TagPropProps> = ({
         <Ionicons name="remove-circle" size={14} color={colors.primary} />
       )}
       <RoboText color={colors.primary} uppercase weight="light" size="tiny">
-        {!editStylesForSearchScreen && '#'} {tag.text}
+        {!editStylesForSearchScreen && '#'} {tag}
       </RoboText>
     </View>
   )
@@ -55,7 +54,7 @@ const Tags: React.FC<Props> = ({ tags }) => (
     }}
   >
     {tags.map(tag => (
-      <Tag tag={tag} key={tag.id} />
+      <Tag tag={tag} key={tag} />
     ))}
   </View>
 )
