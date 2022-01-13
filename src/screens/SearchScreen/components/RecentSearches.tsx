@@ -38,9 +38,10 @@ const RecentSearch: React.FC<RecentSearchInterface> = ({
         ))}
       </ScrollView>
       <IconButton
-        iconName="arrow-forward-circle-outline"
+        iconName="chevron-forward"
         onPress={() => handleOnPress(search)}
         style={{
+          top: 3,
           position: 'absolute',
           right: 2 * 8,
           backgroundColor: colors.background,
