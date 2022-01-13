@@ -11,11 +11,12 @@ export const SearchButton: React.FC<ButtonProps> = ({ onPress }) => {
       style={{
         alignSelf: 'center',
         justifyContent: 'center',
-        width: '91%',
+        width: '91.5%',
         backgroundColor: colors.primary,
         borderRadius: 8 * 1,
         alignItems: 'center',
         height: 8 * 5,
+        marginTop: 8 * 2,
       }}
     >
       <RoboText size="small" weight="bold" color="white" uppercase>

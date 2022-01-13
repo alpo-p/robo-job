@@ -30,7 +30,7 @@ export const DarkTheme = {
     ...DefaultDarkTheme.colors,
     primary: styles.primaryColorLightened20,
     text: styles.whiteText,
-    card: styles.darkGrey,
+    card: styles.lightBgDarkMode,
     border: '#121212',
   },
 }

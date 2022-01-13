@@ -5,7 +5,7 @@ export interface IJobPostCard {
   logoUrl: string
   pictureUrl: string
   location: string
-  tags: string[]
+  tags: TagType[]
   shortDescription: string
   longDescription: string
   deadline: string
@@ -33,4 +33,9 @@ export type Chats = IndividualChat[]
 export interface LikedJob {
   id: string
   isUnread?: boolean
+}
+
+export interface TagType {
+  id: string
+  text: string
 }

@@ -1,40 +1,11 @@
-import { IJobPostCard } from '../common/types'
-import getLoremIpsum from './getLoremIpsum'
-
-const lorem400c = getLoremIpsum(400)
-const lorem2000c = getLoremIpsum(2000)
-
-const MockJobPostCard: IJobPostCard = {
-  id: '123',
-  companyName: 'The Incredible Company',
-  jobTitle: 'Software developer',
-  logoUrl: 'https://picsum.photos/112',
-  pictureUrl: 'https://picsum.photos/280',
-  location: 'Helsinki',
-  tags: [
-    'javascript',
-    'software development',
-    'react',
-    'react native',
-    'node.js',
-  ],
-  shortDescription: lorem400c,
-  longDescription: lorem2000c,
-  deadline: '4.20.22',
-  aboutTheCompany: lorem400c,
-  linkToWebsite: 'www.goatze.com',
-  recruiterName: 'Erlich Bachman',
-}
-
-export default function getSingleMockJobCard(): IJobPostCard {
-  return { ...MockJobPostCard }
-}
-
 // new mocks below
 
 const mockPosition1 = {
   jobTitle: 'Marketing Manager',
-  tags: ['social media', 'marketing automation'],
+  tags: [
+    { text: 'social media', id: 'asdf' },
+    { text: 'marketing automation', id: 'asdfghjk' },
+  ],
   shortDescription: `If you are marketing-minded, enthusiastic, creative, digitally savvy, up to date on emerging trends and tactics, and obsessed with quality - then this is the position for you, and we want to hear from you!
    
 We have top-of-market pay, Friday beers and great support personal growth!`,
@@ -48,7 +19,11 @@ You will get to collaborate with colleagues around the world, create campaigns, 
 
 const mockPosition2 = {
   jobTitle: 'Digital Marketing Manager',
-  tags: ['digital marketing', 'management', 'facebook', 'adwords'],
+  tags: [
+    { text: 'digital marketing', id: 'asd123f' },
+    { text: 'facebook', id: 'asdfg12893uhjk' },
+    { text: 'adwords', id: 'asdfg193uhjk' },
+  ],
   shortDescription:
     'As a Digital Marketing Manager you will be responsible for digital marketing content creation, company newsletter, web pages, social media, photographing and graphic design for web and print media. You will be accompanies by a happy group of hard-working and nice people with good values and great benefits',
   longDescription: `We are searching for a passionate and ambitious MARKETING MANAGER to take on the exciting challenge of managing the company’s marketing activities in their home market - Finland!
@@ -61,7 +36,10 @@ You will get to collaborate with colleagues around the world, create campaigns, 
 
 const mockPosition3 = {
   jobTitle: 'Marketing Analyst',
-  tags: ['analyst', 'data', 'marketing automation'],
+  tags: [
+    { text: 'analyst', id: 'asd123' },
+    { text: 'marketing automation', id: 'fg12893uhjk' },
+  ],
   shortDescription:
     'As the Marketing Analyst within Marketing and Sales Renewal, you will lead activities such as developing a market intelligence tool, renewal of the public website, launching a global marketing automation solution and developing and driving adoption. You will be a key stakeholder to the upper management. You will have an opportunity to work with inspired people, a truly global working environment and support for your personal professional development',
   longDescription: `In this role, you get to:
