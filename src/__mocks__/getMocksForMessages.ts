@@ -5,7 +5,7 @@ const roboMessages: Message[] = [
     typeOfMessage: 'robo',
     text: `Thanks for your interest to the position and our company! To apply, please answer our 3 short questions 🙏
 
-In short, we are looking for a seasoned marketing professional with mature views about the field. Could you explain shortly (280 words or less) how you view the modern marketing field and what's currently imporant?`,
+In short, we are looking for a seasoned marketing professional with mature views about the field. Could you explain shortly (280 characters or less) how you view the modern marketing field and what's currently imporant?`,
   },
   {
     typeOfMessage: 'robo',
@@ -26,7 +26,7 @@ const thanksForApplying: Message = {
 
 const messageFromRecruiter: Message = {
   typeOfMessage: 'recruiter',
-  text: 'Thanks for your interest! We really like your profile ☺️. Are you available for a phone interview tomorrow?',
+  text: 'Thanks for your interest! We really liked your answers and profile ☺️. Are you available for a short 15-min phone interview tomorrow at 2pm?',
 }
 
 interface P {
