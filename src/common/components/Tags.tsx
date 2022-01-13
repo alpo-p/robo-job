@@ -37,7 +37,7 @@ export const Tag: React.FC<TagPropProps> = ({
       }}
     >
       {editStylesForSearchScreen && (
-        <Ionicons name="remove-circle" size={14} color={colors.primary} />
+        <Ionicons name="close" size={14} color={colors.text} />
       )}
       <RoboText color={colors.primary} uppercase weight="light" size="tiny">
         {!editStylesForSearchScreen && '#'} {tag}
