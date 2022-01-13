@@ -28,7 +28,7 @@ const second: OnboardingPageT = {
 const third: OnboardingPageT = {
   title: 'Quick apply',
   text: 'Apply to jobs by answering a couple of questions by the company',
-  iconName: 'chatbox',
+  iconName: 'chatbox-ellipses',
 }
 
 type ScrollEvent = NativeSyntheticEvent<NativeScrollEvent>

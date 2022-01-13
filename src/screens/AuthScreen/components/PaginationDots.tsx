@@ -11,7 +11,7 @@ export const PaginationDots: React.FC<{
     <View
       style={{
         position: 'absolute',
-        bottom: 100,
+        bottom: 8 * 5,
         left: 0,
         right: 0,
         justifyContent: 'center',

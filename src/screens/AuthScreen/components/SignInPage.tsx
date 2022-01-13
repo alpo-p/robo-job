@@ -38,10 +38,15 @@ export default ({ width, hideSignInButton }: P) => {
         </RoboText>
       </View>
       <VerticalSpaceOf8 />
+      {hideSignInButton && (
+        <RoboText weight="light" size="large">
+          The easiest way to find your dream job
+        </RoboText>
+      )}
       <View
         style={{
           position: 'absolute',
-          bottom: 8 * 4,
+          bottom: 8 * 10,
           width: '90%',
         }}
       >
