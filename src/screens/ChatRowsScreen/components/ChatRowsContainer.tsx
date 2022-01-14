@@ -27,7 +27,12 @@ export default ({ searchFilter, stateFilter }: P) => {
       }}
     >
       {likedJobPosts.map((job, i) => (
-        <ChatRow key={job.id} jobPost={job} hasUnread={likedJobs[i].isUnread} />
+        <ChatRow
+          key={job.id}
+          jobPost={job}
+          isUnread={likedJobs[i].isUnread}
+          isUnfinished={likedJobs[i].isUnfinished}
+        />
       ))}
     </View>
   )
