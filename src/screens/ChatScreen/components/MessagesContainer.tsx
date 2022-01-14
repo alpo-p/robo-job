@@ -18,6 +18,7 @@ interface P {
 export default ({ jobPost }: P) => {
   const scrollViewRef = useRef<ScrollView | null>(null)
   const { setGlobalBooleans } = useContext(GlobalBooleansContext)
+
   const messagesFromContext = useGetMessages(jobPost.id)
   const setMessagesToContext = useSetMessages(jobPost.id)
   const { setAsRead, setAsUnread } = useSetAsReadOrUnread(jobPost.id)
@@ -86,6 +87,9 @@ export default ({ jobPost }: P) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const scrollToEnd = () =>
+    scrollViewRef.current?.scrollToEnd({ animated: true })
+
   // TODO: refactor keyboardavoidingview
   // TODO: replace scrollview with flatlist?
   return (
@@ -95,12 +99,7 @@ export default ({ jobPost }: P) => {
       }}
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
-      <ScrollView
-        ref={scrollViewRef}
-        onContentSizeChange={() =>
-          scrollViewRef.current?.scrollToEnd({ animated: true })
-        }
-      >
+      <ScrollView ref={scrollViewRef} onContentSizeChange={scrollToEnd}>
         {shownMessages.map((m, i) => (
           // eslint-disable-next-line react/no-array-index-key
           <MessageComponent key={i} message={m} jobPost={jobPost} />
@@ -110,6 +109,7 @@ export default ({ jobPost }: P) => {
         value={answer}
         onChangeText={setAnswer}
         handleSendAnswer={handleSendAnswer}
+        onFocus={scrollToEnd}
         isApplying={isApplying}
       />
     </KeyboardAvoidingView>

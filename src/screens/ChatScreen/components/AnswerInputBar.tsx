@@ -9,11 +9,18 @@ interface P {
   // eslint-disable-next-line no-unused-vars
   onChangeText: (s: string) => void
   handleSendAnswer: () => void
+  onFocus: () => void
   isApplying?: boolean
 }
 
 // TODO: refactor
-export default ({ value, onChangeText, handleSendAnswer, isApplying }: P) => {
+export default ({
+  value,
+  onChangeText,
+  handleSendAnswer,
+  onFocus,
+  isApplying,
+}: P) => {
   const { colors } = useTheme()
   const scheme = useColorScheme()
   // TODO: refactor placeholderColor to themes
@@ -44,6 +51,7 @@ export default ({ value, onChangeText, handleSendAnswer, isApplying }: P) => {
         placeholder="Write your answer here..."
         placeholderTextColor={placeholderColor}
         multiline
+        onFocus={onFocus}
       />
       <TouchableOpacity
         onPress={handleSendAnswer}
