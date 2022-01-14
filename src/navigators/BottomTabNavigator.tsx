@@ -7,6 +7,7 @@ import { bottomTabNavigatorOptions } from './bottomTabNavigatorOptions'
 import { GlobalBooleansContext } from '../contexts/GlobalBooleansProvider'
 import useLikedJobs from '../hooks/useLikedJobs'
 import HomeScreenNavigator from './HomeScreenNavigator'
+import styles from '../common/styles'
 
 export type RootStackRouteProp = RouteProp<
   RootStackParamList,
@@ -28,7 +29,12 @@ export const BottomTabNavigator = () => {
   const [_s, setS] = useState(false) // eslint-disable-line no-unused-vars
 
   const { likedJobs } = useLikedJobs()
-  const showChatBadge = likedJobs.map(j => j.isUnread).includes(true)
+  const showRedChatBadge = likedJobs.map(j => j.isUnread).includes(true)
+  const showYellowChatBadge = likedJobs.map(j => j.isUnfinished).includes(true)
+  const chatBadgeColor = showRedChatBadge
+    ? colors.notification
+    : styles.unfinishedYellow
+  const showChatBadge = showRedChatBadge || showYellowChatBadge
 
   const {
     globalBooleans: { showProfileBadge },
@@ -52,6 +58,12 @@ export const BottomTabNavigator = () => {
         component={ChatRowsScreen}
         options={{
           tabBarBadge: showChatBadge ? '' : undefined,
+          tabBarBadgeStyle: {
+            backgroundColor: chatBadgeColor,
+            minWidth: 12,
+            maxHeight: 12,
+            borderRadius: 7,
+          },
         }}
       />
       <RootStack.Screen
@@ -59,6 +71,13 @@ export const BottomTabNavigator = () => {
         component={ProfileScreen}
         options={{
           tabBarBadge: showProfileBadge ? '' : undefined,
+          tabBarBadgeStyle: {
+            // TODO: refactor / DRY this up
+            backgroundColor: colors.notification,
+            minWidth: 12,
+            maxHeight: 12,
+            borderRadius: 7,
+          },
         }}
       />
     </RootStack.Navigator>

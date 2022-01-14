@@ -32,6 +32,7 @@ export default ({ jobPost }: P) => {
   const [isApplying, setIsApplying] = useState<boolean>(false)
   const [hasApplied, setHasApplied] = useState<boolean>(false)
 
+  // TODO: clean up this function
   const handleSendAnswer = async () => {
     const userMessage: Message = {
       typeOfMessage: 'user',
