@@ -73,6 +73,7 @@ export default () => {
             borderWidth: 4,
           }}
           ref={viewRef}
+          keyboardShouldPersistTaps="handled"
         >
           <HelloText />
           <InputComponent
