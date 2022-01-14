@@ -7,6 +7,7 @@ import RoboText from '../../../common/components/RoboText'
 import { VerticalSpaceOf8 } from '../../../common/components/VerticalSpaceOf8'
 import { NavigationPropType } from '../../../navigators/Navigator'
 import RoboAvatar from '../../ChatScreen/components/RoboAvatar'
+import useChatsContext from '../../../hooks/useChatsContext'
 
 const LOGO_SIZE = 100
 
@@ -17,12 +18,14 @@ interface P {
 export default ({ width, hideSignInButton }: P) => {
   const scheme = useColorScheme()
   const navigation = useNavigation<NavigationPropType>()
+  const { setChats } = useChatsContext()
   const signInAsDemo = () => {
     Alert.alert(
       'Kuvittele, että kirjauduit sisään puhelinnumerollasi',
       'Kuvittele myös, että etsit markkinointitöitä Helsingistä',
     )
     navigation.navigate('RootNavigator')
+    setChats([])
   }
 
   return (
