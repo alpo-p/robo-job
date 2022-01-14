@@ -28,6 +28,7 @@ export default ({ jobPost }: P) => {
   useEffect(() => {
     const isLiked = likedJobs.map(job => job.id).includes(id)
     setIsHeartPressed(isLiked)
+    console.log(likedJobs)
   }, [likedJobs, id])
 
   const handleClickLike = () => {

@@ -33,6 +33,7 @@ export type Chats = IndividualChat[]
 export interface LikedJob {
   id: string
   isUnread?: boolean
+  isUnfinished?: boolean
 }
 
 export interface TagType {

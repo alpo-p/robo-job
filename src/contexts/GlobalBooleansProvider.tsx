@@ -4,6 +4,7 @@ type TSetGlobalBooleans = React.Dispatch<React.SetStateAction<GlobalBooleans>>
 
 interface GlobalBooleans {
   showProfileBadge: boolean
+  showMessageBadge: boolean
 }
 
 interface IGlobalBooleansContext {
@@ -14,6 +15,7 @@ interface IGlobalBooleansContext {
 const defaultState = {
   globalBooleans: {
     showProfileBadge: false,
+    showMessageBadge: false,
   },
   setGlobalBooleans: undefined as unknown as TSetGlobalBooleans,
 }

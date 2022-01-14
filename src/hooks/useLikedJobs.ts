@@ -15,7 +15,7 @@ export const likeOrDislikeJob = (
     if (jobs.map(job => job.id).includes(id)) {
       return jobs.filter(likedJobId => likedJobId.id !== id)
     }
-    return jobs.concat({ id })
+    return jobs.concat({ id, isUnfinished: true })
   })
 }
 
@@ -38,6 +38,28 @@ export const useSetAsReadOrUnread = (id: string) => {
       return jobs.map(job => (job.id === id ? newLikedJobObject : job))
     })
   return { setAsRead, setAsUnread }
+}
+
+export const useSetAsFinishedOrUnfinished = (id: string) => {
+  const { setLikedJobs } = useContext(LikedJobsContext)
+  const setAsFinished = () =>
+    setLikedJobs((jobs: LikedJob[]) => {
+      const newLikedJobObject = {
+        id,
+        isUnfinished: false,
+      }
+      return jobs.map(job => (job.id === id ? newLikedJobObject : job))
+    })
+  const setAsUnfinished = () =>
+    setLikedJobs((jobs: LikedJob[]) => {
+      const newLikedJobObject = {
+        id,
+        isUnfinished: true,
+      }
+      return jobs.map(job => (job.id === id ? newLikedJobObject : job))
+    })
+
+  return { setAsFinished, setAsUnfinished }
 }
 
 export default () => {

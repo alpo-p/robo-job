@@ -13,7 +13,7 @@ interface P {
 
 // eslint-disable-next-line no-unused-vars
 export default ({ searchFilter, stateFilter }: P) => {
-  const { likedJobs } = useLikedJobs() // Confusingly this is ids and "unread"
+  const { likedJobs } = useLikedJobs() // ids and boolean for unread and unfinished
   const jobPosts = getMockJobCards()
 
   const likedJobPosts = jobPosts.filter(job =>
