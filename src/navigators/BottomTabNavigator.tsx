@@ -29,6 +29,7 @@ export const BottomTabNavigator = () => {
   const [_s, setS] = useState(false) // eslint-disable-line no-unused-vars
 
   const { likedJobs } = useLikedJobs()
+  // refactor these map-includes to be reusable in filtertopbar as well
   const showRedChatBadge = likedJobs.map(j => j.isUnread).includes(true)
   const showYellowChatBadge = likedJobs.map(j => j.isUnfinished).includes(true)
   const chatBadgeColor = showRedChatBadge

@@ -3,7 +3,10 @@ import { KeyboardAvoidingView, Platform, ScrollView } from 'react-native'
 import { IJobPostCard, Message } from '../../../common/types'
 import { GlobalBooleansContext } from '../../../contexts/GlobalBooleansProvider'
 import useGetMessages from '../../../hooks/useGetMessages'
-import { useSetAsReadOrUnread } from '../../../hooks/useLikedJobs'
+import {
+  useSetAsFinishedOrUnfinished,
+  useSetAsReadOrUnread,
+} from '../../../hooks/useLikedJobs'
 import useSetMessages from '../../../hooks/useSetMessages'
 import waitSeconds from '../../../utils/waitSeconds'
 import getMocksForMessages from '../../../__mocks__/getMocksForMessages'
@@ -22,6 +25,7 @@ export default ({ jobPost }: P) => {
   const messagesFromContext = useGetMessages(jobPost.id)
   const setMessagesToContext = useSetMessages(jobPost.id)
   const { setAsRead, setAsUnread } = useSetAsReadOrUnread(jobPost.id)
+  const { setAsFinished } = useSetAsFinishedOrUnfinished(jobPost.id)
 
   const { roboMessages, thanksForApplying, messageFromRecruiter } =
     getMocksForMessages()
@@ -58,6 +62,7 @@ export default ({ jobPost }: P) => {
         .concat(messageFromRecruiter)
       setMessagesToContext(messagesInTheEnd)
       setShownMessages(m => m.concat(thanksForApplying))
+      setAsFinished()
       await waitSeconds(15)
       setAsUnread()
     }
