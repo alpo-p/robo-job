@@ -17,7 +17,6 @@ interface Row {
 
 export const ChatRow: React.FC<Row> = ({ jobPost, isUnread, isUnfinished }) => {
   const navigation = useNavigation<NavigationPropType>()
-  console.log(isUnfinished)
 
   const navigateToDetails = () => {
     navigation.navigate('DetailedJobCard', {

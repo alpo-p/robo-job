@@ -41,10 +41,6 @@ export default () => {
   const [education, setEducation] = useState('')
   const [links, setLinks] = useState('')
 
-  const onTextInputFocus = () => {
-    console.log('textinputfocus on profile')
-  }
-
   const saveProfile = () => {
     console.log('saving profile')
     Keyboard.dismiss()
@@ -82,7 +78,6 @@ export default () => {
             placeholder={PLACEHOLDERS.name}
             value={name}
             onChangeText={setName}
-            onFocus={onTextInputFocus}
           />
           <VerticalSpaceOf16 />
           <InputComponent
@@ -91,7 +86,6 @@ export default () => {
             placeholder={PLACEHOLDERS.summary}
             value={summary}
             onChangeText={setSummary}
-            onFocus={onTextInputFocus}
             multiline
           />
           <VerticalSpaceOf16 />
@@ -101,7 +95,6 @@ export default () => {
             placeholder={PLACEHOLDERS.links}
             value={links}
             onChangeText={setLinks}
-            onFocus={onTextInputFocus}
             multiline
           />
           <VerticalSpaceOf16 />
@@ -111,7 +104,6 @@ export default () => {
             placeholder={PLACEHOLDERS.xp}
             value={experience}
             onChangeText={setExperience}
-            onFocus={onTextInputFocus}
             multiline
             optional
           />
@@ -122,7 +114,6 @@ export default () => {
             placeholder={PLACEHOLDERS.education}
             value={education}
             onChangeText={setEducation}
-            onFocus={onTextInputFocus}
             multiline
             optional
           />

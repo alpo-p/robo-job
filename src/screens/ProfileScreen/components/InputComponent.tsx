@@ -10,7 +10,6 @@ interface P {
   value: string
   // eslint-disable-next-line no-unused-vars
   onChangeText: (text: string) => void
-  onFocus: () => void
   multiline?: boolean
   optional?: boolean
 }
@@ -20,7 +19,6 @@ export default ({
   height,
   value,
   onChangeText,
-  onFocus,
   multiline,
   optional,
 }: P) => {
@@ -53,7 +51,6 @@ export default ({
         value={value}
         onChangeText={onChangeText}
         multiline={multiline}
-        onFocus={onFocus}
       />
       <RoboText color="white" weight="light">
         {optional ? '(optional)' : 'recommended to fill'}
