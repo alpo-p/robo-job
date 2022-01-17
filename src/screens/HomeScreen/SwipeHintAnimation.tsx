@@ -3,24 +3,27 @@ import { useTheme } from '@react-navigation/native'
 import React, { useEffect, useState } from 'react'
 import { Animated } from 'react-native'
 
+const SPEED = 500
+const SIZE = 250
+
 export default () => {
   const { colors } = useTheme()
 
-  const [value] = useState(new Animated.Value(200))
+  const [value] = useState(new Animated.Value(SIZE))
   const [display, setDisplay] = useState<undefined | 'none'>(undefined)
 
   const animateSwipe = () => {
     Animated.loop(
       Animated.sequence([
         Animated.timing(value, {
-          toValue: 200,
-          duration: 400,
+          toValue: SIZE,
+          duration: SPEED,
           useNativeDriver: true,
         }),
-        Animated.delay(500),
+        Animated.delay(SPEED / 2),
         Animated.timing(value, {
           toValue: 0,
-          duration: 200,
+          duration: SPEED / 2,
           useNativeDriver: true,
         }),
       ]),
