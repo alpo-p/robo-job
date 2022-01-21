@@ -1,0 +1,394 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthScreen should match snapshot 1`] = `
+Array [
+  <RCTScrollView
+    horizontal={true}
+    onScroll={[Function]}
+    pagingEnabled={true}
+    scrollEventThrottle={16}
+    showsHorizontalScrollIndicator={false}
+  >
+    <View>
+      <RNCSafeAreaView
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://cdn3.iconfinder.com/data/icons/movies-solid/60/54_-_Robocop_video_film_cinema_movie-1024.png",
+              }
+            }
+            style={
+              Object {
+                "height": 100,
+                "tintColor": undefined,
+                "width": 100,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "black",
+                "fontFamily": "DamascusBold",
+                "fontSize": 40,
+                "textTransform": "none",
+              }
+            }
+          >
+            robo job
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 8,
+            }
+          }
+        />
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontFamily": "DamascusLight",
+              "fontSize": 20,
+              "marginTop": -8,
+              "textTransform": "none",
+            }
+          }
+        >
+          The easiest way to find a job
+        </Text>
+        <View
+          style={
+            Object {
+              "bottom": 80,
+              "position": "absolute",
+              "width": "90%",
+            }
+          }
+        />
+      </RNCSafeAreaView>
+      <RNCSafeAreaView
+        style={
+          Object {
+            "alignContent": "center",
+            "alignItems": "center",
+            "justifyContent": "center",
+            "padding": 40,
+            "width": 750,
+          }
+        }
+      >
+        <Text />
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontFamily": "DamascusBold",
+              "fontSize": 20,
+              "textTransform": "none",
+            }
+          }
+        >
+          Search for jobs
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontFamily": "DamascusLight",
+              "fontSize": 16,
+              "marginTop": 0,
+              "textAlign": "center",
+              "textTransform": "none",
+            }
+          }
+        >
+          ...and then swipe through them
+        </Text>
+      </RNCSafeAreaView>
+      <RNCSafeAreaView
+        style={
+          Object {
+            "alignContent": "center",
+            "alignItems": "center",
+            "justifyContent": "center",
+            "padding": 40,
+            "width": 750,
+          }
+        }
+      >
+        <Text />
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontFamily": "DamascusBold",
+              "fontSize": 20,
+              "textTransform": "none",
+            }
+          }
+        >
+          Save the jobs you like
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontFamily": "DamascusLight",
+              "fontSize": 16,
+              "marginTop": 0,
+              "textAlign": "center",
+              "textTransform": "none",
+            }
+          }
+        >
+          Your profile will not be shared when liking
+        </Text>
+      </RNCSafeAreaView>
+      <RNCSafeAreaView
+        style={
+          Object {
+            "alignContent": "center",
+            "alignItems": "center",
+            "justifyContent": "center",
+            "padding": 40,
+            "width": 750,
+          }
+        }
+      >
+        <Text />
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontFamily": "DamascusBold",
+              "fontSize": 20,
+              "textTransform": "none",
+            }
+          }
+        >
+          Quick apply
+        </Text>
+        <Text
+          style={
+            Object {
+              "color": "#000000",
+              "fontFamily": "DamascusLight",
+              "fontSize": 16,
+              "marginTop": 0,
+              "textAlign": "center",
+              "textTransform": "none",
+            }
+          }
+        >
+          Apply to jobs by answering a couple of questions by the company
+        </Text>
+      </RNCSafeAreaView>
+      <RNCSafeAreaView
+        style={
+          Object {
+            "alignItems": "center",
+            "flex": 1,
+            "justifyContent": "center",
+            "width": 750,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+            }
+          }
+        >
+          <Image
+            source={
+              Object {
+                "uri": "https://cdn3.iconfinder.com/data/icons/movies-solid/60/54_-_Robocop_video_film_cinema_movie-1024.png",
+              }
+            }
+            style={
+              Object {
+                "height": 100,
+                "tintColor": undefined,
+                "width": 100,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "black",
+                "fontFamily": "DamascusBold",
+                "fontSize": 40,
+                "textTransform": "none",
+              }
+            }
+          >
+            robo job
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 8,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "bottom": 80,
+              "position": "absolute",
+              "width": "90%",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+            style={
+              Object {
+                "backgroundColor": "#000000",
+                "borderRadius": 8,
+                "opacity": 1,
+                "padding": 16,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignItems": "center",
+                  "flexDirection": "row",
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "flex": 2,
+                  }
+                }
+              >
+                <Text />
+              </View>
+              <Text
+                style={
+                  Object {
+                    "color": "white",
+                    "flex": 5,
+                    "fontFamily": "DamascusBold",
+                    "fontSize": 16,
+                    "textTransform": "none",
+                  }
+                }
+              >
+                Sign in with phone
+              </Text>
+            </View>
+          </View>
+        </View>
+      </RNCSafeAreaView>
+    </View>
+  </RCTScrollView>,
+  <View
+    style={
+      Object {
+        "alignItems": "center",
+        "bottom": 40,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "left": 0,
+        "position": "absolute",
+        "right": 0,
+      }
+    }
+  >
+    <View
+      style={
+        Object {
+          "backgroundColor": "#000000",
+          "borderRadius": 5,
+          "height": 10,
+          "marginLeft": 10,
+          "opacity": 1,
+          "width": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "#000000",
+          "borderRadius": 5,
+          "height": 10,
+          "marginLeft": 10,
+          "opacity": 0.2,
+          "width": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "#000000",
+          "borderRadius": 5,
+          "height": 10,
+          "marginLeft": 10,
+          "opacity": 0.2,
+          "width": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "#000000",
+          "borderRadius": 5,
+          "height": 10,
+          "marginLeft": 10,
+          "opacity": 0.2,
+          "width": 10,
+        }
+      }
+    />
+    <View
+      style={
+        Object {
+          "backgroundColor": "#000000",
+          "borderRadius": 5,
+          "height": 10,
+          "marginLeft": 10,
+          "opacity": 0.2,
+          "width": 10,
+        }
+      }
+    />
+  </View>,
+]
+`;

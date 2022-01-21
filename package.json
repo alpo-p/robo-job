@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
+    "@jest/globals": "^27.4.6",
     "@testing-library/react-native": "^9.0.0",
     "@types/expo__vector-icons": "^10.0.0",
     "@types/jest": "^27.4.0",
