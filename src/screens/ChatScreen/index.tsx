@@ -5,7 +5,7 @@ import { IJobPostCard } from '../../common/types'
 import ChatTopBar from './components/ChatTopBar'
 import MessagesContainer from './components/MessagesContainer'
 
-interface P {
+export interface ChatScreenProps {
   route: RouteProp<{ params: { jobPost: IJobPostCard } }, 'params'>
 }
 
@@ -13,7 +13,7 @@ export default ({
   route: {
     params: { jobPost },
   },
-}: P) => (
+}: ChatScreenProps) => (
   <SafeAreaView>
     <ChatTopBar jobPost={jobPost} />
     <MessagesContainer jobPost={jobPost} />
