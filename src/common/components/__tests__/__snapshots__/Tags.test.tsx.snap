@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tags should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+      "flexWrap": "wrap",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "alignContent": "center",
+        "borderColor": "rgb(0, 122, 255)",
+        "borderRadius": 4,
+        "borderWidth": 0.5,
+        "flexDirection": "row",
+        "height": 24,
+        "marginRight": 6,
+        "marginTop": 8,
+        "padding": 4,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(0, 122, 255)",
+          "fontFamily": "DamascusLight",
+          "fontSize": 12,
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      #
+       
+      test1
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "alignContent": "center",
+        "borderColor": "rgb(0, 122, 255)",
+        "borderRadius": 4,
+        "borderWidth": 0.5,
+        "flexDirection": "row",
+        "height": 24,
+        "marginRight": 6,
+        "marginTop": 8,
+        "padding": 4,
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "rgb(0, 122, 255)",
+          "fontFamily": "DamascusLight",
+          "fontSize": 12,
+          "textTransform": "uppercase",
+        }
+      }
+    >
+      #
+       
+      test2
+    </Text>
+  </View>
+</View>
+`;
