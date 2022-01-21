@@ -1,6 +1,5 @@
 import React from 'react'
 import { ImageBackground } from 'react-native'
-// eslint-disable-next-line @typescript-eslint/no-empty-interface
 
 interface P {
   pictureUrl: string

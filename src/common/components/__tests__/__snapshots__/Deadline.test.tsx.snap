@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompanyLogo should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "flexDirection": "row",
+    }
+  }
+>
+  <Text />
+  <Text
+    style={
+      Object {
+        "color": "rgb(28, 28, 30)",
+        "fontFamily": "DamascusLight",
+        "fontSize": 14,
+        "textTransform": "none",
+      }
+    }
+  >
+    Deadline in 
+    1
+     days
+  </Text>
+</View>
+`;

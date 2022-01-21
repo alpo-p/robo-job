@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompanyLogo should match snapshot 1`] = `
+<Image
+  source={
+    Object {
+      "uri": "testUrl",
+    }
+  }
+  style={
+    Object {
+      "alignSelf": "center",
+      "borderColor": "white",
+      "borderRadius": 56,
+      "borderWidth": 1,
+      "bottom": 70,
+      "height": 112,
+      "position": "absolute",
+      "width": 112,
+    }
+  }
+/>
+`;

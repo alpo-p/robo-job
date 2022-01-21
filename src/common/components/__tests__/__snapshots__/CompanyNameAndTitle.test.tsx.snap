@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CompanyLogo should match snapshot 1`] = `
+<View
+  style={
+    Object {
+      "alignItems": "center",
+    }
+  }
+>
+  <Text
+    style={
+      Object {
+        "color": "#ffffff",
+        "fontFamily": "DamascusBold",
+        "fontSize": 20,
+        "textTransform": "uppercase",
+      }
+    }
+  >
+    test name
+  </Text>
+  <Text
+    style={
+      Object {
+        "color": "#ffffff",
+        "fontFamily": "Damascus",
+        "fontSize": 20,
+        "textTransform": "none",
+      }
+    }
+  >
+    test title
+  </Text>
+</View>
+`;
