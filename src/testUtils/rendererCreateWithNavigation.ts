@@ -1,7 +1,8 @@
-/* eslint-disable import/no-extraneous-dependencies */
 import { JSXElementConstructor, ReactElement } from 'react'
+// eslint-disable-next-line import/no-extraneous-dependencies
 import renderer from 'react-test-renderer'
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type PropType = ReactElement<any, string | JSXElementConstructor<any>>
 
 const mockedNavigate = jest.fn()
