@@ -29,8 +29,6 @@ jest.mock('@react-navigation/native', () => {
   }
 })
 
-const renderWithNavigation = (children: PropType) => {
+export default (children: PropType) => {
   return renderer.create(children)
 }
-
-export default renderWithNavigation

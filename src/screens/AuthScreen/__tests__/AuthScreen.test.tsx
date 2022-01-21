@@ -1,10 +1,10 @@
 import React from 'react'
-import renderWithNavigation from '../../../testUtils/renderWithNavigation'
+import create from '../../../testUtils/rendererCreateWithNavigation'
 import AuthScreen from '../index'
 
 describe('AuthScreen', () => {
   it('should match snapshot', () => {
-    const tree = renderWithNavigation(<AuthScreen />)
+    const tree = create(<AuthScreen />)
     expect(tree).toMatchSnapshot()
   })
 })
