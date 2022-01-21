@@ -2,8 +2,8 @@ import { Ionicons } from '@expo/vector-icons'
 import { useTheme } from '@react-navigation/native'
 import React from 'react'
 import { TextInput, useColorScheme, View, ViewStyle } from 'react-native'
-import styles from './styles'
-import { IoniconsIconNames } from './types/utilTypes'
+import styles from '../styles'
+import { IoniconsIconNames } from '../types/utilTypes'
 
 interface P {
   value: string
