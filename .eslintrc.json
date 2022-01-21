@@ -48,6 +48,7 @@
     "no-unused-vars": ["error"],
     "camelcase": "off",
     "@typescript-eslint/ban-ts-comment": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.test.ts", "**/*.test.tsx"]}]
   }
 }

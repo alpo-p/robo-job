@@ -1,14 +1,14 @@
 import { useNavigation } from '@react-navigation/native'
 import React, { useEffect, useState } from 'react'
 import { Alert, View } from 'react-native'
-import ChatButton from '../../../../common/components/ChatButton'
-import HeartButton from '../../../../common/components/HeartButton'
-import ShareButton from '../../../../common/components/ShareButton'
+import ChatButton from '../../../../common/components/ChatIconButton'
+import HeartButton from '../../../../common/components/HeartIconButton'
+import ShareButton from '../../../../common/components/ShareIconButton'
 import { IJobPostCard } from '../../../../common/types'
 import { NavigationPropType } from '../../../../navigators/Navigator'
 import { VerticalSpaceOf24 } from '../../../../common/components/VerticalSpaceOf24'
 import useLikedJobs, { likeOrDislikeJob } from '../../../../hooks/useLikedJobs'
-import InfoButton from '../../../../common/components/InfoButton'
+import InfoButton from '../../../../common/components/InfoIconButton'
 
 interface Props {
   jobPost: IJobPostCard
