@@ -1,10 +1,10 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import rendererCreateWithNavigation from '../../../testUtils/rendererCreateWithNavigation'
 import { Deadline } from '../Deadline'
 
 describe('CompanyLogo', () => {
   it('should match snapshot', () => {
-    const tree = renderer.create(<Deadline dl="1" />)
+    const tree = rendererCreateWithNavigation(<Deadline dl="1" />)
     expect(tree).toMatchSnapshot()
   })
 })

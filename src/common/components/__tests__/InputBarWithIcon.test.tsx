@@ -1,14 +1,15 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
-import { render, fireEvent } from '@testing-library/react-native'
+import { fireEvent } from '@testing-library/react-native'
 import InputBarWithIcon from '../InputBarWithIcon'
+import rendererCreateWithNavigation from '../../../testUtils/rendererCreateWithNavigation'
+import renderWithNavigation from '../../../testUtils/renderWithNavigation'
 
 describe('InputBarWithIcon', () => {
   const value = 'test'
   const setValue = jest.fn()
 
   it('should match snapshot', () => {
-    const tree = renderer.create(
+    const tree = rendererCreateWithNavigation(
       <InputBarWithIcon iconName="flower" value={value} setValue={setValue} />,
     )
     expect(tree).toMatchSnapshot()
@@ -17,7 +18,7 @@ describe('InputBarWithIcon', () => {
   it('should call setValue when edited', () => {
     const placeholderText = 'test placeholder'
 
-    const { getByPlaceholderText } = render(
+    const { getByPlaceholderText } = renderWithNavigation(
       <InputBarWithIcon
         iconName="flower"
         value={value}

@@ -1,10 +1,10 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import rendererCreateWithNavigation from '../../../testUtils/rendererCreateWithNavigation'
 import CompanyLogo from '../CompanyLogo'
 
 describe('CompanyLogo', () => {
   it('should match snapshot', () => {
-    const tree = renderer.create(<CompanyLogo url="testUrl" />)
+    const tree = rendererCreateWithNavigation(<CompanyLogo url="testUrl" />)
     expect(tree).toMatchSnapshot()
   })
 })

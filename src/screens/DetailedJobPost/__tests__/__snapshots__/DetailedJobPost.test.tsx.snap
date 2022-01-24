@@ -1,0 +1,396 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailedJobPost should match snapshot 1`] = `
+<RNCSafeAreaView>
+  <View
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignSelf": "flex-start",
+        "marginLeft": 8,
+        "opacity": 1,
+        "position": "absolute",
+        "top": 48,
+        "zIndex": 1,
+      }
+    }
+  >
+    <Text />
+  </View>
+  <RCTScrollView>
+    <View>
+      <View
+        accessibilityIgnoresInvertColors={true}
+        style={
+          Object {
+            "height": 280,
+          }
+        }
+      >
+        <Image
+          resizeMode="stretch"
+          source={
+            Object {
+              "uri": "https://thumbs.dreamstime.com/b/close-up-business-people-congratulating-one-another-team-building-exercise-54970426.jpg",
+            }
+          }
+          style={
+            Array [
+              Object {
+                "bottom": 0,
+                "left": 0,
+                "position": "absolute",
+                "right": 0,
+                "top": 0,
+              },
+              Object {
+                "height": 280,
+                "width": undefined,
+              },
+              undefined,
+            ]
+          }
+        />
+        <Image
+          source={
+            Object {
+              "uri": "https://ih1.redbubble.net/image.659413411.3655/st,small,507x507-pad,600x600,f8f8f8.u1.jpg",
+            }
+          }
+          style={
+            Object {
+              "alignSelf": "center",
+              "borderColor": "white",
+              "borderRadius": 56,
+              "borderWidth": 4,
+              "bottom": -56,
+              "height": 112,
+              "position": "absolute",
+              "width": 112,
+            }
+          }
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "marginBottom": 50,
+            "marginTop": 64,
+            "paddingLeft": 16,
+            "paddingRight": 24,
+          }
+        }
+      >
+        <View>
+          <View
+            style={
+              Object {
+                "alignItems": undefined,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusBold",
+                  "fontSize": 20,
+                  "textTransform": "none",
+                }
+              }
+            >
+              E Corp
+            </Text>
+            <View
+              style={
+                Object {
+                  "marginTop": 4,
+                }
+              }
+            />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "Damascus",
+                  "fontSize": 20,
+                  "textTransform": "none",
+                }
+              }
+            >
+              Digital Marketing Manager
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Helsinki
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "textTransform": "none",
+                }
+              }
+            >
+              Deadline in 
+              7
+               days
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 24,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "lineHeight": 24,
+                  "textAlign": "justify",
+                  "textTransform": "none",
+                }
+              }
+            >
+              As a Digital Marketing Manager you will be responsible for digital marketing content creation, company newsletter, web pages, social media, photographing and graphic design for web and print media. You will be accompanies by a happy group of hard-working and nice people with good values and great benefits
+            </Text>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 24,
+            }
+          }
+        />
+        <View>
+          <Text
+            style={
+              Object {
+                "color": "#000000",
+                "fontFamily": "Damascus",
+                "fontSize": 20,
+                "textTransform": "none",
+              }
+            }
+          >
+            About the position
+          </Text>
+          <View
+            style={
+              Object {
+                "marginBottom": 8,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "#000000",
+                "fontFamily": "DamascusLight",
+                "fontSize": 14,
+                "lineHeight": 24,
+                "textAlign": "justify",
+                "textTransform": "none",
+              }
+            }
+          >
+            We are searching for a passionate and ambitious MARKETING MANAGER to take on the exciting challenge of managing the company’s marketing activities in their home market - Finland!
+  
+As the successful candidate, we trust that you will bring relevant marketing experience with proven success, along with a strong can-do attitude and a banquet of fresh ideas! In this marketing role, you will have the opportunity to influence the direction of some of the most respected brands! 
+  
+You will get to collaborate with colleagues around the world, create campaigns, participate at events, impact product design projects, communicate with like-minded marketing professionals and build brand communities – amongst many other exciting tasks!
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 24,
+            }
+          }
+        />
+        <View>
+          <Text
+            style={
+              Object {
+                "color": "#000000",
+                "fontFamily": "Damascus",
+                "fontSize": 20,
+                "textTransform": "none",
+              }
+            }
+          >
+            About 
+            E Corp
+             
+          </Text>
+          <View
+            style={
+              Object {
+                "marginBottom": 8,
+              }
+            }
+          />
+          <Text
+            style={
+              Object {
+                "color": "#000000",
+                "fontFamily": "DamascusLight",
+                "fontSize": 14,
+                "lineHeight": 24,
+                "textAlign": "justify",
+                "textTransform": "none",
+              }
+            }
+          >
+            E Corp is a fast and responsible loan provider with over 500 000 customers in Finland, Sweden and Lithuania. The company was recently granted a specialized banking license by The European Central Bank (ECB) and is currently establishing a new business to enable international growth and a continuous launch of new products.
+
+E Corp’s unique competitive strength is based on a fully automated lending process with a proprietary scoring system that enables fast, secure and personalized loan offers in a responsible way
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <View
+    style={
+      Object {
+        "backgroundColor": "#000000",
+        "bottom": 40,
+        "flexDirection": "row",
+        "justifyContent": "center",
+        "width": "100%",
+      }
+    }
+  >
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text />
+    </View>
+    <View
+      style={
+        Object {
+          "marginLeft": 24,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text />
+    </View>
+    <View
+      style={
+        Object {
+          "marginLeft": 24,
+        }
+      }
+    />
+    <View
+      accessible={true}
+      focusable={true}
+      onClick={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <Text />
+    </View>
+  </View>
+</RNCSafeAreaView>
+`;

@@ -13,7 +13,7 @@ exports[`Tags should match snapshot 1`] = `
     style={
       Object {
         "alignContent": "center",
-        "borderColor": "rgb(0, 122, 255)",
+        "borderColor": "#000000",
         "borderRadius": 4,
         "borderWidth": 0.5,
         "flexDirection": "row",
@@ -27,7 +27,7 @@ exports[`Tags should match snapshot 1`] = `
     <Text
       style={
         Object {
-          "color": "rgb(0, 122, 255)",
+          "color": "#000000",
           "fontFamily": "DamascusLight",
           "fontSize": 12,
           "textTransform": "uppercase",
@@ -43,7 +43,7 @@ exports[`Tags should match snapshot 1`] = `
     style={
       Object {
         "alignContent": "center",
-        "borderColor": "rgb(0, 122, 255)",
+        "borderColor": "#000000",
         "borderRadius": 4,
         "borderWidth": 0.5,
         "flexDirection": "row",
@@ -57,7 +57,7 @@ exports[`Tags should match snapshot 1`] = `
     <Text
       style={
         Object {
-          "color": "rgb(0, 122, 255)",
+          "color": "#000000",
           "fontFamily": "DamascusLight",
           "fontSize": 12,
           "textTransform": "uppercase",

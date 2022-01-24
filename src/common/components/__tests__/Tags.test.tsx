@@ -1,10 +1,12 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import rendererCreateWithNavigation from '../../../testUtils/rendererCreateWithNavigation'
 import Tags from '../Tags'
 
 describe('Tags', () => {
   it('should match snapshot', () => {
-    const tree = renderer.create(<Tags tags={['test1', 'test2']} />)
+    const tree = rendererCreateWithNavigation(
+      <Tags tags={['test1', 'test2']} />,
+    )
     expect(tree).toMatchSnapshot()
   })
 })

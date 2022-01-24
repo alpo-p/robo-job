@@ -1,10 +1,10 @@
 import React from 'react'
-import renderer from 'react-test-renderer'
+import rendererCreateWithNavigation from '../../../testUtils/rendererCreateWithNavigation'
 import RoboText from '../RoboText'
 
 describe('RoboText', () => {
   it('should match snapshot', () => {
-    const tree = renderer.create(<RoboText>Testi</RoboText>)
+    const tree = rendererCreateWithNavigation(<RoboText>Testi</RoboText>)
     expect(tree).toMatchSnapshot()
   })
 })
