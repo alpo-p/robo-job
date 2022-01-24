@@ -1,0 +1,423 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProfileScreen should match snapshot 1`] = `
+<RNCSafeAreaView>
+  <View
+    onLayout={[Function]}
+    style={
+      Object {
+        "paddingBottom": 0,
+      }
+    }
+  >
+    <RCTScrollView
+      keyboardShouldPersistTaps="handled"
+      style={
+        Object {
+          "backgroundColor": "#000000",
+          "borderColor": "#000000",
+          "borderRadius": 15,
+          "borderWidth": 4,
+          "height": "99%",
+          "margin": 8,
+          "paddingBottom": 44,
+          "paddingTop": 24,
+        }
+      }
+    >
+      <View>
+        <View
+          style={
+            Object {
+              "alignSelf": "center",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "DamascusBold",
+                "fontSize": 40,
+                "textTransform": "uppercase",
+              }
+            }
+          >
+            HELLO
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "marginLeft": 16,
+              "marginRight": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "Damascus",
+                "fontSize": 20,
+                "textTransform": "none",
+              }
+            }
+          >
+            my name is
+          </Text>
+          <TextInput
+            allowFontScaling={true}
+            onChangeText={[Function]}
+            placeholder="Jared Dunn"
+            placeholderTextColor="#d0d0d0"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 2,
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 16,
+                "height": 48,
+                "padding": 12,
+                "textAlign": "center",
+                "width": "100%",
+              }
+            }
+            textAlign="center"
+            textAlignVertical="top"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "DamascusLight",
+                "fontSize": 14,
+                "textTransform": "none",
+              }
+            }
+          >
+            recommended to fill
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 16,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "marginLeft": 16,
+              "marginRight": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "Damascus",
+                "fontSize": 20,
+                "textTransform": "none",
+              }
+            }
+          >
+            who am I
+          </Text>
+          <TextInput
+            allowFontScaling={true}
+            multiline={true}
+            onChangeText={[Function]}
+            placeholder="I am a business graduate with a degree in Marketing looking for work in the field.
+I have worked as a marketing generalist in a small business handling all sides, such as updating websites and copywriting.
+People say I am diligent and easy to work with. I'm looking for full-time offers."
+            placeholderTextColor="#d0d0d0"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 2,
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 16,
+                "height": 192,
+                "padding": 12,
+                "textAlign": "left",
+                "width": "100%",
+              }
+            }
+            textAlign="center"
+            textAlignVertical="top"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "DamascusLight",
+                "fontSize": 14,
+                "textTransform": "none",
+              }
+            }
+          >
+            recommended to fill
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 16,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "marginLeft": 16,
+              "marginRight": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "Damascus",
+                "fontSize": 20,
+                "textTransform": "none",
+              }
+            }
+          >
+            linkedin or other links
+          </Text>
+          <TextInput
+            allowFontScaling={true}
+            multiline={true}
+            onChangeText={[Function]}
+            placeholder="www.linked.com/alpopanula"
+            placeholderTextColor="#d0d0d0"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 2,
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 16,
+                "height": 96,
+                "padding": 12,
+                "textAlign": "left",
+                "width": "100%",
+              }
+            }
+            textAlign="center"
+            textAlignVertical="top"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "DamascusLight",
+                "fontSize": 14,
+                "textTransform": "none",
+              }
+            }
+          >
+            recommended to fill
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 16,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "marginLeft": 16,
+              "marginRight": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "Damascus",
+                "fontSize": 20,
+                "textTransform": "none",
+              }
+            }
+          >
+            work experience
+          </Text>
+          <TextInput
+            allowFontScaling={true}
+            multiline={true}
+            onChangeText={[Function]}
+            placeholder="- Marketing coordinator: Pied Piper (2017-2021)
+- Cashier: K-Market Ilola (2010-2017)"
+            placeholderTextColor="#d0d0d0"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 2,
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 16,
+                "height": 144,
+                "padding": 12,
+                "textAlign": "left",
+                "width": "100%",
+              }
+            }
+            textAlign="center"
+            textAlignVertical="top"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "DamascusLight",
+                "fontSize": 14,
+                "textTransform": "none",
+              }
+            }
+          >
+            (optional)
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 16,
+            }
+          }
+        />
+        <View
+          style={
+            Object {
+              "alignItems": "center",
+              "marginLeft": 16,
+              "marginRight": 16,
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "Damascus",
+                "fontSize": 20,
+                "textTransform": "none",
+              }
+            }
+          >
+            schools
+          </Text>
+          <TextInput
+            allowFontScaling={true}
+            multiline={true}
+            onChangeText={[Function]}
+            placeholder="- Msc. Marketing - Trolls of Trinity Christian College in Illinois (2010)
+- High school degree - Nowheria in the middle of NowWhere (2005)"
+            placeholderTextColor="#d0d0d0"
+            rejectResponderTermination={true}
+            style={
+              Object {
+                "backgroundColor": "white",
+                "borderRadius": 2,
+                "color": "rgb(28, 28, 30)",
+                "fontSize": 16,
+                "height": 144,
+                "padding": 12,
+                "textAlign": "left",
+                "width": "100%",
+              }
+            }
+            textAlign="center"
+            textAlignVertical="top"
+            underlineColorAndroid="transparent"
+            value=""
+          />
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "DamascusLight",
+                "fontSize": 14,
+                "textTransform": "none",
+              }
+            }
+          >
+            (optional)
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 24,
+            }
+          }
+        />
+        <View
+          accessible={true}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "#087c61",
+              "borderRadius": 8,
+              "opacity": 1,
+              "padding": 16,
+              "width": "91%",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontFamily": "DamascusBold",
+                "fontSize": 16,
+                "textTransform": "uppercase",
+              }
+            }
+          >
+            Save
+          </Text>
+        </View>
+        <View
+          style={
+            Object {
+              "marginTop": 120,
+            }
+          }
+        />
+      </View>
+    </RCTScrollView>
+  </View>
+</RNCSafeAreaView>
+`;

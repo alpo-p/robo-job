@@ -1,0 +1,4185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen should match snapshot 1`] = `
+<View>
+  <View
+    style={
+      Object {
+        "bottom": "55%",
+        "display": undefined,
+        "left": "45%",
+        "position": "absolute",
+        "transform": Array [
+          Object {
+            "translateY": 250,
+          },
+        ],
+        "zIndex": 2,
+      }
+    }
+  >
+    <Text />
+  </View>
+  <RCTScrollView
+    decelerationRate="fast"
+    disableScrollViewPanResponder={true}
+    showsVerticalScrollIndicator={false}
+    snapToAlignment="start"
+    snapToInterval={400}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "height": 400,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 280,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": 280,
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://thumbs.dreamstime.com/b/close-up-business-people-congratulating-one-another-team-building-exercise-54970426.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 280,
+                    "width": undefined,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignSelf": "flex-start",
+                  "marginLeft": 8,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 48,
+                  "zIndex": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Image
+              source={
+                Object {
+                  "uri": "https://ih1.redbubble.net/image.659413411.3655/st,small,507x507-pad,600x600,f8f8f8.u1.jpg",
+                }
+              }
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "borderColor": "white",
+                  "borderRadius": 56,
+                  "borderWidth": 1,
+                  "bottom": 70,
+                  "height": 112,
+                  "position": "absolute",
+                  "width": 112,
+                }
+              }
+            />
+            <ViewManagerAdapter_ExpoLinearGradient
+              proxiedProperties={
+                Object {
+                  "colors": Array [
+                    0,
+                    1493172224,
+                    1711276032,
+                    2147483648,
+                    3003121664,
+                    3858759680,
+                  ],
+                  "endPoint": undefined,
+                  "locations": undefined,
+                  "startPoint": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "paddingBottom": 6,
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "DamascusBold",
+                      "fontSize": 20,
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  E Corp
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Damascus",
+                      "fontSize": 20,
+                      "textTransform": "none",
+                    }
+                  }
+                >
+                  Digital Marketing Manager
+                </Text>
+              </View>
+            </ViewManagerAdapter_ExpoLinearGradient>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Helsinki
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                digital marketing
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                facebook
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                adwords
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": 280,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "lineHeight": 24,
+                  "textAlign": "justify",
+                  "textTransform": "none",
+                }
+              }
+            >
+              As a Digital Marketing Manager you will be responsible for digital marketing content creation, company newsletter, web pages, social media, photographing and graphic design for web and print media. You will be accompanies by a happy group of hard-working and nice people with good values and great benefits
+            </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusBold",
+                    "fontSize": 14,
+                    "textTransform": "none",
+                  }
+                }
+              >
+                Read more
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "bottom": 80,
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "height": 400,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 280,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": 280,
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://imgs.smoothradio.com/images/16359?crop=16_9&width=660&relax=1&signature=OWYzew50GlhEjghnZeagBKw4t5g=",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 280,
+                    "width": undefined,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignSelf": "flex-start",
+                  "marginLeft": 8,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 48,
+                  "zIndex": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Image
+              source={
+                Object {
+                  "uri": "https://i.pinimg.com/originals/c7/03/a7/c703a765d546f53eef04dc2eb29f8e17.jpg",
+                }
+              }
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "borderColor": "white",
+                  "borderRadius": 56,
+                  "borderWidth": 1,
+                  "bottom": 70,
+                  "height": 112,
+                  "position": "absolute",
+                  "width": 112,
+                }
+              }
+            />
+            <ViewManagerAdapter_ExpoLinearGradient
+              proxiedProperties={
+                Object {
+                  "colors": Array [
+                    0,
+                    1493172224,
+                    1711276032,
+                    2147483648,
+                    3003121664,
+                    3858759680,
+                  ],
+                  "endPoint": undefined,
+                  "locations": undefined,
+                  "startPoint": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "paddingBottom": 6,
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "DamascusBold",
+                      "fontSize": 20,
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  Wonka Industries
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Damascus",
+                      "fontSize": 20,
+                      "textTransform": "none",
+                    }
+                  }
+                >
+                  Marketing Analyst
+                </Text>
+              </View>
+            </ViewManagerAdapter_ExpoLinearGradient>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Helsinki
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                analyst
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                experienced
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                marketing
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                agile
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": 280,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "lineHeight": 24,
+                  "textAlign": "justify",
+                  "textTransform": "none",
+                }
+              }
+            >
+              As the Marketing Analyst within Marketing and Sales Renewal, you will lead activities such as developing a market intelligence tool, renewal of the public website, launching a global marketing automation solution and developing and driving adoption. You will be a key stakeholder to the upper management. You will have an opportunity to work with inspired people, a truly global working environment and support for your personal professional development
+            </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusBold",
+                    "fontSize": 14,
+                    "textTransform": "none",
+                  }
+                }
+              >
+                Read more
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "bottom": 80,
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "height": 400,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 280,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": 280,
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://static1.bigstockphoto.com/2/9/1/large1500/192129916.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 280,
+                    "width": undefined,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignSelf": "flex-start",
+                  "marginLeft": 8,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 48,
+                  "zIndex": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Image
+              source={
+                Object {
+                  "uri": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-yjO1MhjUPEAspfgIjobxEsDk9o1t88aMkw&usqp=CAU",
+                }
+              }
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "borderColor": "white",
+                  "borderRadius": 56,
+                  "borderWidth": 1,
+                  "bottom": 70,
+                  "height": 112,
+                  "position": "absolute",
+                  "width": 112,
+                }
+              }
+            />
+            <ViewManagerAdapter_ExpoLinearGradient
+              proxiedProperties={
+                Object {
+                  "colors": Array [
+                    0,
+                    1493172224,
+                    1711276032,
+                    2147483648,
+                    3003121664,
+                    3858759680,
+                  ],
+                  "endPoint": undefined,
+                  "locations": undefined,
+                  "startPoint": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "paddingBottom": 6,
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "DamascusBold",
+                      "fontSize": 20,
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  Dunder Mifflin Paper
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Damascus",
+                      "fontSize": 20,
+                      "textTransform": "none",
+                    }
+                  }
+                >
+                  Marketing Manager
+                </Text>
+              </View>
+            </ViewManagerAdapter_ExpoLinearGradient>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Helsinki
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                social media
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                marketing automation
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": 280,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "lineHeight": 24,
+                  "textAlign": "justify",
+                  "textTransform": "none",
+                }
+              }
+            >
+              If you are marketing-minded, enthusiastic, creative, digitally savvy, up to date on emerging trends and tactics, and obsessed with quality - then this is the position for you, and we want to hear from you!
+   
+We have top-of-market pay, Friday beers and great support for personal growth!
+            </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusBold",
+                    "fontSize": 14,
+                    "textTransform": "none",
+                  }
+                }
+              >
+                Read more
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "bottom": 80,
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "height": 400,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 280,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": 280,
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://static1.bigstockphoto.com/2/9/1/large1500/192129916.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 280,
+                    "width": undefined,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignSelf": "flex-start",
+                  "marginLeft": 8,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 48,
+                  "zIndex": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Image
+              source={
+                Object {
+                  "uri": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-yjO1MhjUPEAspfgIjobxEsDk9o1t88aMkw&usqp=CAU",
+                }
+              }
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "borderColor": "white",
+                  "borderRadius": 56,
+                  "borderWidth": 1,
+                  "bottom": 70,
+                  "height": 112,
+                  "position": "absolute",
+                  "width": 112,
+                }
+              }
+            />
+            <ViewManagerAdapter_ExpoLinearGradient
+              proxiedProperties={
+                Object {
+                  "colors": Array [
+                    0,
+                    1493172224,
+                    1711276032,
+                    2147483648,
+                    3003121664,
+                    3858759680,
+                  ],
+                  "endPoint": undefined,
+                  "locations": undefined,
+                  "startPoint": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "paddingBottom": 6,
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "DamascusBold",
+                      "fontSize": 20,
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  Dunder Mifflin Paper
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Damascus",
+                      "fontSize": 20,
+                      "textTransform": "none",
+                    }
+                  }
+                >
+                  Marketing Analyst
+                </Text>
+              </View>
+            </ViewManagerAdapter_ExpoLinearGradient>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Helsinki
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                analyst
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                experienced
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                marketing
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                agile
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": 280,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "lineHeight": 24,
+                  "textAlign": "justify",
+                  "textTransform": "none",
+                }
+              }
+            >
+              As the Marketing Analyst within Marketing and Sales Renewal, you will lead activities such as developing a market intelligence tool, renewal of the public website, launching a global marketing automation solution and developing and driving adoption. You will be a key stakeholder to the upper management. You will have an opportunity to work with inspired people, a truly global working environment and support for your personal professional development
+            </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusBold",
+                    "fontSize": 14,
+                    "textTransform": "none",
+                  }
+                }
+              >
+                Read more
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "bottom": 80,
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "height": 400,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 280,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": 280,
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://imgs.smoothradio.com/images/16359?crop=16_9&width=660&relax=1&signature=OWYzew50GlhEjghnZeagBKw4t5g=",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 280,
+                    "width": undefined,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignSelf": "flex-start",
+                  "marginLeft": 8,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 48,
+                  "zIndex": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Image
+              source={
+                Object {
+                  "uri": "https://i.pinimg.com/originals/c7/03/a7/c703a765d546f53eef04dc2eb29f8e17.jpg",
+                }
+              }
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "borderColor": "white",
+                  "borderRadius": 56,
+                  "borderWidth": 1,
+                  "bottom": 70,
+                  "height": 112,
+                  "position": "absolute",
+                  "width": 112,
+                }
+              }
+            />
+            <ViewManagerAdapter_ExpoLinearGradient
+              proxiedProperties={
+                Object {
+                  "colors": Array [
+                    0,
+                    1493172224,
+                    1711276032,
+                    2147483648,
+                    3003121664,
+                    3858759680,
+                  ],
+                  "endPoint": undefined,
+                  "locations": undefined,
+                  "startPoint": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "paddingBottom": 6,
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "DamascusBold",
+                      "fontSize": 20,
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  Wonka Industries
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Damascus",
+                      "fontSize": 20,
+                      "textTransform": "none",
+                    }
+                  }
+                >
+                  Digital Marketing Manager
+                </Text>
+              </View>
+            </ViewManagerAdapter_ExpoLinearGradient>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Helsinki
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                digital marketing
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                facebook
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                adwords
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": 280,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "lineHeight": 24,
+                  "textAlign": "justify",
+                  "textTransform": "none",
+                }
+              }
+            >
+              As a Digital Marketing Manager you will be responsible for digital marketing content creation, company newsletter, web pages, social media, photographing and graphic design for web and print media. You will be accompanies by a happy group of hard-working and nice people with good values and great benefits
+            </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusBold",
+                    "fontSize": 14,
+                    "textTransform": "none",
+                  }
+                }
+              >
+                Read more
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "bottom": 80,
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "height": 400,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 280,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": 280,
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://static1.bigstockphoto.com/2/9/1/large1500/192129916.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 280,
+                    "width": undefined,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignSelf": "flex-start",
+                  "marginLeft": 8,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 48,
+                  "zIndex": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Image
+              source={
+                Object {
+                  "uri": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-yjO1MhjUPEAspfgIjobxEsDk9o1t88aMkw&usqp=CAU",
+                }
+              }
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "borderColor": "white",
+                  "borderRadius": 56,
+                  "borderWidth": 1,
+                  "bottom": 70,
+                  "height": 112,
+                  "position": "absolute",
+                  "width": 112,
+                }
+              }
+            />
+            <ViewManagerAdapter_ExpoLinearGradient
+              proxiedProperties={
+                Object {
+                  "colors": Array [
+                    0,
+                    1493172224,
+                    1711276032,
+                    2147483648,
+                    3003121664,
+                    3858759680,
+                  ],
+                  "endPoint": undefined,
+                  "locations": undefined,
+                  "startPoint": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "paddingBottom": 6,
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "DamascusBold",
+                      "fontSize": 20,
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  Dunder Mifflin Paper
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Damascus",
+                      "fontSize": 20,
+                      "textTransform": "none",
+                    }
+                  }
+                >
+                  Digital Marketing Manager
+                </Text>
+              </View>
+            </ViewManagerAdapter_ExpoLinearGradient>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Helsinki
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                digital marketing
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                facebook
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                adwords
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": 280,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "lineHeight": 24,
+                  "textAlign": "justify",
+                  "textTransform": "none",
+                }
+              }
+            >
+              As a Digital Marketing Manager you will be responsible for digital marketing content creation, company newsletter, web pages, social media, photographing and graphic design for web and print media. You will be accompanies by a happy group of hard-working and nice people with good values and great benefits
+            </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusBold",
+                    "fontSize": 14,
+                    "textTransform": "none",
+                  }
+                }
+              >
+                Read more
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "bottom": 80,
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "height": 400,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 280,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": 280,
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://thumbs.dreamstime.com/b/close-up-business-people-congratulating-one-another-team-building-exercise-54970426.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 280,
+                    "width": undefined,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignSelf": "flex-start",
+                  "marginLeft": 8,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 48,
+                  "zIndex": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Image
+              source={
+                Object {
+                  "uri": "https://ih1.redbubble.net/image.659413411.3655/st,small,507x507-pad,600x600,f8f8f8.u1.jpg",
+                }
+              }
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "borderColor": "white",
+                  "borderRadius": 56,
+                  "borderWidth": 1,
+                  "bottom": 70,
+                  "height": 112,
+                  "position": "absolute",
+                  "width": 112,
+                }
+              }
+            />
+            <ViewManagerAdapter_ExpoLinearGradient
+              proxiedProperties={
+                Object {
+                  "colors": Array [
+                    0,
+                    1493172224,
+                    1711276032,
+                    2147483648,
+                    3003121664,
+                    3858759680,
+                  ],
+                  "endPoint": undefined,
+                  "locations": undefined,
+                  "startPoint": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "paddingBottom": 6,
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "DamascusBold",
+                      "fontSize": 20,
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  E Corp
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Damascus",
+                      "fontSize": 20,
+                      "textTransform": "none",
+                    }
+                  }
+                >
+                  Marketing Analyst
+                </Text>
+              </View>
+            </ViewManagerAdapter_ExpoLinearGradient>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Helsinki
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                analyst
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                experienced
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                marketing
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                agile
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": 280,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "lineHeight": 24,
+                  "textAlign": "justify",
+                  "textTransform": "none",
+                }
+              }
+            >
+              As the Marketing Analyst within Marketing and Sales Renewal, you will lead activities such as developing a market intelligence tool, renewal of the public website, launching a global marketing automation solution and developing and driving adoption. You will be a key stakeholder to the upper management. You will have an opportunity to work with inspired people, a truly global working environment and support for your personal professional development
+            </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusBold",
+                    "fontSize": 14,
+                    "textTransform": "none",
+                  }
+                }
+              >
+                Read more
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "bottom": 80,
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "height": 400,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 280,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": 280,
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://imgs.smoothradio.com/images/16359?crop=16_9&width=660&relax=1&signature=OWYzew50GlhEjghnZeagBKw4t5g=",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 280,
+                    "width": undefined,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignSelf": "flex-start",
+                  "marginLeft": 8,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 48,
+                  "zIndex": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Image
+              source={
+                Object {
+                  "uri": "https://i.pinimg.com/originals/c7/03/a7/c703a765d546f53eef04dc2eb29f8e17.jpg",
+                }
+              }
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "borderColor": "white",
+                  "borderRadius": 56,
+                  "borderWidth": 1,
+                  "bottom": 70,
+                  "height": 112,
+                  "position": "absolute",
+                  "width": 112,
+                }
+              }
+            />
+            <ViewManagerAdapter_ExpoLinearGradient
+              proxiedProperties={
+                Object {
+                  "colors": Array [
+                    0,
+                    1493172224,
+                    1711276032,
+                    2147483648,
+                    3003121664,
+                    3858759680,
+                  ],
+                  "endPoint": undefined,
+                  "locations": undefined,
+                  "startPoint": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "paddingBottom": 6,
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "DamascusBold",
+                      "fontSize": 20,
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  Wonka Industries
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Damascus",
+                      "fontSize": 20,
+                      "textTransform": "none",
+                    }
+                  }
+                >
+                  Marketing Manager
+                </Text>
+              </View>
+            </ViewManagerAdapter_ExpoLinearGradient>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Helsinki
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                social media
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                marketing automation
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": 280,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "lineHeight": 24,
+                  "textAlign": "justify",
+                  "textTransform": "none",
+                }
+              }
+            >
+              If you are marketing-minded, enthusiastic, creative, digitally savvy, up to date on emerging trends and tactics, and obsessed with quality - then this is the position for you, and we want to hear from you!
+   
+We have top-of-market pay, Friday beers and great support for personal growth!
+            </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusBold",
+                    "fontSize": 14,
+                    "textTransform": "none",
+                  }
+                }
+              >
+                Read more
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "bottom": 80,
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+      </View>
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "flexDirection": "column",
+            "height": 400,
+          }
+        }
+      >
+        <View
+          style={
+            Object {
+              "height": 280,
+            }
+          }
+        >
+          <View
+            accessibilityIgnoresInvertColors={true}
+            style={
+              Object {
+                "height": 280,
+              }
+            }
+          >
+            <Image
+              resizeMode="stretch"
+              source={
+                Object {
+                  "uri": "https://thumbs.dreamstime.com/b/close-up-business-people-congratulating-one-another-team-building-exercise-54970426.jpg",
+                }
+              }
+              style={
+                Array [
+                  Object {
+                    "bottom": 0,
+                    "left": 0,
+                    "position": "absolute",
+                    "right": 0,
+                    "top": 0,
+                  },
+                  Object {
+                    "height": 280,
+                    "width": undefined,
+                  },
+                  undefined,
+                ]
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "alignSelf": "flex-start",
+                  "marginLeft": 8,
+                  "opacity": 1,
+                  "position": "absolute",
+                  "top": 48,
+                  "zIndex": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <Image
+              source={
+                Object {
+                  "uri": "https://ih1.redbubble.net/image.659413411.3655/st,small,507x507-pad,600x600,f8f8f8.u1.jpg",
+                }
+              }
+              style={
+                Object {
+                  "alignSelf": "center",
+                  "borderColor": "white",
+                  "borderRadius": 56,
+                  "borderWidth": 1,
+                  "bottom": 70,
+                  "height": 112,
+                  "position": "absolute",
+                  "width": 112,
+                }
+              }
+            />
+            <ViewManagerAdapter_ExpoLinearGradient
+              proxiedProperties={
+                Object {
+                  "colors": Array [
+                    0,
+                    1493172224,
+                    1711276032,
+                    2147483648,
+                    3003121664,
+                    3858759680,
+                  ],
+                  "endPoint": undefined,
+                  "locations": undefined,
+                  "startPoint": undefined,
+                }
+              }
+              style={
+                Object {
+                  "alignItems": "center",
+                  "bottom": 0,
+                  "paddingBottom": 6,
+                  "position": "absolute",
+                  "width": "100%",
+                  "zIndex": 1,
+                }
+              }
+            >
+              <View
+                style={
+                  Object {
+                    "alignItems": "center",
+                  }
+                }
+              >
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "DamascusBold",
+                      "fontSize": 20,
+                      "textTransform": "uppercase",
+                    }
+                  }
+                >
+                  E Corp
+                </Text>
+                <Text
+                  style={
+                    Object {
+                      "color": "#ffffff",
+                      "fontFamily": "Damascus",
+                      "fontSize": 20,
+                      "textTransform": "none",
+                    }
+                  }
+                >
+                  Marketing Manager
+                </Text>
+              </View>
+            </ViewManagerAdapter_ExpoLinearGradient>
+          </View>
+        </View>
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "paddingLeft": 16,
+              "paddingRight": 16,
+              "paddingTop": 8,
+            }
+          }
+        >
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Text />
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "textTransform": "uppercase",
+                }
+              }
+            >
+              Helsinki
+            </Text>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 8,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "flexDirection": "row",
+                "flexWrap": "wrap",
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                social media
+              </Text>
+            </View>
+            <View
+              style={
+                Object {
+                  "alignContent": "center",
+                  "borderColor": "#000000",
+                  "borderRadius": 4,
+                  "borderWidth": 0.5,
+                  "flexDirection": "row",
+                  "height": 24,
+                  "marginRight": 6,
+                  "marginTop": 8,
+                  "padding": 4,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusLight",
+                    "fontSize": 12,
+                    "textTransform": "uppercase",
+                  }
+                }
+              >
+                #
+                 
+                marketing automation
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "marginTop": 16,
+              }
+            }
+          />
+          <View
+            style={
+              Object {
+                "width": 280,
+              }
+            }
+          >
+            <Text
+              style={
+                Object {
+                  "color": "#000000",
+                  "fontFamily": "DamascusLight",
+                  "fontSize": 14,
+                  "lineHeight": 24,
+                  "textAlign": "justify",
+                  "textTransform": "none",
+                }
+              }
+            >
+              If you are marketing-minded, enthusiastic, creative, digitally savvy, up to date on emerging trends and tactics, and obsessed with quality - then this is the position for you, and we want to hear from you!
+   
+We have top-of-market pay, Friday beers and great support for personal growth!
+            </Text>
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "marginTop": 8,
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text
+                style={
+                  Object {
+                    "color": "#000000",
+                    "fontFamily": "DamascusBold",
+                    "fontSize": 14,
+                    "textTransform": "none",
+                  }
+                }
+              >
+                Read more
+              </Text>
+            </View>
+          </View>
+          <View
+            style={
+              Object {
+                "bottom": 80,
+                "position": "absolute",
+                "right": 16,
+              }
+            }
+          >
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+            <View
+              style={
+                Object {
+                  "marginTop": 24,
+                }
+              }
+            />
+            <View
+              accessible={true}
+              focusable={true}
+              onClick={[Function]}
+              onResponderGrant={[Function]}
+              onResponderMove={[Function]}
+              onResponderRelease={[Function]}
+              onResponderTerminate={[Function]}
+              onResponderTerminationRequest={[Function]}
+              onStartShouldSetResponder={[Function]}
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <Text />
+            </View>
+          </View>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
