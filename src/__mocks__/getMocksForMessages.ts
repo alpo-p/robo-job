@@ -5,7 +5,7 @@ const roboMessages: Message[] = [
     typeOfMessage: 'robo',
     text: `Thanks for your interest to the position and our company! To apply, please answer our 3 short questions 🙏
 
-In short, we are looking for a seasoned marketing professional with mature views about the field. Could you explain shortly (280 characters or less) how you view the modern marketing field and what's currently imporant?`,
+Please tell us shortly about your most recent work experience in marketing.`,
   },
   {
     typeOfMessage: 'robo',
