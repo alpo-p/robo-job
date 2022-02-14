@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native'
 import React from 'react'
-import { Alert, useColorScheme, View } from 'react-native'
+import { useColorScheme, View } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { SignInButton } from './SignInButton'
 import RoboText from '../../../common/components/RoboText'
@@ -15,15 +15,19 @@ interface P {
   width: number
   hideSignInButton?: boolean
 }
+
+// TODO: refactor
 export default ({ width, hideSignInButton }: P) => {
   const scheme = useColorScheme()
   const navigation = useNavigation<NavigationPropType>()
   const { setChats } = useChatsContext()
   const signInAsDemo = () => {
+    /*
     Alert.alert(
       'Kuvittele, että kirjauduit sisään puhelinnumerollasi',
       'Kuvittele myös, että etsit markkinointitöitä Helsingistä',
     )
+    */
     navigation.navigate('RootNavigator')
     setChats([])
   }
